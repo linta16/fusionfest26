@@ -64,13 +64,14 @@ section.active{display:block;}
 @media(max-width:600px){.members{grid-template-columns:1fr;}}
 .member{background:rgba(255,255,255,.04);border:1px solid rgba(168,85,247,.12);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.4rem;}
 .member.sponsor-card{border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);}
-.m-photo{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:.4rem;flex-shrink:0;}
-.m-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
-/* Option B — large circle on dashed bg */
-.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important;gap:.5rem;margin-bottom:.4rem;border:1.5px dashed rgba(168,85,247,0.35) !important;background:rgba(168,85,247,0.07) !important;font-size:unset !important;font-weight:unset !important;text-shadow:none !important;}
-.ini-circle{width:118px;height:118px;border-radius:50% !important;display:flex;align-items:center;justify-content:center;font-size:2.6rem;font-weight:900;color:rgba(255,255,255,.95);letter-spacing:-.02em;flex-shrink:0;}
-.ini-label{font-size:.58rem !important;color:rgba(255,255,255,.28);font-style:italic;letter-spacing:.03em;font-weight:400 !important;}
-.sponsor-card .m-photo-initials{border-color:rgba(245,158,11,0.35) !important;background:rgba(245,158,11,0.06) !important;}
+/* All photos — circle on dashed bg */
+.m-photo{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:.4rem;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;border:1.5px dashed rgba(168,85,247,0.35);background:rgba(168,85,247,0.07);}
+.m-photo img{width:118px;height:118px;object-fit:cover;object-position:center top;display:block;border-radius:50%;flex-shrink:0;}
+.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;margin-bottom:.4rem;border:1.5px dashed rgba(168,85,247,0.35);background:rgba(168,85,247,0.07);}
+.ini-circle{width:118px;height:118px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.6rem;font-weight:900;color:rgba(255,255,255,.95);letter-spacing:-.02em;flex-shrink:0;}
+.ini-label{font-size:.58rem;color:rgba(255,255,255,.28);font-style:italic;letter-spacing:.03em;}
+.sponsor-card .m-photo{border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06);}
+.sponsor-card .m-photo-initials{border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06);}
 .role-badge{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 10px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;width:fit-content;}
 .rb-cap{background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);}
 .rb-ai{background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.5);color:var(--pl);}
