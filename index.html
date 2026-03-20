@@ -14,8 +14,7 @@ nav{background:rgba(15,6,32,0.97);backdrop-filter:blur(12px);border-bottom:1px s
 .logo-text{font-weight:800;font-size:1rem;}
 .logo-sub{font-size:.65rem;color:var(--pl);display:block;line-height:1;}
 .nav-tabs{display:flex;gap:3px;}
-.nt{padding:5px 13px;border-radius:6px;cursor:pointer;font-size:.78rem;font-weight:600;color:rgba(255,255,255,0.55);border:none;background:transparent;transition:.2s;white-space:nowrap;}
-.nt:hover{color:#fff;background:rgba(168,85,247,0.15);}
+.nt{padding:5px 13px;border-radius:6px;cursor:pointer;font-size:.78rem;font-weight:600;color:rgba(255,255,255,0.55);border:none;background:transparent;white-space:nowrap;}
 .nt.active{color:#fff;background:rgba(168,85,247,0.25);border:1px solid rgba(168,85,247,0.4);}
 .nav-badge{background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;padding:3px 11px;border-radius:20px;font-size:.7rem;font-weight:700;white-space:nowrap;}
 section{display:none;padding:1.8rem;max-width:1100px;margin:0 auto;}
@@ -23,7 +22,6 @@ section.active{display:block;}
 .sec-title{font-size:1.3rem;font-weight:800;margin-bottom:.3rem;}
 .sec-title span{background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .sec-sub{color:rgba(255,255,255,0.45);font-size:.82rem;margin-bottom:1.4rem;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;}
 .chip{background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:2px 10px;font-size:.7rem;color:var(--pl);}
 .chip.live{background:rgba(16,185,129,0.2);border-color:rgba(16,185,129,0.5);color:var(--green);}
 .chip.gold{background:rgba(245,158,11,0.2);border-color:rgba(245,158,11,0.5);color:var(--gold);}
@@ -32,6 +30,8 @@ section.active{display:block;}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
 @media(max-width:700px){.grid2,.grid3,.grid4{grid-template-columns:1fr;}.nav-tabs{display:none;}}
+
+/* HERO */
 .hero{background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(124,58,237,.12));border:1px solid rgba(168,85,247,.35);border-radius:18px;padding:2.5rem 2rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
 .hero h1{font-size:2.4rem;font-weight:900;line-height:1.1;margin-bottom:.4rem;}
 .hero h1 span{background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
@@ -39,17 +39,17 @@ section.active{display:block;}
 .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;}
 .sn{font-size:1.7rem;font-weight:800;color:var(--pl);}
 .sl{font-size:.7rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.05em;}
+
+/* KICKOFF BANNER */
 .ko-banner{background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(168,85,247,.15));border:1px solid rgba(245,158,11,.45);border-radius:16px;padding:1.4rem 1.8rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .ko-timer{display:flex;gap:.7rem;}
 .kt{background:rgba(0,0,0,.35);border:1px solid rgba(245,158,11,.35);border-radius:9px;padding:.45rem .8rem;text-align:center;min-width:50px;}
 .ktn{font-size:1.4rem;font-weight:800;color:var(--gold);line-height:1;}
 .ktl{font-size:.55rem;color:rgba(255,255,255,.35);text-transform:uppercase;}
 .ko-btn{background:linear-gradient(135deg,var(--gold),#EF4444);color:#fff;border:none;border-radius:9px;padding:8px 18px;font-weight:700;font-size:.82rem;cursor:pointer;}
-.progress-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;margin-bottom:1.5rem;}
-.progress-bar{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:.6rem;}
-.progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--p),var(--pl),#E879F9);}
-.journey{display:flex;flex-direction:column;gap:.7rem;}
-.jrow{display:flex;align-items:stretch;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;cursor:pointer;}
+
+/* JOURNEY */
+.jrow{display:flex;align-items:stretch;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;cursor:pointer;margin-bottom:.7rem;}
 .jrow.highlight{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.07);}
 .jrow.active-month{border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.1);}
 .j-icon{font-size:1.8rem;display:flex;align-items:center;width:40px;flex-shrink:0;}
@@ -61,6 +61,9 @@ section.active{display:block;}
 .j-dot{width:9px;height:9px;border-radius:50%;}
 .dot-ko{background:var(--gold);box-shadow:0 0 10px var(--gold);}
 .dot-up{background:var(--pl);}
+.dot-live{background:var(--green);box-shadow:0 0 8px var(--green);}
+
+/* TEAMS */
 .team-block{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:1.5rem;}
 .team-hdr{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.6rem;border-bottom:1px solid var(--border);}
 .tn{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;flex-shrink:0;}
@@ -68,16 +71,22 @@ section.active{display:block;}
 .team-tagline{font-size:.72rem;color:rgba(255,255,255,.4);}
 .members{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.2rem 1.6rem;}
 @media(max-width:900px){.members{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:700px){.members{grid-template-columns:1fr;}}
-.member{background:rgba(255,255,255,.04);border:1px solid rgba(168,85,247,.12);border-radius:12px;padding:1rem;}
-.role-badge{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 10px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;}
+@media(max-width:600px){.members{grid-template-columns:1fr;}}
+.member{background:rgba(255,255,255,.04);border:1px solid rgba(168,85,247,.12);border-radius:12px;padding:1rem;display:flex;flex-direction:column;gap:.4rem;}
+.member.sponsor-card{border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);}
+.m-photo{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:.4rem;flex-shrink:0;}
+.m-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-weight:800;margin-bottom:.4rem;}
+.role-badge{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 10px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;width:fit-content;}
 .rb-cap{background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);}
 .rb-ai{background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.5);color:var(--pl);}
 .rb-eng{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);color:var(--green);}
-.m-name{font-weight:700;font-size:.92rem;}
-.m-handle{font-size:.68rem;color:rgba(255,255,255,.3);margin-bottom:.4rem;}
-.m-bio{font-size:.74rem;color:rgba(255,255,255,.5);line-height:1.5;}
-.avatar{width:90px;height:90px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;border:3px solid rgba(168,85,247,.35);margin-bottom:.6rem;}
+.rb-sp{background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);}
+.m-name{font-weight:700;font-size:.88rem;}
+.m-handle{font-size:.68rem;color:rgba(255,255,255,.3);}
+.m-bio{font-size:.74rem;color:rgba(255,255,255,.5);line-height:1.5;margin-top:.2rem;}
+
+/* EVENTS */
 .event-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .ev-hdr{padding:.9rem 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);}
 .ev-icon{font-size:1.5rem;}
@@ -86,11 +95,15 @@ section.active{display:block;}
 .ev-name{font-weight:700;font-size:.95rem;margin-bottom:.2rem;}
 .ev-when{font-size:.72rem;color:var(--pl);font-weight:600;margin-bottom:.4rem;}
 .ev-desc{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.5;margin-bottom:.7rem;}
+
+/* SPORTS */
 .sport-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;text-align:center;}
 .sport-icon{font-size:2.5rem;margin-bottom:.6rem;}
 .sport-name{font-weight:800;font-size:1rem;margin-bottom:.3rem;}
 .sport-when{font-size:.72rem;color:var(--pink);font-weight:700;margin-bottom:.4rem;}
 .sport-desc{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.5;}
+
+/* LEADERBOARD */
 .podium{display:flex;justify-content:center;align-items:flex-end;gap:1rem;margin-bottom:1.8rem;}
 .pod-item{text-align:center;}
 .pod-block{border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.8rem .6rem;width:115px;}
@@ -109,33 +122,43 @@ section.active{display:block;}
 .lb-bar-w{flex:1;height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden;}
 .lb-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--p),var(--pl));}
 .lb-pts{font-size:1.1rem;font-weight:800;color:var(--pl);}
+
+/* FINALE */
 .finale-hero{background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.2));border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:1.5rem;}
 .finale-hero h2{font-size:2rem;font-weight:900;margin-bottom:.4rem;}
 .award-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;text-align:center;}
 .award-icon{font-size:2rem;margin-bottom:.5rem;}
 .award-name{font-weight:800;font-size:.95rem;margin-bottom:.3rem;}
 .award-desc{font-size:.74rem;color:rgba(255,255,255,.45);line-height:1.5;}
-.fi{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(168,85,247,.25);border-radius:8px;padding:.65rem .9rem;color:#fff;font-size:.85rem;font-family:inherit;outline:none;margin-bottom:.9rem;display:block;}
-.fi:focus{border-color:var(--pl);}
-textarea.fi{resize:vertical;min-height:85px;}
-select.fi option{background:#1A0A2E;}
-.flabel{display:block;font-size:.75rem;font-weight:700;color:var(--pl);margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.04em;}
-.sub-btn{width:100%;padding:.85rem;border:none;border-radius:10px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;font-size:.95rem;font-weight:700;cursor:pointer;}
+
+/* ORGANIZERS */
+.org-lead-card{border-radius:16px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.org-avatar{width:70px;height:70px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;flex-shrink:0;}
+.org-role{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;}
+.org-name{font-size:1.2rem;font-weight:800;}
+.org-sub{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.2rem;}
+.core-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;}
+.core-av{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800;}
+.core-name{font-weight:700;font-size:.88rem;}
+.core-role-badge{font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);}
+
+/* DASHBOARD */
 .dash-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;}
 @media(max-width:700px){.dash-grid{grid-template-columns:1fr;}}
 .dash-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;}
 .dash-num{font-size:2.2rem;font-weight:900;line-height:1;color:var(--pl);}
 .dash-lbl{font-size:.72rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;}
 .tbar-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;}
-.tbar-name{font-size:.73rem;font-weight:600;width:120px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.tbar-name{font-size:.73rem;font-weight:600;width:130px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .tbar-wrap{flex:1;height:8px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;}
 .tbar-fill{height:100%;border-radius:4px;}
 .tbar-count{font-size:.75rem;font-weight:700;color:var(--pl);min-width:16px;text-align:right;}
-.cat-chip{display:flex;align-items:center;justify-content:space-between;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);border-radius:8px;padding:5px 12px;font-size:.75rem;margin-bottom:.5rem;}
+.cat-chip-d{display:flex;align-items:center;justify-content:space-between;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);border-radius:8px;padding:5px 12px;font-size:.75rem;margin-bottom:.5rem;}
 .cat-n{background:rgba(168,85,247,.3);border-radius:20px;padding:1px 8px;font-weight:700;font-size:.7rem;color:var(--pl);}
-.member-photo {
-  width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;display:block;
-}
+.empty-msg{font-size:.78rem;color:rgba(255,255,255,.25);font-style:italic;text-align:center;padding:1.2rem 0;}
+.progress-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;margin-bottom:1.5rem;}
+.progress-bar{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:.6rem;}
+.progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--p),var(--pl),#E879F9);}
 </style>
 </head>
 <body>
@@ -146,7 +169,7 @@ select.fi option{background:#1A0A2E;}
     <div><span class="logo-text">APP Fusion Fest '26</span><small class="logo-sub">Innovation · Competition · Celebration</small></div>
   </div>
   <div class="nav-tabs">
-    <button class="nt" data-tab="overview">🏠 Overview</button>
+    <button class="nt active" data-tab="overview">🏠 Overview</button>
     <button class="nt" data-tab="teams">👥 Teams</button>
     <button class="nt" data-tab="aibattle">⚔️ AI Battle</button>
     <button class="nt" data-tab="sports">🏆 Sports</button>
@@ -193,15 +216,15 @@ select.fi option{background:#1A0A2E;}
   </div>
   <div class="sec-title" style="margin-bottom:.3rem;">📅 6-Month <span>Journey</span></div>
   <div class="sec-sub">Click any month to explore</div>
-  <div class="journey" style="margin-bottom:1.8rem;">
-    <div class="jrow highlight" data-goto="overview" data-scroll="kickoff-detail">
+  <div style="margin-bottom:1.8rem;">
+    <div class="jrow highlight" data-goto="overview" id="kickoff-row">
       <div class="j-icon">🚀</div>
       <div style="flex:1"><div class="j-month">27th March 2026</div><div class="j-title">Grand Kick Off</div><div class="j-theme">Virtual Curtain Raiser · Leadership Address · Team Reveal · APP Quiz League</div><div class="j-chips"><span class="chip gold">Countdown On</span><span class="chip gold">Virtual 1 Hour</span></div></div>
       <div class="j-right"><div class="j-dot dot-ko"></div></div>
     </div>
     <div class="jrow" data-goto="aibattle">
       <div class="j-icon">⚔️</div>
-      <div style="flex:1"><div class="j-month">April 2026</div><div class="j-title">Innovation Jam and Pitch Battles</div><div class="j-theme">AI-led idea generation · Teams pitch to judges</div><div class="j-chips"><span class="chip">AI Battle</span><span class="chip">Innovation</span></div></div>
+      <div style="flex:1"><div class="j-month">April 2026</div><div class="j-title">Innovation Jam and Pitch Battles</div><div class="j-theme">AI-led idea generation · Teams pitch to judges</div><div class="j-chips"><span class="chip">AI Battle</span></div></div>
       <div class="j-right"><div class="j-dot dot-up"></div></div>
     </div>
     <div class="jrow" data-goto="sports">
@@ -211,7 +234,7 @@ select.fi option{background:#1A0A2E;}
     </div>
     <div class="jrow" data-goto="aibattle">
       <div class="j-icon">🎙️</div>
-      <div style="flex:1"><div class="j-month">June 2026</div><div class="j-title">AI Panel and Structured Debate</div><div class="j-theme">AI thought leadership · Expert panel and team debate</div><div class="j-chips"><span class="chip">AI Battle</span><span class="chip">Leadership</span></div></div>
+      <div style="flex:1"><div class="j-month">June 2026</div><div class="j-title">AI Panel and Structured Debate</div><div class="j-theme">AI thought leadership · Expert panel and team debate</div><div class="j-chips"><span class="chip">AI Battle</span></div></div>
       <div class="j-right"><div class="j-dot dot-up"></div></div>
     </div>
     <div class="jrow" data-goto="sports">
@@ -221,7 +244,7 @@ select.fi option{background:#1A0A2E;}
     </div>
     <div class="jrow" data-goto="finale">
       <div class="j-icon">🎊</div>
-      <div style="flex:1"><div class="j-month">August 2026</div><div class="j-title">Showcase and Celebrate — Grand Finale</div><div class="j-theme">Cultural Showcase · Innovation Finals · Award Ceremony</div><div class="j-chips"><span class="chip gold">Grand Finale</span><span class="chip">Awards</span></div></div>
+      <div style="flex:1"><div class="j-month">August 2026</div><div class="j-title">Showcase and Celebrate — Grand Finale</div><div class="j-theme">Cultural Showcase · Innovation Finals · Award Ceremony</div><div class="j-chips"><span class="chip gold">Grand Finale</span></div></div>
       <div class="j-right"><div class="j-dot dot-up"></div></div>
     </div>
   </div>
@@ -229,15 +252,15 @@ select.fi option{background:#1A0A2E;}
     <div class="sec-title" style="margin-bottom:.3rem;">🚀 Kick Off <span>Agenda</span></div>
     <div class="sec-sub">Virtual · 1 Hour · Thursday 27th March 2026 · All Locations</div>
     <div class="grid2" style="margin-bottom:1rem;">
-      <div class="card" style="border-color:rgba(245,158,11,.3);">
-        <div style="display:flex;flex-direction:column;gap:.7rem;">
+      <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:1.3rem;">
+        <div style="display:flex;flex-direction:column;gap:.8rem;">
           <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:00–0:05</span><div><div style="font-weight:700;font-size:.88rem;">Welcome and Setting the Stage</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Host opens the session</div></div></div>
           <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:05–0:15</span><div><div style="font-weight:700;font-size:.88rem;">Leadership Address</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Sponsors share vision and goals</div></div></div>
           <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:15–0:20</span><div><div style="font-weight:700;font-size:.88rem;">Sponsor Introduction</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Meet the sponsors powering APP Fusion Fest '26</div></div></div>
         </div>
       </div>
-      <div class="card" style="border-color:rgba(245,158,11,.3);">
-        <div style="display:flex;flex-direction:column;gap:.7rem;">
+      <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:1.3rem;">
+        <div style="display:flex;flex-direction:column;gap:.8rem;">
           <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:20–0:35</span><div><div style="font-weight:700;font-size:.88rem;">Grand Team Reveal</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">All 4 teams announced with Captains, AI Champions and Engagement Champions</div></div></div>
           <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:35–0:45</span><div><div style="font-weight:700;font-size:.88rem;">Event Overview and Scoring</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">6-month journey walkthrough and scoring criteria</div></div></div>
           <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:45–0:55</span><div><div style="font-weight:700;font-size:.88rem;">Team Leader Shoutouts</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Each leader says hello to the whole APP team</div></div></div>
@@ -251,138 +274,156 @@ select.fi option{background:#1A0A2E;}
   </div>
 </section>
 
-<!-- ORGANIZERS -->
-<section id="organizers">
-  <div style="background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(236,72,153,.15));border:1px solid rgba(168,85,247,.35);border-radius:20px;padding:2.5rem 2rem;margin-bottom:2rem;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:-30px;right:-30px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.2),transparent 70%);"></div>
-    <div style="font-size:2.5rem;margin-bottom:.5rem;">🌟</div>
-    <h2 style="font-size:2rem;font-weight:900;margin-bottom:.4rem;">The Minds Behind <span style="background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">the Fest</span></h2>
-    <p style="color:rgba(255,255,255,.55);font-size:.92rem;">The passionate team that dreamt it, planned it and made it happen</p>
-  </div>
-
-  <!-- PROGRAM SPONSOR -->
-  <div class="sec-title" style="margin-bottom:1rem;">🏅 Program <span>Sponsor</span></div>
-  <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(168,85,247,.1));border:1px solid rgba(245,158,11,.4);border-radius:16px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-    <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;flex-shrink:0;border:3px solid rgba(245,158,11,.5);">KC</div>
-    <div>
-      <div style="font-size:.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">🌟 Program Sponsor</div>
-      <div style="font-size:1.2rem;font-weight:800;">Kaladhar Challagondla (KC)</div>
-      <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.2rem;">The visionary backing APP Fusion Fest '26</div>
-    </div>
-  </div>
-
-  <!-- EXPERIENCE LEAD -->
-  <div class="sec-title" style="margin-bottom:1rem;">🎯 Program <span>Lead</span></div>
-  <div style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.4);border-radius:16px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
-    <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid rgba(168,85,247,.5);"><img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover;object-position:center top;" alt="Linta Sebastian"></div>
-    <div>
-      <div style="font-size:.7rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">🎯 Program Lead</div>
-      <div style="font-size:1.2rem;font-weight:800;">Linta Sebastian</div>
-      <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.2rem;">Driving the vision and energy of APP Fusion Fest '26</div>
-    </div>
-  </div>
-
-  <!-- CORE TEAM -->
-  <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
-  <div class="grid3">
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem;">
-      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;border:2px solid rgba(168,85,247,.4);">DK</div>
-      <div style="font-weight:700;font-size:.9rem;">Deepak Suresh Kini</div>
-      <div style="font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);">Core Team</div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem;">
-      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;border:2px solid rgba(236,72,153,.4);">SH</div>
-      <div style="font-weight:700;font-size:.9rem;">Shikha Hurkat</div>
-      <div style="font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);">Core Team</div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem;">
-      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#10B981,#14B8A6);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;border:2px solid rgba(16,185,129,.4);">AK</div>
-      <div style="font-weight:700;font-size:.9rem;">Ashwini Kundaram</div>
-      <div style="font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);">Core Team</div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem;">
-      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#F59E0B,#EF4444);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;border:2px solid rgba(245,158,11,.4);">GM</div>
-      <div style="font-weight:700;font-size:.9rem;">Gowri Myilsamy</div>
-      <div style="font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);">Core Team</div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem;">
-      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#8B5CF6);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;border:2px solid rgba(99,102,241,.4);">PN</div>
-      <div style="font-weight:700;font-size:.9rem;">Pavan Kumar Natraj</div>
-      <div style="font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);">Core Team</div>
-    </div>
-  </div>
-</section>
-
 <!-- TEAMS -->
 <section id="teams">
   <div class="sec-title">👥 Meet the <span>Teams</span></div>
-  <div class="sec-sub">4 balanced teams across all Accenture locations</div>
+  <div class="sec-sub">4 balanced teams · Sponsor · AI Champion · Captain · Engagement Champion</div>
+
+  <!-- TEAM 1 -->
   <div class="team-block" style="border-color:rgba(168,85,247,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">1</div>
       <div><div class="team-name">AI-nstein Squad</div><div class="team-tagline">Where Intelligence Meets Innovation</div></div>
     </div>
     <div class="members">
-      <div class="member" style="border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);">
-        <div class="avatar" style="border-radius:12px;background:linear-gradient(135deg,#F59E0B,#D97706);">HN</div>
-        <div class="role-badge" style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);">🌟 Sponsor</div>
+      <div class="member sponsor-card">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">HN</div>
+        <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Harshad Nanal</div>
-        <div class="m-handle">harshad.nanalal</div>
+        <div class="m-handle">harshad.nanal</div>
       </div>
-      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" class="ph" alt="KK"></div><div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthik Rajkumar Kannan</div><div class="m-handle">k.rajkumar.kannan</div><div class="m-bio-short">~19 years in enterprise architecture & AI engineering. Holds 8 AI patents. Passionate about travel & photography.</div><div class="m-bio-full">~19 years in enterprise architecture & AI engineering. Holds 8 AI patents (4 awarded, 4 pending). Passionate about travel and currently exploring photography as a creative pursuit.</div><span class="read-more" onclick="toggleBio(this)">Read more</span></div>
-      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" class="ph" alt="KL"></div><div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Kamlesh Lakshmanan</div><div class="m-handle">kamlesh.lakshmanan</div><div class="m-bio-short">19+ years at Accenture. Onshore USA experience across AT&T, Kohls, Starwood & NY Life Insurance.</div><div class="m-bio-full">19+ years at Accenture across diverse roles. Onshore USA experience with AT&T, Kohls, Starwood & NY Life Insurance. Passionate about racquet sports, aquariums, gardening & drone videography.</div><span class="read-more" onclick="toggleBio(this)">Read more</span></div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#10B981,#14B8A6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" class="ph" alt="VB"></div><div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vinodhini Balakrishnan</div><div class="m-handle">b.vinodhini</div><div class="m-bio">15+ years in Oracle and Google Cloud. Leads INTIENT Infrastructure and AO team. Passionate about Mandala art.</div></div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik"></div>
+        <div class="role-badge rb-ai">🤖 AI Champion</div>
+        <div class="m-name">Karthik Rajkumar Kannan</div>
+        <div class="m-handle">k.rajkumar.kannan</div>
+        <div class="m-bio">19 yrs in AI engineering. Holds 8 AI patents. Travel and photography enthusiast.</div>
+      </div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh"></div>
+        <div class="role-badge rb-cap">👑 Captain</div>
+        <div class="m-name">Kamlesh Lakshmanan</div>
+        <div class="m-handle">kamlesh.lakshmanan</div>
+        <div class="m-bio">19+ yrs at Accenture. Loves racquet sports, drone videography and aquariums.</div>
+      </div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini"></div>
+        <div class="role-badge rb-eng">🎯 Engagement Champion</div>
+        <div class="m-name">Vinodhini Balakrishnan</div>
+        <div class="m-handle">b.vinodhini</div>
+        <div class="m-bio">15+ yrs in Oracle and Google Cloud. INTIENT Infrastructure lead. Mandala art lover.</div>
+      </div>
     </div>
   </div>
+
+  <!-- TEAM 2 -->
   <div class="team-block" style="border-color:rgba(99,102,241,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(99,102,241,.3),rgba(139,92,246,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">2</div>
       <div><div class="team-name">Team 2 (Name TBD)</div><div class="team-tagline">Coming soon!</div></div>
     </div>
     <div class="members">
-      <div class="member" style="border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);">
-        <div class="avatar" style="border-radius:12px;background:linear-gradient(135deg,#F59E0B,#D97706);">SP</div>
-        <div class="role-badge" style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);">🌟 Sponsor</div>
+      <div class="member sponsor-card">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">SP</div>
+        <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Shobha Puttanna</div>
         <div class="m-handle">shobha.b.puttanna</div>
       </div>
-      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">JM</div><div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Jyoti Misra Parashar</div><div class="m-handle">jyoti.misra.parashar</div><div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div></div>
-      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#F59E0B,#F97316);">NT</div><div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Naga K. Tankala</div><div class="m-handle">naga.k.tankala</div><div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div></div>
-      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#10B981,#059669);">VK</div><div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Venkatesh B. Kesari</div><div class="m-handle">venkatesh.b.kesari</div><div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div></div>
+      <div class="member">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">JM</div>
+        <div class="role-badge rb-ai">🤖 AI Champion</div>
+        <div class="m-name">Jyoti Misra Parashar</div>
+        <div class="m-handle">jyoti.misra.parashar</div>
+        <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
+      </div>
+      <div class="member">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#F97316);">NT</div>
+        <div class="role-badge rb-cap">👑 Captain</div>
+        <div class="m-name">Naga K. Tankala</div>
+        <div class="m-handle">naga.k.tankala</div>
+        <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
+      </div>
+      <div class="member">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#10B981,#059669);">VK</div>
+        <div class="role-badge rb-eng">🎯 Engagement Champion</div>
+        <div class="m-name">Venkatesh B. Kesari</div>
+        <div class="m-handle">venkatesh.b.kesari</div>
+        <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
+      </div>
     </div>
   </div>
+
+  <!-- TEAM 3 -->
   <div class="team-block" style="border-color:rgba(236,72,153,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#EC4899,#A855F7);">3</div>
       <div><div class="team-name">Neural Mavericks</div><div class="team-tagline">Boldly Pushing Boundaries</div></div>
     </div>
     <div class="members">
-      <div class="member" style="border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);">
-        <div class="avatar" style="border-radius:12px;background:linear-gradient(135deg,#F59E0B,#D97706);">BC</div>
-        <div class="role-badge" style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);">🌟 Sponsor</div>
+      <div class="member sponsor-card">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">BC</div>
+        <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Bipin Chandra</div>
         <div class="m-handle">bipin.a.chandra</div>
       </div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#EC4899,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" class="ph" alt="KS"></div><div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthika Subbiah</div><div class="m-handle">karthika.subbiah</div><div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div></div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" class="ph" alt="VS"></div><div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Vishal D. Singh</div><div class="m-handle">vishal.d.singh</div><div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div></div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#10B981,#14B8A6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" class="ph" alt="VR"></div><div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vivek Sharma</div><div class="m-handle">vivekr.sharma</div><div class="m-bio">Excited to join this! More details coming soon.</div></div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika"></div>
+        <div class="role-badge rb-ai">🤖 AI Champion</div>
+        <div class="m-name">Karthika Subbiah</div>
+        <div class="m-handle">karthika.subbiah</div>
+        <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
+      </div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal"></div>
+        <div class="role-badge rb-cap">👑 Captain</div>
+        <div class="m-name">Vishal D. Singh</div>
+        <div class="m-handle">vishal.d.singh</div>
+        <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
+      </div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek"></div>
+        <div class="role-badge rb-eng">🎯 Engagement Champion</div>
+        <div class="m-name">Vivek Sharma</div>
+        <div class="m-handle">vivekr.sharma</div>
+        <div class="m-bio">Excited to join APP Fusion Fest '26!</div>
+      </div>
     </div>
   </div>
+
+  <!-- TEAM 4 -->
   <div class="team-block" style="border-color:rgba(245,158,11,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#F59E0B,#D97706);">4</div>
       <div><div class="team-name">The Orchestrators</div><div class="team-tagline">Perfect Sync. Perfect Win.</div></div>
     </div>
     <div class="members">
-      <div class="member" style="border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);">
-        <div class="avatar" style="border-radius:12px;background:linear-gradient(135deg,#F59E0B,#D97706);">SN</div>
-        <div class="role-badge" style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);">🌟 Sponsor</div>
+      <div class="member sponsor-card">
+        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">SN</div>
+        <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Santhosh Nair</div>
         <div class="m-handle">santhosh.r.nair</div>
       </div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" class="ph" alt="SK"></div><div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Satish D. Kumar</div><div class="m-handle">satish.d.kumar</div><div class="m-bio">Weekday executor, weekend optimizer. AI-driven thinking meets data strategy.</div></div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" class="ph" alt="SC"></div><div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Sulagna Chattopadhyay</div><div class="m-handle">s.y.chattopadhyay</div><div class="m-bio">Mission: align talent, energize teams, orchestrate the path to victory.</div></div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#10B981,#059669);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" class="ph" alt="AP"></div><div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Ajith PuthanPisharath</div><div class="m-handle">p.pisharath.ajith</div><div class="m-bio">Settled in Bangalore. Loves practical living, smart planning and citizen volunteering.</div></div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish"></div>
+        <div class="role-badge rb-ai">🤖 AI Champion</div>
+        <div class="m-name">Satish D. Kumar</div>
+        <div class="m-handle">satish.d.kumar</div>
+        <div class="m-bio">Weekday executor, weekend optimizer. AI-driven thinker and data strategist.</div>
+      </div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna"></div>
+        <div class="role-badge rb-cap">👑 Captain</div>
+        <div class="m-name">Sulagna Chattopadhyay</div>
+        <div class="m-handle">s.y.chattopadhyay</div>
+        <div class="m-bio">Aligning talent and orchestrating the path to victory. Collaboration meets creativity.</div>
+      </div>
+      <div class="member">
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith"></div>
+        <div class="role-badge rb-eng">🎯 Engagement Champion</div>
+        <div class="m-name">Ajith PuthanPisharath</div>
+        <div class="m-handle">p.pisharath.ajith</div>
+        <div class="m-bio">Practical living, smart planning and citizen volunteering — someone has to keep things moving!</div>
+      </div>
     </div>
   </div>
 </section>
@@ -402,20 +443,15 @@ select.fi option{background:#1A0A2E;}
     </div>
   </div>
   <div class="sec-title" style="margin-bottom:.3rem;">📝 Submit Your <span>Idea Pitch</span></div>
-  <div class="sec-sub">Submit via official form · Saved automatically to SharePoint</div>
+  <div class="sec-sub">Submit your idea via the official form · Saved automatically to SharePoint</div>
   <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:10px;padding:.8rem 1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem;font-size:.78rem;color:rgba(255,255,255,.65);">
     <span style="font-size:1.2rem;">✅</span><span>Submissions <strong style="color:var(--green);">automatically saved to SharePoint</strong> · DLP compliant</span>
   </div>
-  <div style="display:flex;gap:1rem;margin-bottom:1.2rem;">
-    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=OT154DkJbUmxKRmO3ZFv63L5KZh44WJJpOhWygTCai5UQUdKTUdWUVRPSVdLWDg0UFdMOEFJMFVHQi4u" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;">📝 Open Submission Form</a>
+  <div style="display:flex;gap:1rem;margin-bottom:1.5rem;">
+    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=OT154DkJbUmxKRmO3ZFv63L5KZh44WJJpOhWygTCai5UQUdKTUdWUVRPSVdLWDg0UFdMOEFJMFVHQi4u" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;">📝 Open Submission Form ↗</a>
   </div>
-
-
-  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.3rem;">
-    <div class="sec-title" style="margin-bottom:0;">📊 Ideas <span>Dashboard</span></div>
-  </div>
-  <div class="sec-sub">Live summary of idea submissions · Team-wise and category breakdown</div>
-
+  <div class="sec-title" style="margin-bottom:.3rem;">📊 Ideas <span>Dashboard</span></div>
+  <div class="sec-sub">Live summary of idea submissions</div>
   <div class="dash-grid">
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
       <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">📋 Total</div>
@@ -437,7 +473,7 @@ select.fi option{background:#1A0A2E;}
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
       <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">🏷️ By Category</div>
       <div id="d-cat-list">
-        <div class="cat-chip"><span>Agentic AI</span><span class="cat-n">5</span></div>
+        <div class="cat-chip-d"><span>Agentic AI</span><span class="cat-n">5</span></div>
       </div>
     </div>
   </div>
@@ -449,16 +485,16 @@ select.fi option{background:#1A0A2E;}
   <div class="sec-sub">Team bonding through competition, movement and fun · May and July 2026</div>
   <div class="grid2" style="margin-bottom:1.5rem;">
     <div style="background:linear-gradient(135deg,rgba(236,72,153,.15),rgba(168,85,247,.1));border:1px solid rgba(236,72,153,.35);border-radius:14px;padding:1.3rem;">
-      <div style="font-size:.72rem;color:var(--pink);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">May 2026 · Sports Month</div>
+      <div style="font-size:.72rem;color:var(--pink);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">May 2026 · Sports Month</div>
       <div style="font-weight:800;font-size:1.1rem;margin-bottom:.3rem;">Play and Perform</div>
       <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;">Cross-team bonding through healthy competition.</div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="chip pink">Carroms Tournament</span><span class="chip pink">Table Tennis</span></div>
+      <div style="display:flex;gap:6px;"><span class="chip pink">Carroms</span><span class="chip pink">Table Tennis</span></div>
     </div>
     <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(168,85,247,.08));border:1px solid rgba(16,185,129,.3);border-radius:14px;padding:1.3rem;">
-      <div style="font-size:.72rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">July 2026 · Wellness Month</div>
+      <div style="font-size:.72rem;color:var(--green);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">July 2026 · Wellness Month</div>
       <div style="font-weight:800;font-size:1.1rem;margin-bottom:.3rem;">Move and Momentum</div>
-      <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;">Promote well-being and drive informal bonding across all locations.</div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;"><span class="chip live">Step Challenge</span><span class="chip live">Fitness Reels</span></div>
+      <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;">Promote well-being and drive bonding across all locations.</div>
+      <div style="display:flex;gap:6px;"><span class="chip live">Step Challenge</span><span class="chip live">Fitness Reels</span></div>
     </div>
   </div>
   <div class="grid4">
@@ -475,7 +511,7 @@ select.fi option{background:#1A0A2E;}
   <div class="sec-sub">Live scores across all APP locations · Updated after every event</div>
   <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(168,85,247,.08));border:1px solid rgba(16,185,129,.4);border-radius:11px;padding:.9rem 1.2rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;">
     <span style="font-size:1.3rem;">⚡</span>
-    <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;color:var(--green);">Scoreboard is LIVE — Bonus Points Awarded!</div><div style="font-size:.75rem;color:rgba(255,255,255,.5);">The Orchestrators lead with 10 pts · AI-nstein Squad on 5 pts · Others ready to climb!</div></div>
+    <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;color:var(--green);">Scoreboard is LIVE — Bonus Points Awarded!</div><div style="font-size:.75rem;color:rgba(255,255,255,.5);">The Orchestrators lead with 10 pts · AI-nstein Squad on 5 pts</div></div>
     <span style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--green);">LIVE</span>
   </div>
   <div class="podium">
@@ -487,10 +523,10 @@ select.fi option{background:#1A0A2E;}
     <div class="lb-row r1"><div style="width:26px;text-align:center;">🥇</div><div class="lb-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">TO</div><div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">10</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
     <div class="lb-row r2"><div style="width:26px;text-align:center;">🥈</div><div class="lb-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">AI</div><div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:50%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts">5</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
     <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">NM</div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Naga · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">T3</div><div class="lb-info"><div class="lb-team">Team 3 (TBD)</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">T2</div><div class="lb-info"><div class="lb-team">Team 2 (TBD)</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
   </div>
   <div style="margin-top:1.2rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;">
-    <div style="font-size:.72rem;color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Scoring Criteria</div>
+    <div style="font-size:.72rem;color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">Scoring Criteria</div>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.65);">
       <span>🏅 Event Points</span><span>💡 Innovation Impact</span><span>🤝 Participation</span><span>🏆 Sports and Cultural</span><span>⭐ Bonus Points</span>
     </div>
@@ -509,8 +545,8 @@ select.fi option{background:#1A0A2E;}
   <div class="sec-sub" style="margin-bottom:1.2rem;">Three spectacular events to close out APP Fusion Fest '26</div>
   <div class="grid3" style="margin-bottom:1.8rem;">
     <div class="event-card" style="border-color:rgba(168,85,247,.35);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(168,85,247,.2),rgba(124,58,237,.1));"><div class="ev-icon">💡</div><span class="ev-type">Innovation</span></div><div class="ev-body"><div class="ev-name">Innovation Final Presentation</div><div class="ev-when">August 2026</div><div class="ev-desc">Final showcase of the best ideas from all 4 teams.</div></div></div>
-    <div class="event-card" style="border-color:rgba(236,72,153,.35);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.2),rgba(168,85,247,.1));"><div class="ev-icon">🎤</div><span class="ev-type" style="background:rgba(236,72,153,.2);border-color:rgba(236,72,153,.4);color:var(--pink);">Cultural</span></div><div class="ev-body"><div class="ev-name">Cultural Showcase</div><div class="ev-when">August 2026</div><div class="ev-desc">Dance, Music and Skit performances celebrating team creativity.</div></div></div>
-    <div class="event-card" style="border-color:rgba(245,158,11,.4);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));"><div class="ev-icon">🎊</div><span class="ev-type" style="background:rgba(245,158,11,.2);border-color:rgba(245,158,11,.4);color:var(--gold);">Awards</span></div><div class="ev-body"><div class="ev-name">Award Ceremony</div><div class="ev-when">August 2026</div><div class="ev-desc">Grand recognition of champions, top innovators and star performers.</div></div></div>
+    <div class="event-card" style="border-color:rgba(236,72,153,.35);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.2),rgba(168,85,247,.1));"><div class="ev-icon">🎤</div><span class="ev-type" style="color:var(--pink);">Cultural</span></div><div class="ev-body"><div class="ev-name">Cultural Showcase</div><div class="ev-when">August 2026</div><div class="ev-desc">Dance, Music and Skit performances celebrating team creativity.</div></div></div>
+    <div class="event-card" style="border-color:rgba(245,158,11,.4);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));"><div class="ev-icon">🎊</div><span class="ev-type" style="color:var(--gold);">Awards</span></div><div class="ev-body"><div class="ev-name">Award Ceremony</div><div class="ev-when">August 2026</div><div class="ev-desc">Grand recognition of champions, top innovators and star performers.</div></div></div>
   </div>
   <div class="sec-title" style="margin-bottom:.3rem;">🏅 <span>Awards</span></div>
   <div class="grid4">
@@ -521,9 +557,46 @@ select.fi option{background:#1A0A2E;}
   </div>
 </section>
 
+<!-- OUR TEAM -->
+<section id="organizers">
+  <div style="background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(236,72,153,.15));border:1px solid rgba(168,85,247,.35);border-radius:20px;padding:2.5rem 2rem;margin-bottom:2rem;text-align:center;">
+    <div style="font-size:2.5rem;margin-bottom:.5rem;">🌟</div>
+    <h2 style="font-size:2rem;font-weight:900;margin-bottom:.4rem;">The Minds Behind <span style="background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">the Fest</span></h2>
+    <p style="color:rgba(255,255,255,.55);font-size:.92rem;">The passionate team that dreamt it, planned it and made it happen</p>
+  </div>
+
+  <div class="sec-title" style="margin-bottom:1rem;">🏅 Program <span>Sponsor</span></div>
+  <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(168,85,247,.1));border:1px solid rgba(245,158,11,.4);">
+    <div class="org-avatar" style="background:linear-gradient(135deg,#F59E0B,#D97706);border:3px solid rgba(245,158,11,.5);">KC</div>
+    <div>
+      <div class="org-role" style="color:var(--gold);">🌟 Program Sponsor</div>
+      <div class="org-name">Kaladhar Challagondla (KC)</div>
+      <div class="org-sub">The visionary backing APP Fusion Fest '26</div>
+    </div>
+  </div>
+
+  <div class="sec-title" style="margin-bottom:1rem;">🎯 Program <span>Lead</span></div>
+  <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.4);">
+    <div class="org-avatar" style="background:linear-gradient(135deg,#A855F7,#EC4899);border:3px solid rgba(168,85,247,.5);">LS</div>
+    <div>
+      <div class="org-role" style="color:var(--pl);">🎯 Program Lead</div>
+      <div class="org-name">Linta Sebastian</div>
+      <div class="org-sub">Driving the vision and energy of APP Fusion Fest '26</div>
+    </div>
+  </div>
+
+  <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
+  <div class="grid3">
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">DK</div><div class="core-name">Deepak Suresh Kini</div><div class="core-role-badge">Core Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">SH</div><div class="core-name">Shikha Hurkat</div><div class="core-role-badge">Core Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#10B981,#14B8A6);">AK</div><div class="core-name">Ashwini Kundaram</div><div class="core-role-badge">Core Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">GM</div><div class="core-name">Gowri Myilsamy</div><div class="core-role-badge">Core Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">PN</div><div class="core-name">Pavan Kumar Natraj</div><div class="core-role-badge">Core Team</div></div>
+  </div>
+</section>
+
 <script>
 (function() {
-
   var ideas = [
     {name:'linta.sebastian', team:'The Orchestrators', title:'Test Idea',   cat:'Agentic AI'},
     {name:'linta.sebastian', team:'Neural Mavericks',  title:'Test idea',   cat:'Agentic AI'},
@@ -531,19 +604,6 @@ select.fi option{background:#1A0A2E;}
     {name:'linta.sebastian', team:'AI-nstein Squad',   title:'Test 1',      cat:'Agentic AI'},
     {name:'linta.sebastian', team:'The Orchestrators', title:'Test idea 1', cat:'Agentic AI'}
   ];
-
-  function toggleBio(btn) {
-    var bio = btn.previousElementSibling;
-    if (bio.classList.contains('expanded')) {
-      bio.classList.remove('expanded');
-      bio.textContent = bio.getAttribute('data-short');
-      btn.textContent = 'Read more ↓';
-    } else {
-      bio.classList.add('expanded');
-      bio.textContent = bio.getAttribute('data-full');
-      btn.textContent = 'Read less ↑';
-    }
-  }
 
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
@@ -556,8 +616,7 @@ select.fi option{background:#1A0A2E;}
     var target = document.getElementById(id);
     if (target) target.classList.add('active');
     for (i = 0; i < tabs.length; i++) {
-      var d = tabs[i].getAttribute('data-tab');
-      if (d === id) tabs[i].classList.add('active');
+      if (tabs[i].getAttribute('data-tab') === id) tabs[i].classList.add('active');
     }
     if (id === 'aibattle') renderDashboard();
   }
@@ -567,11 +626,9 @@ select.fi option{background:#1A0A2E;}
     var cbEl = document.getElementById('d-cat-list');
     var totalEl = document.getElementById('d-total');
     var teamsEl = document.getElementById('d-teams');
-    var catsEl  = document.getElementById('d-cats');
+    var catsEl = document.getElementById('d-cats');
     if (!tbEl || !cbEl) return;
-
     if (totalEl) totalEl.textContent = ideas.length;
-
     var tc = [], cc = [], i, j;
     for (i = 0; i < ideas.length; i++) {
       var ft = false;
@@ -581,25 +638,19 @@ select.fi option{background:#1A0A2E;}
       for (j = 0; j < cc.length; j++) { if (cc[j].n === ideas[i].cat) { cc[j].c++; fc = true; break; } }
       if (!fc) cc.push({n: ideas[i].cat, c: 1});
     }
-
     if (teamsEl) teamsEl.textContent = tc.length + ' / 4';
-    if (catsEl)  catsEl.textContent  = cc.length;
-
+    if (catsEl) catsEl.textContent = cc.length;
     tc.sort(function(a,b){ return b.c - a.c; });
     cc.sort(function(a,b){ return b.c - a.c; });
-
     var maxT = tc.length > 0 ? tc[0].c : 1;
     var cols = ['#F59E0B','#7C3AED','#EC4899','#6366F1','#10B981'];
-    var th = '', ch = '', i2;
-    for (i2 = 0; i2 < tc.length; i2++) {
-      var pct = Math.round((tc[i2].c / maxT) * 100);
-      th += '<div class="tbar-row">'
-        + '<div class="tbar-name">' + tc[i2].n + '</div>'
-        + '<div class="tbar-wrap"><div class="tbar-fill" style="width:' + pct + '%;background:' + cols[i2 % cols.length] + ';height:100%;border-radius:4px;"></div></div>'
-        + '<div class="tbar-count">' + tc[i2].c + '</div></div>';
+    var th = '', ch = '';
+    for (i = 0; i < tc.length; i++) {
+      var pct = Math.round((tc[i].c / maxT) * 100);
+      th += '<div class="tbar-row"><div class="tbar-name">' + tc[i].n + '</div><div class="tbar-wrap"><div class="tbar-fill" style="width:' + pct + '%;background:' + cols[i % cols.length] + ';height:100%;"></div></div><div class="tbar-count">' + tc[i].c + '</div></div>';
     }
-    for (i2 = 0; i2 < cc.length; i2++) {
-      ch += '<div class="cat-chip"><span>' + cc[i2].n + '</span><span class="cat-n">' + cc[i2].c + '</span></div>';
+    for (i = 0; i < cc.length; i++) {
+      ch += '<div class="cat-chip-d"><span>' + cc[i].n + '</span><span class="cat-n">' + cc[i].c + '</span></div>';
     }
     tbEl.innerHTML = th || '<div class="empty-msg">No entries yet</div>';
     cbEl.innerHTML = ch || '<div class="empty-msg">No entries yet</div>';
@@ -620,72 +671,27 @@ select.fi option{background:#1A0A2E;}
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-
-    // Nav tabs
     var tabs = document.querySelectorAll('.nt');
     for (var i = 0; i < tabs.length; i++) {
-      tabs[i].addEventListener('click', function() {
-        showTab(this.getAttribute('data-tab'));
-      });
+      tabs[i].addEventListener('click', function() { showTab(this.getAttribute('data-tab')); });
     }
-
-    // Journey rows
     var rows = document.querySelectorAll('.jrow');
     for (var i = 0; i < rows.length; i++) {
       rows[i].addEventListener('click', function() {
-        showTab(this.getAttribute('data-goto'));
+        var g = this.getAttribute('data-goto');
+        if (g) showTab(g);
       });
     }
-
-    // View agenda btn
     var vab = document.getElementById('view-agenda-btn');
-    if (vab) vab.addEventListener('click', function() { showTab('overview'); });
-
-    // Refresh btn
-    var rb = document.getElementById('refresh-btn');
-    if (rb) rb.addEventListener('click', renderDashboard);
-
-    // Org toggle
-    var ot = document.getElementById('org-toggle');
-    if (ot) ot.addEventListener('click', function() {
-      var f = document.getElementById('org-form');
-      if (f.style.display === 'none' || f.style.display === '') { f.style.display = 'block'; ot.textContent = '- Close'; }
-      else { f.style.display = 'none'; ot.textContent = '+ Add Entry'; }
+    if (vab) vab.addEventListener('click', function() {
+      showTab('overview');
+      var kd = document.getElementById('kickoff-detail');
+      if (kd) kd.scrollIntoView();
     });
-
-    // Add entry btn
-    var aeb = document.getElementById('add-entry-btn');
-    if (aeb) aeb.addEventListener('click', function() {
-      var n  = document.getElementById('org-name').value.trim();
-      var te = document.getElementById('org-team').value;
-      var ti = document.getElementById('org-title').value.trim();
-      var c  = document.getElementById('org-cat').value;
-      if (!n || !te || !ti || !c) { alert('Please fill all fields'); return; }
-      ideas.push({name:n, team:te, title:ti, cat:c});
-      renderDashboard();
-      var msg = document.getElementById('org-msg');
-      msg.style.display = 'inline';
-      setTimeout(function(){ msg.style.display = 'none'; }, 2500);
-      document.getElementById('org-name').value  = '';
-      document.getElementById('org-title').value = '';
-      document.getElementById('org-team').selectedIndex = 0;
-      document.getElementById('org-cat').selectedIndex  = 0;
-    });
-
-    // Clear btn
-    var cb = document.getElementById('clear-btn');
-    if (cb) cb.addEventListener('click', function() {
-      if (!confirm('Clear all entries?')) return;
-      ideas = [];
-      renderDashboard();
-    });
-
-    // Set overview active
     showTab('overview');
     updateCountdown();
     setInterval(updateCountdown, 1000);
   });
-
 }());
 </script>
 </body>
