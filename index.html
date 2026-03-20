@@ -329,8 +329,8 @@ select.fi option{background:#1A0A2E;}
         <div class="m-name">Harshad Nanal</div>
         <div class="m-handle">harshad.nanalal</div>
       </div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" class="ph" alt="KK"></div><div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthik Rajkumar Kannan</div><div class="m-handle">k.rajkumar.kannan</div><div class="m-bio">~19 years in enterprise architecture and AI engineering. Holds 8 AI patents. Passionate about travel and photography.</div></div>
-      <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" class="ph" alt="KL"></div><div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Kamlesh Lakshmanan</div><div class="m-handle">kamlesh.lakshmanan</div><div class="m-bio">19+ years at Accenture. Onshore USA experience across AT&T, Kohls, Starwood and NY Life Insurance. Loves racquet sports and drone videography.</div></div>
+      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" class="ph" alt="KK"></div><div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthik Rajkumar Kannan</div><div class="m-handle">k.rajkumar.kannan</div><div class="m-bio-short">~19 years in enterprise architecture & AI engineering. Holds 8 AI patents. Passionate about travel & photography.</div><div class="m-bio-full">~19 years in enterprise architecture & AI engineering. Holds 8 AI patents (4 awarded, 4 pending). Passionate about travel and currently exploring photography as a creative pursuit.</div><span class="read-more" onclick="toggleBio(this)">Read more</span></div>
+      <div class="member"><div class="avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" class="ph" alt="KL"></div><div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Kamlesh Lakshmanan</div><div class="m-handle">kamlesh.lakshmanan</div><div class="m-bio-short">19+ years at Accenture. Onshore USA experience across AT&T, Kohls, Starwood & NY Life Insurance.</div><div class="m-bio-full">19+ years at Accenture across diverse roles. Onshore USA experience with AT&T, Kohls, Starwood & NY Life Insurance. Passionate about racquet sports, aquariums, gardening & drone videography.</div><span class="read-more" onclick="toggleBio(this)">Read more</span></div>
       <div class="member"><div class="avatar" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#10B981,#14B8A6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" class="ph" alt="VB"></div><div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vinodhini Balakrishnan</div><div class="m-handle">b.vinodhini</div><div class="m-bio">15+ years in Oracle and Google Cloud. Leads INTIENT Infrastructure and AO team. Passionate about Mandala art.</div></div>
     </div>
   </div>
@@ -531,6 +531,19 @@ select.fi option{background:#1A0A2E;}
     {name:'linta.sebastian', team:'AI-nstein Squad',   title:'Test 1',      cat:'Agentic AI'},
     {name:'linta.sebastian', team:'The Orchestrators', title:'Test idea 1', cat:'Agentic AI'}
   ];
+
+  function toggleBio(btn) {
+    var bio = btn.previousElementSibling;
+    if (bio.classList.contains('expanded')) {
+      bio.classList.remove('expanded');
+      bio.textContent = bio.getAttribute('data-short');
+      btn.textContent = 'Read more ↓';
+    } else {
+      bio.classList.add('expanded');
+      bio.textContent = bio.getAttribute('data-full');
+      btn.textContent = 'Read less ↑';
+    }
+  }
 
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
