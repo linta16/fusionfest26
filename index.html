@@ -30,8 +30,6 @@ section.active{display:block;}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
 @media(max-width:700px){.grid2,.grid3,.grid4{grid-template-columns:1fr;}.nav-tabs{display:none;}}
-
-/* HERO */
 .hero{background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(124,58,237,.12));border:1px solid rgba(168,85,247,.35);border-radius:18px;padding:2.5rem 2rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
 .hero h1{font-size:2.4rem;font-weight:900;line-height:1.1;margin-bottom:.4rem;}
 .hero h1 span{background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
@@ -39,16 +37,12 @@ section.active{display:block;}
 .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;}
 .sn{font-size:1.7rem;font-weight:800;color:var(--pl);}
 .sl{font-size:.7rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.05em;}
-
-/* KICKOFF BANNER */
 .ko-banner{background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(168,85,247,.15));border:1px solid rgba(245,158,11,.45);border-radius:16px;padding:1.4rem 1.8rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .ko-timer{display:flex;gap:.7rem;}
 .kt{background:rgba(0,0,0,.35);border:1px solid rgba(245,158,11,.35);border-radius:9px;padding:.45rem .8rem;text-align:center;min-width:50px;}
 .ktn{font-size:1.4rem;font-weight:800;color:var(--gold);line-height:1;}
 .ktl{font-size:.55rem;color:rgba(255,255,255,.35);text-transform:uppercase;}
 .ko-btn{background:linear-gradient(135deg,var(--gold),#EF4444);color:#fff;border:none;border-radius:9px;padding:8px 18px;font-weight:700;font-size:.82rem;cursor:pointer;}
-
-/* JOURNEY */
 .jrow{display:flex;align-items:stretch;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;cursor:pointer;margin-bottom:.7rem;}
 .jrow.highlight{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.07);}
 .jrow.active-month{border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.1);}
@@ -62,8 +56,6 @@ section.active{display:block;}
 .dot-ko{background:var(--gold);box-shadow:0 0 10px var(--gold);}
 .dot-up{background:var(--pl);}
 .dot-live{background:var(--green);box-shadow:0 0 8px var(--green);}
-
-/* TEAMS */
 .team-block{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:1.5rem;}
 .team-hdr{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.6rem;border-bottom:1px solid var(--border);}
 .tn{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;flex-shrink:0;}
@@ -76,7 +68,8 @@ section.active{display:block;}
 .member.sponsor-card{border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);}
 .m-photo{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:.4rem;flex-shrink:0;}
 .m-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
-.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-weight:800;margin-bottom:.4rem;}
+/* Refined Option A placeholder */
+.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;font-weight:900;margin-bottom:.4rem;letter-spacing:-.02em;color:rgba(255,255,255,.95);text-shadow:0 2px 8px rgba(0,0,0,.25);}
 .role-badge{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 10px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;width:fit-content;}
 .rb-cap{background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);}
 .rb-ai{background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.5);color:var(--pl);}
@@ -85,8 +78,6 @@ section.active{display:block;}
 .m-name{font-weight:700;font-size:.88rem;}
 .m-handle{font-size:.68rem;color:rgba(255,255,255,.3);}
 .m-bio{font-size:.74rem;color:rgba(255,255,255,.5);line-height:1.5;margin-top:.2rem;}
-
-/* EVENTS */
 .event-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .ev-hdr{padding:.9rem 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);}
 .ev-icon{font-size:1.5rem;}
@@ -95,15 +86,11 @@ section.active{display:block;}
 .ev-name{font-weight:700;font-size:.95rem;margin-bottom:.2rem;}
 .ev-when{font-size:.72rem;color:var(--pl);font-weight:600;margin-bottom:.4rem;}
 .ev-desc{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.5;margin-bottom:.7rem;}
-
-/* SPORTS */
 .sport-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;text-align:center;}
 .sport-icon{font-size:2.5rem;margin-bottom:.6rem;}
 .sport-name{font-weight:800;font-size:1rem;margin-bottom:.3rem;}
 .sport-when{font-size:.72rem;color:var(--pink);font-weight:700;margin-bottom:.4rem;}
 .sport-desc{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.5;}
-
-/* LEADERBOARD */
 .podium{display:flex;justify-content:center;align-items:flex-end;gap:1rem;margin-bottom:1.8rem;}
 .pod-item{text-align:center;}
 .pod-block{border-radius:10px 10px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.8rem .6rem;width:115px;}
@@ -122,16 +109,12 @@ section.active{display:block;}
 .lb-bar-w{flex:1;height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden;}
 .lb-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--p),var(--pl));}
 .lb-pts{font-size:1.1rem;font-weight:800;color:var(--pl);}
-
-/* FINALE */
 .finale-hero{background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.2));border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:1.5rem;}
 .finale-hero h2{font-size:2rem;font-weight:900;margin-bottom:.4rem;}
 .award-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;text-align:center;}
 .award-icon{font-size:2rem;margin-bottom:.5rem;}
 .award-name{font-weight:800;font-size:.95rem;margin-bottom:.3rem;}
 .award-desc{font-size:.74rem;color:rgba(255,255,255,.45);line-height:1.5;}
-
-/* ORGANIZERS */
 .org-lead-card{border-radius:16px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
 .org-avatar{width:70px;height:70px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;flex-shrink:0;}
 .org-role{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;}
@@ -141,8 +124,6 @@ section.active{display:block;}
 .core-av{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800;}
 .core-name{font-weight:700;font-size:.88rem;}
 .core-role-badge{font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);}
-
-/* DASHBOARD */
 .dash-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;}
 @media(max-width:700px){.dash-grid{grid-template-columns:1fr;}}
 .dash-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;}
@@ -162,7 +143,6 @@ section.active{display:block;}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">
     <div class="logo-icon">🎯</div>
@@ -293,21 +273,21 @@ section.active{display:block;}
         <div class="m-handle">harshad.nanal</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>KR</div>'"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Karthik Rajkumar Kannan</div>
         <div class="m-handle">k.rajkumar.kannan</div>
         <div class="m-bio">19 yrs in AI engineering. Holds 8 AI patents. Travel and photography enthusiast.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>KL</div>'"></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Kamlesh Lakshmanan</div>
         <div class="m-handle">kamlesh.lakshmanan</div>
         <div class="m-bio">19+ yrs at Accenture. Loves racquet sports, drone videography and aquariums.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VB</div>'"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Vinodhini Balakrishnan</div>
         <div class="m-handle">b.vinodhini</div>
@@ -367,21 +347,21 @@ section.active{display:block;}
         <div class="m-handle">bipin.a.chandra</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>KS</div>'"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Karthika Subbiah</div>
         <div class="m-handle">karthika.subbiah</div>
         <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>VS</div>'"></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Vishal D. Singh</div>
         <div class="m-handle">vishal.d.singh</div>
         <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VS</div>'"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Vivek Sharma</div>
         <div class="m-handle">vivekr.sharma</div>
@@ -404,21 +384,21 @@ section.active{display:block;}
         <div class="m-handle">santhosh.r.nair</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>SD</div>'"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Satish D. Kumar</div>
         <div class="m-handle">satish.d.kumar</div>
         <div class="m-bio">Weekday executor, weekend optimizer. AI-driven thinker and data strategist.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>SC</div>'"></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Sulagna Chattopadhyay</div>
         <div class="m-handle">s.y.chattopadhyay</div>
         <div class="m-bio">Aligning talent and orchestrating the path to victory. Collaboration meets creativity.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div>'"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Ajith PuthanPisharath</div>
         <div class="m-handle">p.pisharath.ajith</div>
@@ -464,17 +444,11 @@ section.active{display:block;}
     </div>
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
       <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">👥 By Team</div>
-      <div id="d-team-bars">
-        <div class="tbar-row"><div class="tbar-name">The Orchestrators</div><div class="tbar-wrap"><div class="tbar-fill" style="width:100%;background:#F59E0B;"></div></div><div class="tbar-count">3</div></div>
-        <div class="tbar-row"><div class="tbar-name">Neural Mavericks</div><div class="tbar-wrap"><div class="tbar-fill" style="width:33%;background:#EC4899;"></div></div><div class="tbar-count">1</div></div>
-        <div class="tbar-row"><div class="tbar-name">AI-nstein Squad</div><div class="tbar-wrap"><div class="tbar-fill" style="width:33%;background:#7C3AED;"></div></div><div class="tbar-count">1</div></div>
-      </div>
+      <div id="d-team-bars"></div>
     </div>
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
       <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">🏷️ By Category</div>
-      <div id="d-cat-list">
-        <div class="cat-chip-d"><span>Agentic AI</span><span class="cat-n">5</span></div>
-      </div>
+      <div id="d-cat-list"></div>
     </div>
   </div>
 </section>
@@ -522,8 +496,8 @@ section.active{display:block;}
   <div>
     <div class="lb-row r1"><div style="width:26px;text-align:center;">🥇</div><div class="lb-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">TO</div><div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">10</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
     <div class="lb-row r2"><div style="width:26px;text-align:center;">🥈</div><div class="lb-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">AI</div><div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:50%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts">5</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">NM</div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Naga · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">T2</div><div class="lb-info"><div class="lb-team">Team 2 (TBD)</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">NM</div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">T2</div><div class="lb-info"><div class="lb-team">Team 2 (TBD)</div><div class="lb-detail">Capt: Naga · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
   </div>
   <div style="margin-top:1.2rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;">
     <div style="font-size:.72rem;color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">Scoring Criteria</div>
@@ -564,7 +538,6 @@ section.active{display:block;}
     <h2 style="font-size:2rem;font-weight:900;margin-bottom:.4rem;">The Minds Behind <span style="background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">the Fest</span></h2>
     <p style="color:rgba(255,255,255,.55);font-size:.92rem;">The passionate team that dreamt it, planned it and made it happen</p>
   </div>
-
   <div class="sec-title" style="margin-bottom:1rem;">🏅 Program <span>Sponsor</span></div>
   <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(168,85,247,.1));border:1px solid rgba(245,158,11,.4);">
     <div class="org-avatar" style="background:linear-gradient(135deg,#F59E0B,#D97706);border:3px solid rgba(245,158,11,.5);">KC</div>
@@ -574,7 +547,6 @@ section.active{display:block;}
       <div class="org-sub">The visionary backing APP Fusion Fest '26</div>
     </div>
   </div>
-
   <div class="sec-title" style="margin-bottom:1rem;">🎯 Program <span>Lead</span></div>
   <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.4);">
     <div class="org-avatar" style="background:linear-gradient(135deg,#A855F7,#EC4899);border:3px solid rgba(168,85,247,.5);">LS</div>
@@ -584,7 +556,6 @@ section.active{display:block;}
       <div class="org-sub">Driving the vision and energy of APP Fusion Fest '26</div>
     </div>
   </div>
-
   <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
   <div class="grid3">
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">DK</div><div class="core-name">Deepak Suresh Kini</div><div class="core-role-badge">Core Team</div></div>
@@ -596,101 +567,76 @@ section.active{display:block;}
 </section>
 
 <script>
-(function() {
-  var ideas = [
-    {name:'linta.sebastian', team:'The Orchestrators', title:'Test Idea',   cat:'Agentic AI'},
-    {name:'linta.sebastian', team:'Neural Mavericks',  title:'Test idea',   cat:'Agentic AI'},
-    {name:'linta.sebastian', team:'The Orchestrators', title:'Test Idea 2', cat:'Agentic AI'},
-    {name:'linta.sebastian', team:'AI-nstein Squad',   title:'Test 1',      cat:'Agentic AI'},
-    {name:'linta.sebastian', team:'The Orchestrators', title:'Test idea 1', cat:'Agentic AI'}
+(function(){
+  var ideas=[
+    {name:'linta.sebastian',team:'The Orchestrators',title:'Test Idea',cat:'Agentic AI'},
+    {name:'linta.sebastian',team:'Neural Mavericks',title:'Test idea',cat:'Agentic AI'},
+    {name:'linta.sebastian',team:'The Orchestrators',title:'Test Idea 2',cat:'Agentic AI'},
+    {name:'linta.sebastian',team:'AI-nstein Squad',title:'Test 1',cat:'Agentic AI'},
+    {name:'linta.sebastian',team:'The Orchestrators',title:'Test idea 1',cat:'Agentic AI'}
   ];
-
-  function pad(n) { return n < 10 ? '0' + n : '' + n; }
-
-  function showTab(id) {
-    var secs = document.querySelectorAll('section');
-    var tabs = document.querySelectorAll('.nt');
-    var i;
-    for (i = 0; i < secs.length; i++) secs[i].classList.remove('active');
-    for (i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
-    var target = document.getElementById(id);
-    if (target) target.classList.add('active');
-    for (i = 0; i < tabs.length; i++) {
-      if (tabs[i].getAttribute('data-tab') === id) tabs[i].classList.add('active');
-    }
-    if (id === 'aibattle') renderDashboard();
+  function pad(n){return n<10?'0'+n:''+n;}
+  function showTab(id){
+    var secs=document.querySelectorAll('section'),tabs=document.querySelectorAll('.nt'),i;
+    for(i=0;i<secs.length;i++)secs[i].classList.remove('active');
+    for(i=0;i<tabs.length;i++)tabs[i].classList.remove('active');
+    var t=document.getElementById(id);
+    if(t)t.classList.add('active');
+    for(i=0;i<tabs.length;i++){if(tabs[i].getAttribute('data-tab')===id)tabs[i].classList.add('active');}
+    if(id==='aibattle')renderDashboard();
   }
-
-  function renderDashboard() {
-    var tbEl = document.getElementById('d-team-bars');
-    var cbEl = document.getElementById('d-cat-list');
-    var totalEl = document.getElementById('d-total');
-    var teamsEl = document.getElementById('d-teams');
-    var catsEl = document.getElementById('d-cats');
-    if (!tbEl || !cbEl) return;
-    if (totalEl) totalEl.textContent = ideas.length;
-    var tc = [], cc = [], i, j;
-    for (i = 0; i < ideas.length; i++) {
-      var ft = false;
-      for (j = 0; j < tc.length; j++) { if (tc[j].n === ideas[i].team) { tc[j].c++; ft = true; break; } }
-      if (!ft) tc.push({n: ideas[i].team, c: 1});
-      var fc = false;
-      for (j = 0; j < cc.length; j++) { if (cc[j].n === ideas[i].cat) { cc[j].c++; fc = true; break; } }
-      if (!fc) cc.push({n: ideas[i].cat, c: 1});
+  function renderDashboard(){
+    var tbEl=document.getElementById('d-team-bars'),cbEl=document.getElementById('d-cat-list');
+    var totalEl=document.getElementById('d-total'),teamsEl=document.getElementById('d-teams'),catsEl=document.getElementById('d-cats');
+    if(!tbEl||!cbEl)return;
+    if(totalEl)totalEl.textContent=ideas.length;
+    var tc=[],cc=[],i,j;
+    for(i=0;i<ideas.length;i++){
+      var ft=false;
+      for(j=0;j<tc.length;j++){if(tc[j].n===ideas[i].team){tc[j].c++;ft=true;break;}}
+      if(!ft)tc.push({n:ideas[i].team,c:1});
+      var fc=false;
+      for(j=0;j<cc.length;j++){if(cc[j].n===ideas[i].cat){cc[j].c++;fc=true;break;}}
+      if(!fc)cc.push({n:ideas[i].cat,c:1});
     }
-    if (teamsEl) teamsEl.textContent = tc.length + ' / 4';
-    if (catsEl) catsEl.textContent = cc.length;
-    tc.sort(function(a,b){ return b.c - a.c; });
-    cc.sort(function(a,b){ return b.c - a.c; });
-    var maxT = tc.length > 0 ? tc[0].c : 1;
-    var cols = ['#F59E0B','#7C3AED','#EC4899','#6366F1','#10B981'];
-    var th = '', ch = '';
-    for (i = 0; i < tc.length; i++) {
-      var pct = Math.round((tc[i].c / maxT) * 100);
-      th += '<div class="tbar-row"><div class="tbar-name">' + tc[i].n + '</div><div class="tbar-wrap"><div class="tbar-fill" style="width:' + pct + '%;background:' + cols[i % cols.length] + ';height:100%;"></div></div><div class="tbar-count">' + tc[i].c + '</div></div>';
+    if(teamsEl)teamsEl.textContent=tc.length+' / 4';
+    if(catsEl)catsEl.textContent=cc.length;
+    tc.sort(function(a,b){return b.c-a.c;});
+    cc.sort(function(a,b){return b.c-a.c;});
+    var maxT=tc.length>0?tc[0].c:1;
+    var cols=['#F59E0B','#7C3AED','#EC4899','#6366F1','#10B981'];
+    var th='',ch='';
+    for(i=0;i<tc.length;i++){
+      var pct=Math.round((tc[i].c/maxT)*100);
+      th+='<div class="tbar-row"><div class="tbar-name">'+tc[i].n+'</div><div class="tbar-wrap"><div class="tbar-fill" style="width:'+pct+'%;background:'+cols[i%cols.length]+';height:100%;"></div></div><div class="tbar-count">'+tc[i].c+'</div></div>';
     }
-    for (i = 0; i < cc.length; i++) {
-      ch += '<div class="cat-chip-d"><span>' + cc[i].n + '</span><span class="cat-n">' + cc[i].c + '</span></div>';
+    for(i=0;i<cc.length;i++){
+      ch+='<div class="cat-chip-d"><span>'+cc[i].n+'</span><span class="cat-n">'+cc[i].c+'</span></div>';
     }
-    tbEl.innerHTML = th || '<div class="empty-msg">No entries yet</div>';
-    cbEl.innerHTML = ch || '<div class="empty-msg">No entries yet</div>';
+    tbEl.innerHTML=th||'<div class="empty-msg">No entries yet</div>';
+    cbEl.innerHTML=ch||'<div class="empty-msg">No entries yet</div>';
   }
-
-  function updateCountdown() {
-    var diff = new Date('2026-03-27T10:00:00') - new Date();
-    var d = document.getElementById('ko-d');
-    var h = document.getElementById('ko-h');
-    var m = document.getElementById('ko-m');
-    var s = document.getElementById('ko-s');
-    if (!d) return;
-    if (diff <= 0) { d.textContent='00'; h.textContent='00'; m.textContent='00'; s.textContent='00'; return; }
-    d.textContent = pad(Math.floor(diff / 86400000));
-    h.textContent = pad(Math.floor((diff % 86400000) / 3600000));
-    m.textContent = pad(Math.floor((diff % 3600000) / 60000));
-    s.textContent = pad(Math.floor((diff % 60000) / 1000));
+  function updateCountdown(){
+    var diff=new Date('2026-03-27T10:00:00')-new Date();
+    var d=document.getElementById('ko-d'),h=document.getElementById('ko-h'),m=document.getElementById('ko-m'),s=document.getElementById('ko-s');
+    if(!d)return;
+    if(diff<=0){d.textContent='00';h.textContent='00';m.textContent='00';s.textContent='00';return;}
+    d.textContent=pad(Math.floor(diff/86400000));
+    h.textContent=pad(Math.floor((diff%86400000)/3600000));
+    m.textContent=pad(Math.floor((diff%3600000)/60000));
+    s.textContent=pad(Math.floor((diff%60000)/1000));
   }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var tabs = document.querySelectorAll('.nt');
-    for (var i = 0; i < tabs.length; i++) {
-      tabs[i].addEventListener('click', function() { showTab(this.getAttribute('data-tab')); });
-    }
-    var rows = document.querySelectorAll('.jrow');
-    for (var i = 0; i < rows.length; i++) {
-      rows[i].addEventListener('click', function() {
-        var g = this.getAttribute('data-goto');
-        if (g) showTab(g);
-      });
-    }
-    var vab = document.getElementById('view-agenda-btn');
-    if (vab) vab.addEventListener('click', function() {
-      showTab('overview');
-      var kd = document.getElementById('kickoff-detail');
-      if (kd) kd.scrollIntoView();
-    });
+  document.addEventListener('DOMContentLoaded',function(){
+    var tabs=document.querySelectorAll('.nt'),i;
+    for(i=0;i<tabs.length;i++){tabs[i].addEventListener('click',function(){showTab(this.getAttribute('data-tab'));});}
+    var rows=document.querySelectorAll('.jrow');
+    for(i=0;i<rows.length;i++){rows[i].addEventListener('click',function(){var g=this.getAttribute('data-goto');if(g)showTab(g);});}
+    var vab=document.getElementById('view-agenda-btn');
+    if(vab)vab.addEventListener('click',function(){showTab('overview');var kd=document.getElementById('kickoff-detail');if(kd)kd.scrollIntoView();});
     showTab('overview');
+    renderDashboard();
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown,1000);
   });
 }());
 </script>
