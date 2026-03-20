@@ -30,7 +30,7 @@ section.active{display:block;}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
 @media(max-width:700px){.grid2,.grid3,.grid4{grid-template-columns:1fr;}.nav-tabs{display:none;}}
-.hero{background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(124,58,237,.12));border:1px solid rgba(168,85,247,.35);border-radius:18px;padding:2.5rem 2rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
+.hero{background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(124,58,237,.12));border:1px solid rgba(168,85,247,.35);border-radius:18px;padding:2.5rem 2rem;margin-bottom:1.5rem;}
 .hero h1{font-size:2.4rem;font-weight:900;line-height:1.1;margin-bottom:.4rem;}
 .hero h1 span{background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hero p{color:rgba(255,255,255,.6);font-size:.92rem;margin-bottom:1.5rem;}
@@ -45,7 +45,6 @@ section.active{display:block;}
 .ko-btn{background:linear-gradient(135deg,var(--gold),#EF4444);color:#fff;border:none;border-radius:9px;padding:8px 18px;font-weight:700;font-size:.82rem;cursor:pointer;}
 .jrow{display:flex;align-items:stretch;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;cursor:pointer;margin-bottom:.7rem;}
 .jrow.highlight{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.07);}
-.jrow.active-month{border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.1);}
 .j-icon{font-size:1.8rem;display:flex;align-items:center;width:40px;flex-shrink:0;}
 .j-month{font-size:.68rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem;}
 .j-title{font-weight:700;font-size:.95rem;margin-bottom:.2rem;}
@@ -55,7 +54,6 @@ section.active{display:block;}
 .j-dot{width:9px;height:9px;border-radius:50%;}
 .dot-ko{background:var(--gold);box-shadow:0 0 10px var(--gold);}
 .dot-up{background:var(--pl);}
-.dot-live{background:var(--green);box-shadow:0 0 8px var(--green);}
 .team-block{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:1.5rem;}
 .team-hdr{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.6rem;border-bottom:1px solid var(--border);}
 .tn{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;flex-shrink:0;}
@@ -68,8 +66,12 @@ section.active{display:block;}
 .member.sponsor-card{border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);}
 .m-photo{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:.4rem;flex-shrink:0;}
 .m-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
-/* Refined Option A placeholder */
-.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;font-weight:900;margin-bottom:.4rem;letter-spacing:-.02em;color:rgba(255,255,255,.95);text-shadow:0 2px 8px rgba(0,0,0,.25);}
+/* Option B — large circle on dashed bg */
+.m-photo-initials{width:100%;height:160px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;margin-bottom:.4rem;border:1.5px dashed rgba(168,85,247,0.3);background:rgba(168,85,247,0.07);}
+.m-photo-initials .ini-circle{width:118px;height:118px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.6rem;font-weight:900;color:rgba(255,255,255,.95);letter-spacing:-.02em;}
+.m-photo-initials .ini-label{font-size:.58rem;color:rgba(255,255,255,.28);font-style:italic;letter-spacing:.03em;}
+/* sponsor card dashed border uses gold tint */
+.sponsor-card .m-photo-initials{border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06);}
 .role-badge{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 10px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;width:fit-content;}
 .rb-cap{background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);color:var(--gold);}
 .rb-ai{background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.5);color:var(--pl);}
@@ -197,7 +199,7 @@ section.active{display:block;}
   <div class="sec-title" style="margin-bottom:.3rem;">📅 6-Month <span>Journey</span></div>
   <div class="sec-sub">Click any month to explore</div>
   <div style="margin-bottom:1.8rem;">
-    <div class="jrow highlight" data-goto="overview" id="kickoff-row">
+    <div class="jrow highlight" data-goto="overview">
       <div class="j-icon">🚀</div>
       <div style="flex:1"><div class="j-month">27th March 2026</div><div class="j-title">Grand Kick Off</div><div class="j-theme">Virtual Curtain Raiser · Leadership Address · Team Reveal · APP Quiz League</div><div class="j-chips"><span class="chip gold">Countdown On</span><span class="chip gold">Virtual 1 Hour</span></div></div>
       <div class="j-right"><div class="j-dot dot-ko"></div></div>
@@ -258,7 +260,6 @@ section.active{display:block;}
 <section id="teams">
   <div class="sec-title">👥 Meet the <span>Teams</span></div>
   <div class="sec-sub">4 balanced teams · Sponsor · AI Champion · Captain · Engagement Champion</div>
-
   <!-- TEAM 1 -->
   <div class="team-block" style="border-color:rgba(168,85,247,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));">
@@ -267,27 +268,27 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">HN</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#F59E0B,#D97706);">HN</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Harshad Nanal</div>
         <div class="m-handle">harshad.nanal</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>KR</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>KR</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Karthik Rajkumar Kannan</div>
         <div class="m-handle">k.rajkumar.kannan</div>
         <div class="m-bio">19 yrs in AI engineering. Holds 8 AI patents. Travel and photography enthusiast.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>KL</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>KL</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Kamlesh Lakshmanan</div>
         <div class="m-handle">kamlesh.lakshmanan</div>
         <div class="m-bio">19+ yrs at Accenture. Loves racquet sports, drone videography and aquariums.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VB</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VB</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Vinodhini Balakrishnan</div>
         <div class="m-handle">b.vinodhini</div>
@@ -295,7 +296,6 @@ section.active{display:block;}
       </div>
     </div>
   </div>
-
   <!-- TEAM 2 -->
   <div class="team-block" style="border-color:rgba(99,102,241,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(99,102,241,.3),rgba(139,92,246,.1));">
@@ -304,27 +304,27 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">SP</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#F59E0B,#D97706);">SP</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Shobha Puttanna</div>
         <div class="m-handle">shobha.b.puttanna</div>
       </div>
       <div class="member">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">JM</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">JM</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Jyoti Misra Parashar</div>
         <div class="m-handle">jyoti.misra.parashar</div>
         <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
       </div>
       <div class="member">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#F97316);">NT</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#F59E0B,#F97316);">NT</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Naga K. Tankala</div>
         <div class="m-handle">naga.k.tankala</div>
         <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
       </div>
       <div class="member">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#10B981,#059669);">VK</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#10B981,#059669);">VK</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Venkatesh B. Kesari</div>
         <div class="m-handle">venkatesh.b.kesari</div>
@@ -332,7 +332,6 @@ section.active{display:block;}
       </div>
     </div>
   </div>
-
   <!-- TEAM 3 -->
   <div class="team-block" style="border-color:rgba(236,72,153,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(168,85,247,.1));">
@@ -341,27 +340,27 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">BC</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#F59E0B,#D97706);">BC</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Bipin Chandra</div>
         <div class="m-handle">bipin.a.chandra</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>KS</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>KS</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Karthika Subbiah</div>
         <div class="m-handle">karthika.subbiah</div>
         <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>VS</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>VS</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Vishal D. Singh</div>
         <div class="m-handle">vishal.d.singh</div>
         <div class="m-bio" style="font-style:italic;color:rgba(255,255,255,.3);">Bio coming soon</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VS</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VS</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Vivek Sharma</div>
         <div class="m-handle">vivekr.sharma</div>
@@ -369,7 +368,6 @@ section.active{display:block;}
       </div>
     </div>
   </div>
-
   <!-- TEAM 4 -->
   <div class="team-block" style="border-color:rgba(245,158,11,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));">
@@ -378,27 +376,27 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="m-photo-initials" style="background:linear-gradient(135deg,#F59E0B,#D97706);">SN</div>
+        <div class="m-photo-initials"><span class="ini-circle" style="background:linear-gradient(135deg,#F59E0B,#D97706);">SN</span><span class="ini-label">Photo coming soon</span></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div>
         <div class="m-name">Santhosh Nair</div>
         <div class="m-handle">santhosh.r.nair</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>SD</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>SD</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div>
         <div class="m-name">Satish D. Kumar</div>
         <div class="m-handle">satish.d.kumar</div>
         <div class="m-bio">Weekday executor, weekend optimizer. AI-driven thinker and data strategist.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>SC</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>SC</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-cap">👑 Captain</div>
         <div class="m-name">Sulagna Chattopadhyay</div>
         <div class="m-handle">s.y.chattopadhyay</div>
         <div class="m-bio">Aligning talent and orchestrating the path to victory. Collaboration meets creativity.</div>
       </div>
       <div class="member">
-        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div>'"></div>
+        <div class="m-photo"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith" onerror="this.parentNode.outerHTML='<div class=\'m-photo-initials\'><span class=\'ini-circle\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</span><span class=\'ini-label\'>Photo coming soon</span></div>'"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div>
         <div class="m-name">Ajith PuthanPisharath</div>
         <div class="m-handle">p.pisharath.ajith</div>
@@ -541,20 +539,12 @@ section.active{display:block;}
   <div class="sec-title" style="margin-bottom:1rem;">🏅 Program <span>Sponsor</span></div>
   <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(168,85,247,.1));border:1px solid rgba(245,158,11,.4);">
     <div class="org-avatar" style="background:linear-gradient(135deg,#F59E0B,#D97706);border:3px solid rgba(245,158,11,.5);">KC</div>
-    <div>
-      <div class="org-role" style="color:var(--gold);">🌟 Program Sponsor</div>
-      <div class="org-name">Kaladhar Challagondla (KC)</div>
-      <div class="org-sub">The visionary backing APP Fusion Fest '26</div>
-    </div>
+    <div><div class="org-role" style="color:var(--gold);">🌟 Program Sponsor</div><div class="org-name">Kaladhar Challagondla (KC)</div><div class="org-sub">The visionary backing APP Fusion Fest '26</div></div>
   </div>
   <div class="sec-title" style="margin-bottom:1rem;">🎯 Program <span>Lead</span></div>
   <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.4);">
     <div class="org-avatar" style="background:linear-gradient(135deg,#A855F7,#EC4899);border:3px solid rgba(168,85,247,.5);">LS</div>
-    <div>
-      <div class="org-role" style="color:var(--pl);">🎯 Program Lead</div>
-      <div class="org-name">Linta Sebastian</div>
-      <div class="org-sub">Driving the vision and energy of APP Fusion Fest '26</div>
-    </div>
+    <div><div class="org-role" style="color:var(--pl);">🎯 Program Lead</div><div class="org-name">Linta Sebastian</div><div class="org-sub">Driving the vision and energy of APP Fusion Fest '26</div></div>
   </div>
   <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
   <div class="grid3">
@@ -580,8 +570,7 @@ section.active{display:block;}
     var secs=document.querySelectorAll('section'),tabs=document.querySelectorAll('.nt'),i;
     for(i=0;i<secs.length;i++)secs[i].classList.remove('active');
     for(i=0;i<tabs.length;i++)tabs[i].classList.remove('active');
-    var t=document.getElementById(id);
-    if(t)t.classList.add('active');
+    var t=document.getElementById(id);if(t)t.classList.add('active');
     for(i=0;i<tabs.length;i++){if(tabs[i].getAttribute('data-tab')===id)tabs[i].classList.add('active');}
     if(id==='aibattle')renderDashboard();
   }
@@ -592,27 +581,17 @@ section.active{display:block;}
     if(totalEl)totalEl.textContent=ideas.length;
     var tc=[],cc=[],i,j;
     for(i=0;i<ideas.length;i++){
-      var ft=false;
-      for(j=0;j<tc.length;j++){if(tc[j].n===ideas[i].team){tc[j].c++;ft=true;break;}}
+      var ft=false;for(j=0;j<tc.length;j++){if(tc[j].n===ideas[i].team){tc[j].c++;ft=true;break;}}
       if(!ft)tc.push({n:ideas[i].team,c:1});
-      var fc=false;
-      for(j=0;j<cc.length;j++){if(cc[j].n===ideas[i].cat){cc[j].c++;fc=true;break;}}
+      var fc=false;for(j=0;j<cc.length;j++){if(cc[j].n===ideas[i].cat){cc[j].c++;fc=true;break;}}
       if(!fc)cc.push({n:ideas[i].cat,c:1});
     }
     if(teamsEl)teamsEl.textContent=tc.length+' / 4';
     if(catsEl)catsEl.textContent=cc.length;
-    tc.sort(function(a,b){return b.c-a.c;});
-    cc.sort(function(a,b){return b.c-a.c;});
-    var maxT=tc.length>0?tc[0].c:1;
-    var cols=['#F59E0B','#7C3AED','#EC4899','#6366F1','#10B981'];
-    var th='',ch='';
-    for(i=0;i<tc.length;i++){
-      var pct=Math.round((tc[i].c/maxT)*100);
-      th+='<div class="tbar-row"><div class="tbar-name">'+tc[i].n+'</div><div class="tbar-wrap"><div class="tbar-fill" style="width:'+pct+'%;background:'+cols[i%cols.length]+';height:100%;"></div></div><div class="tbar-count">'+tc[i].c+'</div></div>';
-    }
-    for(i=0;i<cc.length;i++){
-      ch+='<div class="cat-chip-d"><span>'+cc[i].n+'</span><span class="cat-n">'+cc[i].c+'</span></div>';
-    }
+    tc.sort(function(a,b){return b.c-a.c;});cc.sort(function(a,b){return b.c-a.c;});
+    var maxT=tc.length>0?tc[0].c:1,cols=['#F59E0B','#7C3AED','#EC4899','#6366F1','#10B981'],th='',ch='',i;
+    for(i=0;i<tc.length;i++){var pct=Math.round((tc[i].c/maxT)*100);th+='<div class="tbar-row"><div class="tbar-name">'+tc[i].n+'</div><div class="tbar-wrap"><div class="tbar-fill" style="width:'+pct+'%;background:'+cols[i%cols.length]+';height:100%;"></div></div><div class="tbar-count">'+tc[i].c+'</div></div>';}
+    for(i=0;i<cc.length;i++){ch+='<div class="cat-chip-d"><span>'+cc[i].n+'</span><span class="cat-n">'+cc[i].c+'</span></div>';}
     tbEl.innerHTML=th||'<div class="empty-msg">No entries yet</div>';
     cbEl.innerHTML=ch||'<div class="empty-msg">No entries yet</div>';
   }
@@ -621,10 +600,8 @@ section.active{display:block;}
     var d=document.getElementById('ko-d'),h=document.getElementById('ko-h'),m=document.getElementById('ko-m'),s=document.getElementById('ko-s');
     if(!d)return;
     if(diff<=0){d.textContent='00';h.textContent='00';m.textContent='00';s.textContent='00';return;}
-    d.textContent=pad(Math.floor(diff/86400000));
-    h.textContent=pad(Math.floor((diff%86400000)/3600000));
-    m.textContent=pad(Math.floor((diff%3600000)/60000));
-    s.textContent=pad(Math.floor((diff%60000)/1000));
+    d.textContent=pad(Math.floor(diff/86400000));h.textContent=pad(Math.floor((diff%86400000)/3600000));
+    m.textContent=pad(Math.floor((diff%3600000)/60000));s.textContent=pad(Math.floor((diff%60000)/1000));
   }
   document.addEventListener('DOMContentLoaded',function(){
     var tabs=document.querySelectorAll('.nt'),i;
@@ -633,10 +610,7 @@ section.active{display:block;}
     for(i=0;i<rows.length;i++){rows[i].addEventListener('click',function(){var g=this.getAttribute('data-goto');if(g)showTab(g);});}
     var vab=document.getElementById('view-agenda-btn');
     if(vab)vab.addEventListener('click',function(){showTab('overview');var kd=document.getElementById('kickoff-detail');if(kd)kd.scrollIntoView();});
-    showTab('overview');
-    renderDashboard();
-    updateCountdown();
-    setInterval(updateCountdown,1000);
+    showTab('overview');renderDashboard();updateCountdown();setInterval(updateCountdown,1000);
   });
 }());
 </script>
