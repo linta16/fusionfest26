@@ -202,7 +202,7 @@ section.active{display:block;}
     <div class="jrow" data-goto="sports"><div class="j-icon">🏃</div><div style="flex:1"><div class="j-month">July 2026</div><div class="j-title">Move and Momentum — Step Challenge and Fitness Reels</div><div class="j-theme">Well-being · Morale · Informal bonding</div><div class="j-chips"><span class="chip pink">Sports and Wellness</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="finale"><div class="j-icon">🎊</div><div style="flex:1"><div class="j-month">August 2026</div><div class="j-title">Showcase and Celebrate — Grand Finale</div><div class="j-theme">Cultural Showcase · Innovation Finals · Award Ceremony</div><div class="j-chips"><span class="chip gold">Grand Finale</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
   </div>
-  <div id="kickoff-detail">
+  <div id="kickoff-detail" style="display:none;">
     <div class="sec-title" style="margin-bottom:.3rem;">🚀 Kick Off <span>Agenda</span></div>
     <div class="sec-sub">Thursday 27th March 2026 · 3:30 PM – 4:30 PM · MS Teams · All Locations</div>
     <div class="grid2" style="margin-bottom:1rem;">
@@ -499,16 +499,15 @@ section.active{display:block;}
     for(i=0;i<rows.length;i++){rows[i].addEventListener('click',function(){var g=this.getAttribute('data-goto');if(g)showTab(g);});}
     var vab=document.getElementById('view-agenda-btn');
     if(vab)vab.addEventListener('click',function(){
-      showTab('overview');
-      setTimeout(function(){
-        var kd=document.getElementById('kickoff-detail');
-        if(kd){
-          var top=kd.getBoundingClientRect().top + (window.pageYOffset||document.documentElement.scrollTop) - 70;
-          window.scrollTo({top:top,behavior:'smooth'});
-          try{window.parent.scrollTo({top:top,behavior:'smooth'});}catch(e){}
-          kd.scrollIntoView({behavior:'smooth',block:'start'});
-        }
-      },100);
+      var kd=document.getElementById('kickoff-detail');
+      if(!kd)return;
+      if(kd.style.display==='none'){
+        kd.style.display='block';
+        vab.textContent='Hide Agenda';
+      } else {
+        kd.style.display='none';
+        vab.textContent='View Agenda';
+      }
     });
     showTab('overview');renderDashboard();updateCountdown();setInterval(updateCountdown,1000);
   });
