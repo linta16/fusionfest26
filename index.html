@@ -37,12 +37,18 @@ section.active{display:block;}
 .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;}
 .sn{font-size:1.7rem;font-weight:800;color:var(--pl);}
 .sl{font-size:.7rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.05em;}
-.ko-banner{background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(168,85,247,.15));border:1px solid rgba(245,158,11,.45);border-radius:16px;padding:1.4rem 1.8rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.ko-banner{background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(168,85,247,.15));border:1px solid rgba(245,158,11,.45);border-radius:16px;padding:1.4rem 1.8rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .ko-timer{display:flex;gap:.7rem;}
 .kt{background:rgba(0,0,0,.35);border:1px solid rgba(245,158,11,.35);border-radius:9px;padding:.45rem .8rem;text-align:center;min-width:50px;}
 .ktn{font-size:1.4rem;font-weight:800;color:var(--gold);line-height:1;}
 .ktl{font-size:.55rem;color:rgba(255,255,255,.35);text-transform:uppercase;}
 .ko-btn{background:linear-gradient(135deg,var(--gold),#EF4444);color:#fff;border:none;border-radius:9px;padding:8px 18px;font-weight:700;font-size:.82rem;cursor:pointer;}
+.agenda-box{background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(168,85,247,.08));border:1px solid rgba(245,158,11,.35);border-radius:14px;padding:1.4rem;margin-bottom:1.5rem;}
+.agenda-row{display:flex;align-items:flex-start;gap:.8rem;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.agenda-row:last-child{border-bottom:none;}
+.agenda-time{font-size:.7rem;font-weight:700;color:var(--gold);white-space:nowrap;min-width:100px;padding-top:2px;}
+.agenda-title{font-weight:700;font-size:.88rem;}
+.agenda-owner{font-size:.74rem;color:rgba(255,255,255,.45);margin-top:2px;}
 .jrow{display:flex;align-items:stretch;gap:1rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;cursor:pointer;margin-bottom:.7rem;}
 .jrow.highlight{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.07);}
 .j-icon{font-size:1.8rem;display:flex;align-items:center;width:40px;flex-shrink:0;}
@@ -120,7 +126,7 @@ section.active{display:block;}
 .org-name{font-size:1.2rem;font-weight:800;}
 .org-sub{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.2rem;}
 .core-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;}
-.core-av{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800;}
+.core-av{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800;overflow:hidden;}
 .core-name{font-weight:700;font-size:.88rem;}
 .core-role-badge{font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);}
 .dash-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;}
@@ -188,6 +194,21 @@ section.active{display:block;}
     </div>
     <button class="ko-btn" id="view-agenda-btn">View Agenda</button>
   </div>
+
+  <!-- AGENDA — toggles open below the banner -->
+  <div id="kickoff-detail" style="display:none;margin-bottom:1.5rem;">
+    <div class="agenda-box">
+      <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem;">🚀 Kick Off Agenda · Thursday 27th March · 3:30–4:30 PM · MS Teams</div>
+      <div class="agenda-row"><div class="agenda-time">3:30 – 3:33</div><div><div class="agenda-title">Welcoming the Audience</div><div class="agenda-owner">Emcee</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:33 – 3:38</div><div><div class="agenda-title">Brief Intro on APP Fusion Fest 2026</div><div class="agenda-owner">Linta</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:38 – 3:43</div><div><div class="agenda-title">Portal Launch and Event Kick Off</div><div class="agenda-owner">Santhosh / MDs</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:43 – 3:48</div><div><div class="agenda-title">Teams / Sponsors / Captains Announcement</div><div class="agenda-owner">Anitta</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">3:48 – 4:03</div><div><div class="agenda-title">Sponsors and Captains Intro</div><div class="agenda-owner"></div></div></div>
+      <div class="agenda-row"><div class="agenda-time">4:03 – 4:28</div><div><div class="agenda-title">Quiz</div><div class="agenda-owner">Gowri / Pavan / Shikha</div></div></div>
+      <div class="agenda-row"><div class="agenda-time">4:28 – 4:30</div><div><div class="agenda-title">Closing Notes, Thanks and Heads-up for April Events</div><div class="agenda-owner">Deepak</div></div></div>
+    </div>
+  </div>
+
   <div class="progress-section">
     <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span style="font-weight:600;">Journey Progress</span><span style="color:var(--pl);">Month 1 of 6</span></div>
     <div class="progress-bar"><div class="progress-fill" style="width:8%"></div></div>
@@ -202,35 +223,11 @@ section.active{display:block;}
     <div class="jrow" data-goto="sports"><div class="j-icon">🏃</div><div style="flex:1"><div class="j-month">July 2026</div><div class="j-title">Move and Momentum — Step Challenge and Fitness Reels</div><div class="j-theme">Well-being · Morale · Informal bonding</div><div class="j-chips"><span class="chip pink">Sports and Wellness</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="finale"><div class="j-icon">🎊</div><div style="flex:1"><div class="j-month">August 2026</div><div class="j-title">Showcase and Celebrate — Grand Finale</div><div class="j-theme">Cultural Showcase · Innovation Finals · Award Ceremony</div><div class="j-chips"><span class="chip gold">Grand Finale</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
   </div>
-  <div id="kickoff-detail" style="display:none;">
-    <div class="sec-title" style="margin-bottom:.3rem;">🚀 Kick Off <span>Agenda</span></div>
-    <div class="sec-sub">Thursday 27th March 2026 · 3:30 PM – 4:30 PM · MS Teams · All Locations</div>
-    <div class="grid2" style="margin-bottom:1rem;">
-      <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:1.3rem;">
-        <div style="display:flex;flex-direction:column;gap:.8rem;">
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:30–3:33</span><div><div style="font-weight:700;font-size:.88rem;">Welcoming the Audience</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Emcee · 3 mins</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:33–3:40</span><div><div style="font-weight:700;font-size:.88rem;">Brief Intro on APP Fusion Fest 2026</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Linta · 7 mins</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--gold);white-space:nowrap;flex-shrink:0;">3:40–3:45</span><div><div style="font-weight:700;font-size:.88rem;">Portal Launch and Event Kick Off</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Santhosh · 5 mins</div></div></div>
-        </div>
-      </div>
-      <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:1.3rem;">
-        <div style="display:flex;flex-direction:column;gap:.8rem;">
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:45–3:50</span><div><div style="font-weight:700;font-size:.88rem;">Teams / Sponsors / Captains Announcement</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Anitta · 5 mins</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:50–4:05</span><div><div style="font-weight:700;font-size:.88rem;">Sponsors and Captains Intro</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">15 mins</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--gold);white-space:nowrap;flex-shrink:0;">4:05–4:30</span><div><div style="font-weight:700;font-size:.88rem;">Quiz</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Gowri / Pavan / Shikha · 25 mins</div></div></div>
-        </div>
-      </div>
-    </div>
-    <div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:.9rem 1.1rem;display:flex;align-items:center;gap:.8rem;font-size:.78rem;color:rgba(255,255,255,.6);">
-      <span style="font-size:1.3rem;">💻</span><strong style="color:var(--gold);">Virtual Event</strong> · Join via MS Teams · Calendar invite will be shared · All APP locations
-    </div>
-  </div>
 </section>
 
 <section id="teams">
   <div class="sec-title">👥 Meet the <span>Teams</span></div>
   <div class="sec-sub">4 balanced teams · Sponsor · AI Champion · Captain · Engagement Champion</div>
-
   <div class="team-block" style="border-color:rgba(168,85,247,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">1</div>
@@ -242,15 +239,15 @@ section.active{display:block;}
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Harshad Nanal</div><div class="m-handle">harshad.nanal</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>KR</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>KR</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthik Rajkumar Kannan</div><div class="m-handle">k.rajkumar.kannan</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>KL</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>KL</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Kamlesh Lakshmanan</div><div class="m-handle">kamlesh.lakshmanan</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VB</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VB</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vinodhini Balakrishnan</div><div class="m-handle">b.vinodhini</div>
       </div>
     </div>
@@ -263,7 +260,8 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.jpeg" alt="Shobha" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#D97706);\'>SP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div><div class="m-handle">shobha.b.puttanna</div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.jpeg" alt="Shobha" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#D97706);\'>SP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Shobha Puttanna</div><div class="m-handle">shobha.b.puttanna</div>
       </div>
       <div class="member">
         <div class="pframe"><div class="ini" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">JM</div><span class="plabel">Photo coming soon</span></div>
@@ -291,15 +289,15 @@ section.active{display:block;}
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Bipin Chandra</div><div class="m-handle">bipin.a.chandra</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>KS</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>KS</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthika Subbiah</div><div class="m-handle">karthika.subbiah</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>VS</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>VS</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Vishal D. Singh</div><div class="m-handle">vishal.d.singh</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VV</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VV</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vivek Sharma</div><div class="m-handle">vivekr.sharma</div>
       </div>
     </div>
@@ -316,15 +314,15 @@ section.active{display:block;}
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Santhosh Nair</div><div class="m-handle">santhosh.r.nair</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>SD</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>SD</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Satish D. Kumar</div><div class="m-handle">satish.d.kumar</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>SC</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>SC</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Sulagna Chattopadhyay</div><div class="m-handle">s.y.chattopadhyay</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith" onerror="this.outerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div><span class=\'plabel\'>Photo coming soon</span>'"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg" alt="Ajith" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Ajith PuthanPisharath</div><div class="m-handle">p.pisharath.ajith</div>
       </div>
     </div>
@@ -394,7 +392,7 @@ section.active{display:block;}
     <div class="lb-row r1"><div style="width:26px;text-align:center;">🥇</div><div class="lb-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);">TO</div><div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">10</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
     <div class="lb-row r2"><div style="width:26px;text-align:center;">🥈</div><div class="lb-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">AI</div><div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:50%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts">5</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
     <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">NM</div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">T2</div><div class="lb-info"><div class="lb-team">Team 2 (TBD)</div><div class="lb-detail">Capt: Naga · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">T2</div><div class="lb-info"><div class="lb-team">Team 2 (TBD)</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:0%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.25);">0</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
   </div>
   <div style="margin-top:1.2rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;">
     <div style="font-size:.72rem;color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">Scoring Criteria</div>
@@ -424,7 +422,7 @@ section.active{display:block;}
 
 <section id="organizers">
   <div style="background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(236,72,153,.15));border:1px solid rgba(168,85,247,.35);border-radius:20px;padding:2.5rem 2rem;margin-bottom:2rem;text-align:center;">
-    <div style="font-size:2.5rem;margin-bottom:.5rem;">🌟</div>
+    <div style="font-size:2.5rem;margin-bottom:.5rem;">✨</div>
     <h2 style="font-size:2rem;font-weight:900;margin-bottom:.4rem;">The Minds Behind <span style="background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">the Fest</span></h2>
     <p style="color:rgba(255,255,255,.55);font-size:.92rem;">The passionate team that dreamt it, planned it and made it happen</p>
   </div>
@@ -485,7 +483,7 @@ section.active{display:block;}
     cbEl.innerHTML=ch||'<div class="empty-msg">No entries yet</div>';
   }
   function updateCountdown(){
-    var diff=new Date('2026-03-27T10:00:00')-new Date();
+    var diff=new Date('2026-03-27T15:30:00')-new Date();
     var d=document.getElementById('ko-d'),h=document.getElementById('ko-h'),m=document.getElementById('ko-m'),s=document.getElementById('ko-s');
     if(!d)return;
     if(diff<=0){d.textContent='00';h.textContent='00';m.textContent='00';s.textContent='00';return;}
@@ -498,18 +496,18 @@ section.active{display:block;}
     var rows=document.querySelectorAll('.jrow');
     for(i=0;i<rows.length;i++){rows[i].addEventListener('click',function(){var g=this.getAttribute('data-goto');if(g)showTab(g);});}
     var vab=document.getElementById('view-agenda-btn');
-    if(vab)vab.addEventListener('click',function(){
-      var kd=document.getElementById('kickoff-detail');
-      if(!kd)return;
-      if(kd.style.display==='none'){
-        kd.style.display='block';
-        vab.textContent='Hide Agenda';
-      } else {
-        kd.style.display='none';
-        vab.textContent='View Agenda';
-      }
-    });
-    showTab('overview');renderDashboard();updateCountdown();setInterval(updateCountdown,1000);
+    if(vab){
+      vab.addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var kd=document.getElementById('kickoff-detail');
+        if(kd) kd.style.display=kd.style.display==='none'?'block':'none';
+      });
+    }
+    showTab('overview');
+    renderDashboard();
+    updateCountdown();
+    setInterval(updateCountdown,1000);
   });
 }());
 </script>
