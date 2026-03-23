@@ -186,7 +186,7 @@ section.active{display:block;}
       <div class="kt"><div class="ktn" id="ko-m">--</div><div class="ktl">Mins</div></div>
       <div class="kt"><div class="ktn" id="ko-s">--</div><div class="ktl">Secs</div></div>
     </div>
-    <button class="ko-btn" id="view-agenda-btn">View Agenda</button>
+    <button class="ko-btn" onclick="document.getElementById('kickoff-detail').scrollIntoView({behavior:'smooth'})">View Agenda</button>
   </div>
   <div class="progress-section">
     <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span style="font-weight:600;">Journey Progress</span><span style="color:var(--pl);">Month 1 of 6</span></div>
@@ -204,21 +204,20 @@ section.active{display:block;}
   </div>
   <div id="kickoff-detail">
     <div class="sec-title" style="margin-bottom:.3rem;">🚀 Kick Off <span>Agenda</span></div>
-    <div class="sec-sub">Virtual · 1 Hour · Thursday 27th March 2026 · All Locations</div>
+    <div class="sec-sub">Thursday 27th March 2026 · 3:30 PM – 4:30 PM · MS Teams · All Locations</div>
     <div class="grid2" style="margin-bottom:1rem;">
       <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:1.3rem;">
         <div style="display:flex;flex-direction:column;gap:.8rem;">
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:00–0:05</span><div><div style="font-weight:700;font-size:.88rem;">Welcome and Setting the Stage</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Host opens the session</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:05–0:15</span><div><div style="font-weight:700;font-size:.88rem;">Leadership Address</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Sponsors share vision and goals</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:15–0:20</span><div><div style="font-weight:700;font-size:.88rem;">Sponsor Introduction</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Meet the sponsors powering APP Fusion Fest '26</div></div></div>
+          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:30–3:33</span><div><div style="font-weight:700;font-size:.88rem;">Welcoming the Audience</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Emcee · 3 mins</div></div></div>
+          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:33–3:40</span><div><div style="font-weight:700;font-size:.88rem;">Brief Intro on APP Fusion Fest 2026</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Linta · 7 mins</div></div></div>
+          <div style="display:flex;gap:.8rem;"><span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--gold);white-space:nowrap;flex-shrink:0;">3:40–3:45</span><div><div style="font-weight:700;font-size:.88rem;">Portal Launch and Event Kick Off</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Santhosh · 5 mins</div></div></div>
         </div>
       </div>
       <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:1.3rem;">
         <div style="display:flex;flex-direction:column;gap:.8rem;">
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:20–0:35</span><div><div style="font-weight:700;font-size:.88rem;">Grand Team Reveal</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">All 4 teams announced with Captains, AI Champions and Engagement Champions</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:35–0:45</span><div><div style="font-weight:700;font-size:.88rem;">Event Overview and Scoring</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">6-month journey walkthrough and scoring criteria</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">0:45–0:55</span><div><div style="font-weight:700;font-size:.88rem;">Team Leader Shoutouts</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Each leader says hello to the whole APP team</div></div></div>
-          <div style="display:flex;gap:.8rem;"><span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--gold);white-space:nowrap;flex-shrink:0;">0:55–1:00</span><div><div style="font-weight:700;font-size:.88rem;">APP Quiz League Round 1</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">First competitive event kicks off live!</div></div></div>
+          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:45–3:50</span><div><div style="font-weight:700;font-size:.88rem;">Teams / Sponsors / Captains Announcement</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Anitta · 5 mins</div></div></div>
+          <div style="display:flex;gap:.8rem;"><span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--pl);white-space:nowrap;flex-shrink:0;">3:50–4:05</span><div><div style="font-weight:700;font-size:.88rem;">Sponsors and Captains Intro</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">15 mins</div></div></div>
+          <div style="display:flex;gap:.8rem;"><span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.35);border-radius:7px;padding:3px 9px;font-size:.68rem;font-weight:700;color:var(--gold);white-space:nowrap;flex-shrink:0;">4:05–4:30</span><div><div style="font-weight:700;font-size:.88rem;">Quiz</div><div style="font-size:.74rem;color:rgba(255,255,255,.45);">Gowri / Pavan / Shikha · 25 mins</div></div></div>
         </div>
       </div>
     </div>
