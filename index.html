@@ -442,7 +442,14 @@ section.active{display:block;}
     {name:'linta.sebastian',team:'The Orchestrators',title:'Test idea 1',cat:'Agentic AI'}
   ];
   function pad(n){return n<10?'0'+n:''+n;}
-  function showTab(id){
+  function resizeSP(){
+      try{
+        var h=document.body.scrollHeight;
+        window.parent.resizeTo(window.parent.outerWidth, h);
+        if(window.frameElement) window.frameElement.style.height=h+'px';
+      }catch(e){}
+    }
+    function showTab(id){
     var secs=document.querySelectorAll('section'),tabs=document.querySelectorAll('.nt'),i;
     for(i=0;i<secs.length;i++)secs[i].classList.remove('active');
     for(i=0;i<tabs.length;i++)tabs[i].classList.remove('active');
@@ -488,6 +495,7 @@ section.active{display:block;}
       if(kd)kd.style.display=kd.style.display==='none'?'block':'none';
     });}
     showTab('overview');renderDashboard();updateCountdown();setInterval(updateCountdown,1000);
+    setTimeout(resizeSP,300);
   });
 }());
 </script>
