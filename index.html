@@ -8,7 +8,7 @@
 :root{--p:#7C3AED;--pl:#A855F7;--gold:#F59E0B;--green:#10B981;--pink:#EC4899;--dark:#0F0620;--card:rgba(255,255,255,0.04);--border:rgba(168,85,247,0.2);--w:#fff;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{height:100%;}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--dark);color:var(--w);min-height:100%;overflow-y:auto;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--dark);color:var(--w);min-height:100%;}
 nav{background:rgba(15,6,32,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:58px;}
 .nav-logo{display:flex;align-items:center;gap:10px;}
 .logo-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--p),var(--pl));display:flex;align-items:center;justify-content:center;font-size:16px;}
@@ -116,10 +116,6 @@ section.active{display:block;}
 .lb-pts{font-size:1.1rem;font-weight:800;color:var(--pl);}
 .finale-hero{background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.2));border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:1.5rem;}
 .finale-hero h2{font-size:2rem;font-weight:900;margin-bottom:.4rem;}
-.award-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;text-align:center;}
-.award-icon{font-size:2rem;margin-bottom:.5rem;}
-.award-name{font-weight:800;font-size:.95rem;margin-bottom:.3rem;}
-.award-desc{font-size:.74rem;color:rgba(255,255,255,.45);line-height:1.5;}
 .org-lead-card{border-radius:16px;padding:1.5rem 2rem;margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
 .org-avatar{width:120px;height:120px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;flex-shrink:0;overflow:hidden;}
 .org-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px;display:block;}
@@ -131,6 +127,7 @@ section.active{display:block;}
 .core-av img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px;display:block;}
 .core-name{font-weight:700;font-size:.88rem;}
 .core-role-badge{font-size:.68rem;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:2px 10px;color:var(--pl);}
+.supporting-badge{font-size:.68rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);border-radius:20px;padding:2px 10px;color:var(--green);}
 .dash-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;}
 @media(max-width:700px){.dash-grid{grid-template-columns:1fr;}}
 .dash-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;}
@@ -147,6 +144,7 @@ section.active{display:block;}
 .progress-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;margin-bottom:1.5rem;}
 .progress-bar{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:.6rem;}
 .progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--p),var(--pl),#E879F9);}
+.coming-soon-box{background:var(--card);border:1.5px dashed rgba(168,85,247,.35);border-radius:16px;padding:3rem;text-align:center;margin-top:1.5rem;}
 </style>
 </head>
 <body>
@@ -167,6 +165,7 @@ section.active{display:block;}
   <div class="nav-badge">Mar 27 — KICK OFF 🚀 v2</div>
 </nav>
 
+<!-- OVERVIEW -->
 <section id="overview" class="active">
   <div class="hero">
     <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.4);border-radius:20px;padding:3px 13px;font-size:.72rem;color:var(--pl);margin-bottom:.9rem;">🎯 6-Month Engagement Journey · March to August 2026</div>
@@ -221,42 +220,17 @@ section.active{display:block;}
     <div class="jrow" data-goto="aibattle"><div class="j-icon">🎙️</div><div style="flex:1"><div class="j-month">June 2026</div><div class="j-title">AI Panel and Structured Debate</div><div class="j-theme">AI thought leadership · Expert panel and team debate</div><div class="j-chips"><span class="chip">AI Battle</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="sports"><div class="j-icon">🏃</div><div style="flex:1"><div class="j-month">July 2026</div><div class="j-title">Move and Momentum — Step Challenge and Fitness Reels</div><div class="j-theme">Well-being · Morale · Informal bonding</div><div class="j-chips"><span class="chip pink">Sports and Wellness</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="finale"><div class="j-icon">🎊</div><div style="flex:1"><div class="j-month">August 2026</div><div class="j-title">Showcase and Celebrate — Grand Finale</div><div class="j-theme">Cultural Showcase · Innovation Finals · Award Ceremony</div><div class="j-chips"><span class="chip gold">Grand Finale</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
-  <div class="sec-title" style="margin-bottom:1rem;margin-top:1.5rem;">🎨 Supporting <span>Team</span></div>
-  <div class="grid3">
-    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">MV</div><div class="core-name">Madhusudhana V</div><div class="core-role-badge">Supporting Team</div></div>
-    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">GA</div><div class="core-name">Giridharan Arumugham</div><div class="core-role-badge">Supporting Team</div></div>
-    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#10B981,#059669);">RN</div><div class="core-name">Roshini Nirmala</div><div class="core-role-badge">Supporting Team</div></div>
-  </div>
-  <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:1.4rem 1.8rem;margin-top:1.5rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
-    <div style="font-size:2rem;">💬</div>
-    <div style="flex:1;">
-      <div style="font-weight:700;font-size:.95rem;margin-bottom:.3rem;">Have Feedback or Questions?</div>
-      <div style="font-size:.78rem;color:rgba(255,255,255,.5);">We'd love to hear from you — reach out to us anytime</div>
-    </div>
-    <a href="mailto:APP_myXperience@accenture.com" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:9px 20px;border-radius:10px;font-weight:700;font-size:.82rem;white-space:nowrap;">✉️ APP_myXperience ↗</a>
-  </div>
-  <div class="sec-title" style="margin-bottom:1rem;margin-top:1.5rem;">🎨 Supporting <span>Team</span></div>
-  <div class="grid3" style="margin-bottom:1.5rem;">
-    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">MV</div><div class="core-name">Madhusudhana V</div><div class="core-role-badge">Supporting Team</div></div>
-    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">GA</div><div class="core-name">Giridharan Arumugham</div><div class="core-role-badge">Supporting Team</div></div>
-    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#10B981,#059669);">RN</div><div class="core-name">Roshini Nirmala</div><div class="core-role-badge">Supporting Team</div></div>
-  </div>
-  <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:1.4rem 1.8rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
-    <div style="font-size:2rem;">💬</div>
-    <div style="flex:1;">
-      <div style="font-weight:700;font-size:.95rem;margin-bottom:.3rem;">Have Feedback or Questions?</div>
-      <div style="font-size:.78rem;color:rgba(255,255,255,.5);">We'd love to hear from you — reach out to us anytime</div>
-    </div>
-    <a href="mailto:APP_myXperience@accenture.com" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:9px 20px;border-radius:10px;font-weight:700;font-size:.82rem;white-space:nowrap;">✉️ APP_myXperience ↗</a>
   </div>
 </section>
 
+<!-- TEAMS -->
 <section id="teams">
   <div class="sec-title">👥 Meet the <span>Teams</span></div>
   <div class="sec-sub">4 balanced teams · Sponsor · AI Champion · Captain · Engagement Champion</div>
   <div style="margin-bottom:1.2rem;">
     <a href="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Fusion%20Fest%20-Teams/APP%20Fusion%20Fest_Teams.xlsx?d=w8d2e549ea51b48ca9407b1c07c3eee7c" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;">📋 View Full Team Details ↗</a>
   </div>
+  <!-- TEAM 1 -->
   <div class="team-block" style="border-color:rgba(168,85,247,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">1</div>
@@ -281,6 +255,7 @@ section.active{display:block;}
       </div>
     </div>
   </div>
+  <!-- TEAM 2 -->
   <div class="team-block" style="border-color:rgba(99,102,241,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(99,102,241,.3),rgba(139,92,246,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">2</div>
@@ -305,6 +280,7 @@ section.active{display:block;}
       </div>
     </div>
   </div>
+  <!-- TEAM 3 -->
   <div class="team-block" style="border-color:rgba(236,72,153,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#EC4899,#A855F7);">3</div>
@@ -329,6 +305,7 @@ section.active{display:block;}
       </div>
     </div>
   </div>
+  <!-- TEAM 4 -->
   <div class="team-block" style="border-color:rgba(245,158,11,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#F59E0B,#D97706);">4</div>
@@ -348,27 +325,20 @@ section.active{display:block;}
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Sulagna Chattopadhyay</div><div class="m-handle">s.y.chattopadhyay</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpeg" alt="Ajith" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.png" alt="Ajith" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Ajith PuthanPisharath</div><div class="m-handle">p.pisharath.ajith</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- AI BATTLE -->
 <section id="aibattle">
   <div class="sec-title">⚔️ AI <span>Battle</span></div>
   <div class="sec-sub">Innovation Jam and Pitch Battles · AI Panel and Structured Debate · April and June 2026</div>
   <div class="grid2" style="margin-bottom:1.5rem;">
     <div class="event-card"><div class="ev-hdr"><div class="ev-icon">💡</div><span class="ev-type">Innovation · April</span></div><div class="ev-body"><div class="ev-name">Innovation Jam and Pitch Battles</div><div class="ev-when">April 2026</div><div class="ev-desc">Teams brainstorm AI-powered ideas then battle it out in front of a judging panel.</div><div style="display:flex;gap:5px;flex-wrap:wrap;"><span class="chip">AI-led Ideation</span><span class="chip">Judged Pitch</span></div></div></div>
     <div class="event-card"><div class="ev-hdr"><div class="ev-icon">🎙️</div><span class="ev-type">Leadership · June</span></div><div class="ev-body"><div class="ev-name">AI Panel and Structured Debate</div><div class="ev-when">June 2026</div><div class="ev-desc">Expert panel on AI thought leadership followed by a structured team debate on current AI trends.</div><div style="display:flex;gap:5px;flex-wrap:wrap;"><span class="chip">Thought Leadership</span><span class="chip">Team Debate</span></div></div></div>
-  </div>
-  <!-- Timeline placeholder -->
-  <div class="sec-title" style="margin-bottom:.3rem;">📅 <span>Timeline</span></div>
-  <div class="sec-sub">Event schedule and key dates</div>
-  <div style="background:var(--card);border:1px dashed rgba(168,85,247,.35);border-radius:16px;padding:3rem;text-align:center;margin-bottom:1.5rem;">
-    <div style="font-size:2.5rem;margin-bottom:.8rem;">📅</div>
-    <div style="font-weight:700;font-size:1rem;margin-bottom:.3rem;">Calendar View</div>
-    <div style="font-size:.78rem;color:rgba(255,255,255,.4);">Detailed timeline and schedule coming soon</div>
   </div>
   <div class="sec-title" style="margin-bottom:.3rem;">📝 Submit Your <span>Idea Pitch</span></div>
   <div class="sec-sub">Submit your idea via the official form · Saved automatically to SharePoint</div>
@@ -392,8 +362,14 @@ section.active{display:block;}
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);"><div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">👥 By Team</div><div id="d-team-bars"></div></div>
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);"><div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">🏷️ By Category</div><div id="d-cat-list"></div></div>
   </div>
+  <div class="coming-soon-box">
+    <div style="font-size:2.5rem;margin-bottom:.8rem;">📅</div>
+    <div style="font-weight:700;font-size:1rem;margin-bottom:.3rem;">Calendar View</div>
+    <div style="font-size:.78rem;color:rgba(255,255,255,.4);">Detailed timeline and schedule coming soon</div>
+  </div>
 </section>
 
+<!-- SPORTS -->
 <section id="sports">
   <div class="sec-title">🏆 Sports and <span>Wellness</span></div>
   <div class="sec-sub">Team bonding through competition, movement and fun · May and July 2026</div>
@@ -407,16 +383,14 @@ section.active{display:block;}
     <div class="sport-card"><div class="sport-icon">👟</div><div class="sport-name">Step Challenge</div><div class="sport-when">July 2026</div><div class="sport-desc">2-week team step counting challenge. Most steps wins!</div></div>
     <div class="sport-card"><div class="sport-icon">🎬</div><div class="sport-name">Fitness Reels</div><div class="sport-when">July 2026</div><div class="sport-desc">Creative fitness videos judged on energy and team spirit.</div></div>
   </div>
-  <!-- Timeline placeholder -->
-  <div class="sec-title" style="margin-bottom:.3rem;margin-top:1.5rem;">📅 <span>Timeline</span></div>
-  <div class="sec-sub">Event schedule and key dates</div>
-  <div style="background:var(--card);border:1px dashed rgba(236,72,153,.35);border-radius:16px;padding:3rem;text-align:center;">
-    <div style="font-size:2.5rem;margin-bottom:.8rem;">🏅</div>
+  <div class="coming-soon-box" style="border-color:rgba(236,72,153,.35);">
+    <div style="font-size:2.5rem;margin-bottom:.8rem;">📅</div>
     <div style="font-weight:700;font-size:1rem;margin-bottom:.3rem;">Calendar View</div>
     <div style="font-size:.78rem;color:rgba(255,255,255,.4);">Detailed timeline and schedule coming soon</div>
   </div>
 </section>
 
+<!-- LEADERBOARD -->
 <section id="leaderboard">
   <div class="sec-title">📊 <span>Leaderboard</span></div>
   <div class="sec-sub">Live scores across all APP locations · Updated after every event</div>
@@ -438,19 +412,20 @@ section.active{display:block;}
   </div>
 </section>
 
+<!-- GRAND FINALE -->
 <section id="finale">
   <div class="finale-hero"><div style="font-size:3rem;margin-bottom:.5rem;">🏆</div><h2>Grand <span style="color:var(--gold);">Finale</span></h2><p style="color:rgba(255,255,255,.6);margin-bottom:1.2rem;">August 2026 · The culmination of 6 months of innovation, competition and collaboration</p><span style="display:inline-flex;align-items:center;gap:7px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:5px 16px;font-size:.82rem;color:var(--gold);font-weight:700;">August 2026</span></div>
   <div class="sec-title" style="margin-bottom:.3rem;">🎉 Finale <span>Events</span></div>
   <div class="sec-sub" style="margin-bottom:1.2rem;">Three spectacular events to close out APP Fusion Fest '26</div>
-  <div class="grid3" style="margin-bottom:1.8rem;">
+  <div class="grid3">
     <div class="event-card" style="border-color:rgba(168,85,247,.35);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(168,85,247,.2),rgba(124,58,237,.1));"><div class="ev-icon">💡</div><span class="ev-type">Innovation</span></div><div class="ev-body"><div class="ev-name">Innovation Final Presentation</div><div class="ev-when">August 2026</div><div class="ev-desc">Final showcase of the best ideas from all 4 teams.</div></div></div>
     <div class="event-card" style="border-color:rgba(236,72,153,.35);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.2),rgba(168,85,247,.1));"><div class="ev-icon">🎤</div><span class="ev-type" style="color:var(--pink);">Cultural</span></div><div class="ev-body"><div class="ev-name">Cultural Showcase</div><div class="ev-when">August 2026</div><div class="ev-desc">Dance, Music and Skit performances celebrating team creativity.</div></div></div>
     <div class="event-card" style="border-color:rgba(245,158,11,.4);"><div class="ev-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));"><div class="ev-icon">🎊</div><span class="ev-type" style="color:var(--gold);">Awards</span></div><div class="ev-body"><div class="ev-name">Award Ceremony</div><div class="ev-when">August 2026</div><div class="ev-desc">Grand recognition of champions, top innovators and star performers.</div></div></div>
   </div>
-
 </section>
 
-<section id="organizers" style="padding-bottom:1.8rem;">
+<!-- MEET THE CREW -->
+<section id="organizers">
   <div style="background:linear-gradient(135deg,rgba(107,33,168,.35),rgba(236,72,153,.15));border:1px solid rgba(168,85,247,.35);border-radius:20px;padding:2.5rem 2rem;margin-bottom:2rem;text-align:center;">
     <div style="font-size:2.5rem;margin-bottom:.5rem;">✨</div>
     <h2 style="font-size:2rem;font-weight:900;margin-bottom:.4rem;">The Minds Behind <span style="background:linear-gradient(135deg,var(--pl),#E879F9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">the Fest</span></h2>
@@ -467,12 +442,26 @@ section.active{display:block;}
     <div><div class="org-role" style="color:var(--pl);">🎯 Program Lead</div><div class="org-name">Linta Sebastian</div><div class="org-sub">Driving the vision and energy of APP Fusion Fest '26</div></div>
   </div>
   <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
-  <div class="grid3" style="margin-bottom:0;">
+  <div class="grid3" style="margin-bottom:1.5rem;">
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Deepak.jpeg" alt="Deepak" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Deepak.png';"></div><div class="core-name">Deepak Suresh Kini</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/shikha.png" alt="Shikha" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px;display:block;" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/shikha.jpeg';"></div><div class="core-name">Shikha Hurkat</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#10B981,#14B8A6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ashwini.jpeg" alt="Ashwini" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ashwini.png';"></div><div class="core-name">Ashwini Kundaram</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Gowri.jpeg" alt="Gowri" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Gowri.png';"></div><div class="core-name">Gowri Myilsamy</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Pavan.jpeg" alt="Pavan" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Pavan.png';"></div><div class="core-name">Pavan Kumar Natraj</div><div class="core-role-badge">Core Team</div></div>
+  </div>
+  <div class="sec-title" style="margin-bottom:1rem;">🎨 Supporting <span>Team</span></div>
+  <div class="grid3" style="margin-bottom:1.5rem;">
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">MV</div><div class="core-name">Madhusudhana V</div><div class="core-role-badge supporting-badge">Supporting Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);">GA</div><div class="core-name">Giridharan Arumugham</div><div class="core-role-badge supporting-badge">Supporting Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#10B981,#059669);">RN</div><div class="core-name">Roshini Nirmala</div><div class="core-role-badge supporting-badge">Supporting Team</div></div>
+  </div>
+  <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:1.4rem 1.8rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
+    <div style="font-size:2rem;">💬</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;font-size:.95rem;margin-bottom:.3rem;">Have Feedback or Questions?</div>
+      <div style="font-size:.78rem;color:rgba(255,255,255,.5);">We'd love to hear from you — reach out to us anytime</div>
+    </div>
+    <a href="mailto:APP_myXperience@accenture.com" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:9px 20px;border-radius:10px;font-weight:700;font-size:.82rem;white-space:nowrap;">✉️ APP_myXperience ↗</a>
   </div>
 </section>
 
@@ -486,14 +475,7 @@ section.active{display:block;}
     {name:'linta.sebastian',team:'The Orchestrators',title:'Test idea 1',cat:'Agentic AI'}
   ];
   function pad(n){return n<10?'0'+n:''+n;}
-  function resizeSP(){
-      try{
-        var h=document.body.scrollHeight;
-        window.parent.resizeTo(window.parent.outerWidth, h);
-        if(window.frameElement) window.frameElement.style.height=h+'px';
-      }catch(e){}
-    }
-    function showTab(id){
+  function showTab(id){
     var secs=document.querySelectorAll('section'),tabs=document.querySelectorAll('.nt'),i;
     for(i=0;i<secs.length;i++)secs[i].classList.remove('active');
     for(i=0;i<tabs.length;i++)tabs[i].classList.remove('active');
@@ -539,7 +521,6 @@ section.active{display:block;}
       if(kd)kd.style.display=kd.style.display==='none'?'block':'none';
     });}
     showTab('overview');renderDashboard();updateCountdown();setInterval(updateCountdown,1000);
-    setTimeout(resizeSP,300);
   });
 }());
 </script>
