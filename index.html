@@ -503,10 +503,28 @@ section.active{display:block;}
     cbEl.innerHTML=ch||'<div class="empty-msg">No entries yet</div>';
   }
   function updateCountdown(){
-    var diff=new Date('2026-03-27T15:30:00')-new Date();
+    var now=new Date();
+    var start=new Date('2026-03-27T10:00:00Z'); // 3:30 PM IST = 10:00 AM UTC
+    var end=new Date('2026-03-27T11:00:00Z');   // 4:30 PM IST = 11:00 AM UTC
+    var diff=start-now;
     var d=document.getElementById('ko-d'),h=document.getElementById('ko-h'),m=document.getElementById('ko-m'),s=document.getElementById('ko-s');
     if(!d)return;
-    if(diff<=0){d.textContent='00';h.textContent='00';m.textContent='00';s.textContent='00';return;}
+    var banner=document.querySelector('.ko-banner');
+    if(now>=start && now<end){
+      // Event in progress
+      if(banner){
+        banner.innerHTML='<div style="display:flex;align-items:center;gap:1rem;width:100%;"><div style="font-size:2.2rem;">🎬</div><div><div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.2rem;">Live Now</div><div style="font-size:1.1rem;font-weight:800;">Event in Progress · Thank you for joining! 🙏</div><div style="font-size:.78rem;color:rgba(255,255,255,.55);">Grand Kick Off and Curtain Raiser · MS Teams</div></div><span style="margin-left:auto;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:5px 16px;font-size:.8rem;font-weight:700;color:var(--green);">● LIVE</span></div>';
+      }
+      return;
+    }
+    if(now>=end){
+      // Event completed
+      if(banner){
+        banner.innerHTML='<div style="display:flex;align-items:center;gap:1rem;width:100%;"><div style="font-size:2.2rem;">🎊</div><div><div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.2rem;">Grand Kick Off</div><div style="font-size:1.1rem;font-weight:800;">Event Completed! Thank you for joining 🎉</div><div style="font-size:.78rem;color:rgba(255,255,255,.55);">APP Fusion Fest \'26 is officially underway · Stay tuned for upcoming events</div></div><span style="margin-left:auto;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:5px 16px;font-size:.8rem;font-weight:700;color:var(--green);">Completed ✓</span></div>';
+      }
+      return;
+    }
+    // Countdown
     d.textContent=pad(Math.floor(diff/86400000));h.textContent=pad(Math.floor((diff%86400000)/3600000));
     m.textContent=pad(Math.floor((diff%3600000)/60000));s.textContent=pad(Math.floor((diff%60000)/1000));
   }
