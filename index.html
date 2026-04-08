@@ -108,7 +108,7 @@ section.active{display:block;}
 .lb-row{display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;margin-bottom:.6rem;}
 .lb-row.r1{border-color:rgba(245,158,11,.4);background:rgba(245,158,11,.05);}
 .lb-row.r2{border-color:rgba(156,163,175,.35);background:rgba(156,163,175,.04);}
-.lb-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;}
+.lb-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;overflow:hidden;}
 .lb-info{flex:1;}
 .lb-team{font-weight:700;font-size:.9rem;}
 .lb-detail{font-size:.7rem;color:rgba(255,255,255,.4);}
@@ -145,7 +145,8 @@ section.active{display:block;}
 .progress-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;margin-bottom:1.5rem;}
 .progress-bar{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:.6rem;}
 .progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--p),var(--pl),#E879F9);}
-.coming-soon-box{background:var(--card);border:1.5px dashed rgba(168,85,247,.35);border-radius:16px;padding:3rem;text-align:center;margin-top:1.5rem;}
+.rule-item{display:flex;gap:.6rem;font-size:.8rem;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.rule-item:last-child{border-bottom:none;}
 </style>
 </head>
 <body>
@@ -231,7 +232,6 @@ section.active{display:block;}
   <div style="margin-bottom:1.2rem;">
     <a href="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Fusion%20Fest%20-Teams/APP%20Fusion%20Fest_Teams.xlsx?d=w8d2e549ea51b48ca9407b1c07c3eee7c" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;">📋 View Full Team Details ↗</a>
   </div>
-  <!-- TEAM 1 -->
   <div class="team-block" style="border-color:rgba(168,85,247,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" alt="AI-nstein Squad"></div>
@@ -256,7 +256,6 @@ section.active{display:block;}
       </div>
     </div>
   </div>
-  <!-- TEAM 2 -->
   <div class="team-block" style="border-color:rgba(99,102,241,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(99,102,241,.3),rgba(139,92,246,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" alt="Quantum Crew"></div>
@@ -281,7 +280,6 @@ section.active{display:block;}
       </div>
     </div>
   </div>
-  <!-- TEAM 3 -->
   <div class="team-block" style="border-color:rgba(236,72,153,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(236,72,153,.25),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#EC4899,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" alt="Neural Mavericks"></div>
@@ -306,7 +304,6 @@ section.active{display:block;}
       </div>
     </div>
   </div>
-  <!-- TEAM 4 -->
   <div class="team-block" style="border-color:rgba(245,158,11,.45);">
     <div class="team-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));">
       <div class="tn" style="background:linear-gradient(135deg,#F59E0B,#D97706);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" alt="The Orchestrators"></div>
@@ -341,105 +338,131 @@ section.active{display:block;}
     <p style="color:rgba(255,255,255,.6);font-size:.9rem;">From AI Ideas to Actionable Impact</p>
   </div>
 
-  <!-- Participation Rules -->
-  <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;margin-bottom:1.2rem;">
-    <div style="font-weight:800;font-size:1rem;margin-bottom:.8rem;">📋 Participation Rules</div>
-    <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.82rem;">
-      <div style="display:flex;align-items:center;gap:.6rem;"><span style="color:var(--green);">✅</span><span>Team-based participation within assigned FusionFest teams only</span></div>
-      <div style="display:flex;align-items:center;gap:.6rem;"><span style="color:var(--green);">✅</span><span>Multiple entries per team allowed</span></div>
-      <div style="display:flex;align-items:center;gap:.6rem;"><span style="color:var(--green);">✅</span><span>Each individual can submit only one idea</span></div>
-      <div style="display:flex;align-items:center;gap:.6rem;"><span style="color:#EF4444;">❌</span><span>Cross-team entries are not allowed</span></div>
+  <!-- Rules & Guidelines -->
+  <div style="background:var(--card);border:1px solid rgba(168,85,247,.35);border-radius:14px;overflow:hidden;margin-bottom:1.2rem;">
+    <div style="background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(168,85,247,.1));padding:.9rem 1.3rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;">
+      <span style="font-size:1.2rem;">📋</span>
+      <div style="font-weight:800;font-size:.95rem;">Rules & Guidelines</div>
+    </div>
+    <div style="padding:1rem 1.3rem;">
+      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Each participant can submit a maximum of <strong>2 ideas</strong></span></div>
+      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Teams must consist of members from the <strong>same parent team</strong> — cross-team grouping not allowed</span></div>
+      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Each team must have a <strong>minimum of 2 and maximum of 5 members</strong></span></div>
+      <div class="rule-item"><span style="color:var(--gold);flex-shrink:0;">⚠️</span><span><strong>AI Champions cannot participate</strong> as team members — they may only guide teams</span></div>
+      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Ideas must be presented as a <strong>clear solution pitch</strong></span></div>
+      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Ideas must be <strong>original</strong> — any external or pre-built content must be clearly disclosed</span></div>
+      <div class="rule-item"><span style="color:#EF4444;flex-shrink:0;">❌</span><span>Use of <strong>confidential or sensitive company data</strong> is strictly prohibited</span></div>
+      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Use of <strong>Accenture-approved AI tools</strong> is allowed · Teams may consult AI Champions for guidance</span></div>
+      <div class="rule-item"><span style="color:var(--pl);flex-shrink:0;">🏆</span><span>Evaluation criteria: <strong>Innovation · Relevance · Feasibility · Business Impact · Clarity</strong></span></div>
+      <div class="rule-item"><span style="color:var(--gold);flex-shrink:0;">🎤</span><span>Top 10 shortlisted ideas present to a judging panel — <strong>4–5 minutes + Q&A</strong> · Strict time adherence required</span></div>
+      <div class="rule-item"><span style="color:var(--pl);flex-shrink:0;">ℹ️</span><span>All submitted ideas may be considered for <strong>future development</strong> within the organization, with due credit</span></div>
+      <div class="rule-item"><span style="color:#EF4444;flex-shrink:0;">❌</span><span><strong>Judges' decisions are final</strong> · Any misconduct or plagiarism will lead to disqualification</span></div>
     </div>
   </div>
 
-  <!-- 3 Rounds -->
-  <div class="sec-title" style="margin-bottom:.3rem;">🥊 3-Round <span>Structure</span></div>
-  <div class="sec-sub">From idea to impact in 3 competitive rounds</div>
-  <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;">
-
-    <!-- Round 1 -->
-    <div style="background:var(--card);border:1px solid rgba(168,85,247,.35);border-radius:14px;overflow:hidden;">
-      <div style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));padding:.9rem 1.2rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border);">
-        <span style="background:rgba(168,85,247,.3);border-radius:8px;padding:4px 10px;font-weight:800;font-size:.8rem;color:var(--pl);">Round 1</span>
-        <div style="font-weight:800;font-size:.95rem;">Open AI Idea Submission</div>
-        <span class="chip" style="margin-left:auto;">Apr 4–11</span>
-      </div>
-      <div style="padding:1rem 1.2rem;font-size:.8rem;color:rgba(255,255,255,.7);">
-        <div style="margin-bottom:.6rem;color:rgba(255,255,255,.5);">Submit your idea covering: Idea Title · Problem Statement · AI-Based Solution · Tools used · Expected Benefits</div>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
-          <span class="chip">All team members</span><span class="chip">Individual submissions</span><span class="chip">Top 10 shortlisted</span>
-        </div>
-      </div>
+  <!-- Round 1 -->
+  <div style="background:var(--card);border:1px solid rgba(168,85,247,.4);border-radius:16px;overflow:hidden;margin-bottom:1.2rem;">
+    <div style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));padding:1rem 1.3rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;">
+      <span style="background:rgba(168,85,247,.35);border-radius:8px;padding:4px 12px;font-weight:800;font-size:.82rem;color:var(--pl);">🥊 Round 1</span>
+      <div style="font-weight:800;font-size:1rem;">Open AI Idea Submission</div>
+      <span class="chip" style="margin-left:auto;">Apr 13–20</span>
     </div>
-
-    <!-- Round 2 -->
-    <div style="background:var(--card);border:1px solid rgba(236,72,153,.35);border-radius:14px;overflow:hidden;">
-      <div style="background:linear-gradient(135deg,rgba(236,72,153,.2),rgba(168,85,247,.1));padding:.9rem 1.2rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border);">
-        <span style="background:rgba(236,72,153,.3);border-radius:8px;padding:4px 10px;font-weight:800;font-size:.8rem;color:var(--pink);">Round 2</span>
-        <div style="font-weight:800;font-size:.95rem;">AI Hack Sprint</div>
-        <span class="chip pink" style="margin-left:auto;">Apr 16–22</span>
-      </div>
-      <div style="padding:1rem 1.2rem;font-size:.8rem;color:rgba(255,255,255,.7);">
-        <div style="margin-bottom:.6rem;color:rgba(255,255,255,.5);">Top 10 ideas converted into working prototypes over 3–5 days. Accepted formats: Copilot workflow · Prompt chain · Power Automate · UI mock · Recorded demo</div>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
-          <span class="chip pink">Top 10 ideas</span><span class="chip pink">3–5 day sprint</span><span class="chip pink">Top 5 shortlisted</span>
+    <div style="padding:1.1rem 1.3rem;display:flex;flex-direction:column;gap:1rem;">
+      <div style="font-size:.8rem;color:rgba(255,255,255,.6);">🎯 Maximize participation and surface high-potential AI ideas</div>
+      <div>
+        <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Submission Requirements</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;font-size:.78rem;">
+          <div style="background:rgba(168,85,247,.08);border-radius:8px;padding:.4rem .7rem;">1. Idea Title</div>
+          <div style="background:rgba(168,85,247,.08);border-radius:8px;padding:.4rem .7rem;">2. Problem Statement</div>
+          <div style="background:rgba(168,85,247,.08);border-radius:8px;padding:.4rem .7rem;">3. Proposed AI Solution</div>
+          <div style="background:rgba(168,85,247,.08);border-radius:8px;padding:.4rem .7rem;">4. AI Tool(s) to be used</div>
+          <div style="background:rgba(168,85,247,.08);border-radius:8px;padding:.4rem .7rem;grid-column:1/-1;">5. Expected Benefits — Time saved · Efficiency gain · Cost/value impact</div>
         </div>
       </div>
-    </div>
-
-    <!-- Round 3 -->
-    <div style="background:var(--card);border:1px solid rgba(245,158,11,.4);border-radius:14px;overflow:hidden;">
-      <div style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));padding:.9rem 1.2rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border);">
-        <span style="background:rgba(245,158,11,.3);border-radius:8px;padding:4px 10px;font-weight:800;font-size:.8rem;color:var(--gold);">Round 3</span>
-        <div style="font-weight:800;font-size:.95rem;">Grand Finale — Pitch Battle</div>
-        <span class="chip gold" style="margin-left:auto;">Apr 28/29</span>
-      </div>
-      <div style="padding:1rem 1.2rem;font-size:.8rem;color:rgba(255,255,255,.7);">
-        <div style="margin-bottom:.6rem;color:rgba(255,255,255,.5);">Top 5 finalists pitch their solutions: 5 min pitch · 3 min demo · 4 min Q&A covering Problem, AI Solution, Tools, Impact and Feasibility</div>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
-          <span class="chip gold">🥇 AI Battle Champion</span><span class="chip gold">🥈 1st Runner-Up</span><span class="chip gold">🥉 2nd Runner-Up</span>
+      <div>
+        <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Evaluation Criteria</div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;font-size:.75rem;">
+          <span class="chip">Problem Relevance 20%</span><span class="chip">AI Applicability 20%</span><span class="chip">Innovation 20%</span><span class="chip">Business Value 25%</span><span class="chip">Feasibility 15%</span>
         </div>
+      </div>
+      <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:.6rem .9rem;font-size:.76rem;color:rgba(255,255,255,.7);">
+        🏁 All ideas evaluated · <strong style="color:var(--green);">Top 8–10 ideas shortlisted</strong> — based on ideas, not teams · Announced Apr 23
       </div>
     </div>
   </div>
 
-  <!-- April Timeline -->
+  <!-- Round 2 -->
+  <div style="background:var(--card);border:1px solid rgba(245,158,11,.4);border-radius:16px;overflow:hidden;margin-bottom:1.2rem;">
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(168,85,247,.1));padding:1rem 1.3rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;">
+      <span style="background:rgba(245,158,11,.3);border-radius:8px;padding:4px 12px;font-weight:800;font-size:.82rem;color:var(--gold);">🏆 Round 2</span>
+      <div style="font-weight:800;font-size:1rem;">Build + Pitch Finale</div>
+      <span class="chip gold" style="margin-left:auto;">Apr 24–30</span>
+    </div>
+    <div style="padding:1.1rem 1.3rem;display:flex;flex-direction:column;gap:1rem;">
+      <div style="font-size:.8rem;color:rgba(255,255,255,.6);">🎯 Convert shortlisted ideas into demo-ready, business-relevant solutions · ~10 days</div>
+      <div class="grid2">
+        <div>
+          <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Build / Demonstrate</div>
+          <div style="display:flex;flex-direction:column;gap:.3rem;font-size:.78rem;color:rgba(255,255,255,.7);">
+            <div>· AI workflow / agent concept</div><div>· Copilot use case</div><div>· Power Automate flow</div><div>· Prompt-based solution</div><div>· UI mock / simulation</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;">Pitch Must Cover</div>
+          <div style="display:flex;flex-direction:column;gap:.3rem;font-size:.78rem;color:rgba(255,255,255,.7);">
+            <div>1. Problem</div><div>2. AI Solution & Tool</div><div>3. Demo (live or recorded)</div><div>4. Business impact (quantified)</div><div>5. Implementation (30–90 days)</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:.8rem 1rem;">
+        <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem;">🎤 Finale Format · Apr 30</div>
+        <div style="display:flex;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.7);"><span>⏱ 5 min pitch</span><span>🎬 3 min demo</span><span>❓ 5 min Q&A</span></div>
+      </div>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
+        <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:4px 14px;font-size:.75rem;font-weight:700;color:var(--gold);">🥇 AI Battle Champion</span>
+        <span style="background:rgba(156,163,175,.15);border:1px solid rgba(156,163,175,.3);border-radius:20px;padding:4px 14px;font-size:.75rem;font-weight:700;color:#9CA3AF;">🥈 1st Runner-Up</span>
+        <span style="background:rgba(217,119,6,.15);border:1px solid rgba(217,119,6,.3);border-radius:20px;padding:4px 14px;font-size:.75rem;font-weight:700;color:#D97706;">🥉 2nd Runner-Up</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- April Execution Plan -->
   <div class="sec-title" style="margin-bottom:.3rem;">📅 April <span>Execution Plan</span></div>
   <div class="sec-sub">Week-by-week breakdown</div>
   <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.5rem;">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;">
-      <div style="font-size:.68rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 1 · Apr 4–11</div>
-      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">🚀 Launch & Submissions</div>
-      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 4 — Launch communication<br>Apr 4–11 — Idea submission window</div>
+      <div style="font-size:.68rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 1 · Apr 13–20</div>
+      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">🚀 Idea Submission</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 13 — Submission window opens<br>Apr 20 — Submission window closes</div>
     </div>
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;">
-      <div style="font-size:.68rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 2 · Apr 12–15</div>
-      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">🔍 Shortlisting</div>
-      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 12–14 — Panel evaluation<br>Apr 15 — Announce Top 10</div>
+      <div style="font-size:.68rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 2 · Apr 21–23</div>
+      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">🔍 Evaluation & Shortlisting</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 21–22 — Panel evaluation<br>Apr 23 — Top 10 announced</div>
     </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;">
-      <div style="font-size:.68rem;color:var(--pink);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 3 · Apr 16–22</div>
-      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">⚡ Hack Sprint</div>
-      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 16 — Kickoff session<br>Apr 16–22 — Hack Sprint window</div>
+    <div style="background:var(--card);border:1px solid rgba(236,72,153,.3);border-radius:12px;padding:1rem;">
+      <div style="font-size:.68rem;color:var(--pink);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 3 · Apr 24–29</div>
+      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">⚡ Build Phase</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 24 — Round 2 kickoff<br>Apr 24–29 — Build + mentoring support</div>
     </div>
     <div style="background:var(--card);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:1rem;">
-      <div style="font-size:.68rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 4 · Apr 23–30</div>
-      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">🏆 Finale</div>
-      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 23–24 — Evaluate submissions<br>Apr 25 — Announce Top 5<br>Apr 28/29 — Pitch Battle<br>Apr 30 — Winners announced</div>
+      <div style="font-size:.68rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Week 4 · Apr 30</div>
+      <div style="font-weight:700;font-size:.88rem;margin-bottom:.4rem;">🏆 Prototype Presentations</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Apr 30 — Top 10 prototype presentations<br>Winners announced</div>
     </div>
   </div>
 
-  <!-- Submission Form -->
-  <div class="sec-title" style="margin-bottom:.3rem;">📝 Submit Your <span>Idea Pitch</span></div>
-  <div class="sec-sub">Submit your idea via the official form · Saved automatically to SharePoint</div>
+  <!-- Submit -->
+  <div class="sec-title" style="margin-bottom:.3rem;">📝 Submit Your <span>Idea</span></div>
+  <div class="sec-sub">Round 1 submission window: Apr 13–20 · Saved automatically to SharePoint</div>
   <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:10px;padding:.8rem 1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem;font-size:.78rem;color:rgba(255,255,255,.65);">
     <span style="font-size:1.2rem;">✅</span><span>Submissions <strong style="color:var(--green);">automatically saved to SharePoint</strong> · DLP compliant</span>
   </div>
   <div style="display:flex;gap:1rem;margin-bottom:1.5rem;">
-    <a href="https://ts.accenture.com/sites/APP-Learning/Pages/Idea-Submission.aspx" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;">📝 Submit Your Idea ↗</a>
+    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=OT154DkJbUmxKRmO3ZFv63L5KZh44WJJpOhWygTCai5UOTZCREw0UllLSjZTOUVUUzlOOUNBNFlUMS4u" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;">📝 Submit Your Idea ↗</a>
   </div>
 
-  <!-- Ideas Dashboard -->
+  <!-- Dashboard -->
   <div class="sec-title" style="margin-bottom:.3rem;">📊 Ideas <span>Dashboard</span></div>
   <div class="sec-sub">Live summary of idea submissions</div>
   <div class="dash-grid">
@@ -470,7 +493,7 @@ section.active{display:block;}
     <div class="sport-card"><div class="sport-icon">👟</div><div class="sport-name">Step Challenge</div><div class="sport-when">July 2026</div><div class="sport-desc">2-week team step counting challenge. Most steps wins!</div></div>
     <div class="sport-card"><div class="sport-icon">🎬</div><div class="sport-name">Fitness Reels</div><div class="sport-when">July 2026</div><div class="sport-desc">Creative fitness videos judged on energy and team spirit.</div></div>
   </div>
-  <div class="coming-soon-box" style="border-color:rgba(236,72,153,.35);">
+  <div style="background:var(--card);border:1.5px dashed rgba(236,72,153,.35);border-radius:16px;padding:3rem;text-align:center;margin-top:1.5rem;">
     <div style="font-size:2.5rem;margin-bottom:.8rem;">📅</div>
     <div style="font-weight:700;font-size:1rem;margin-bottom:.3rem;">Calendar View</div>
     <div style="font-size:.78rem;color:rgba(255,255,255,.4);">Detailed timeline and schedule coming soon</div>
@@ -492,46 +515,19 @@ section.active{display:block;}
     <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">3rd</div><div class="pod-block pod-3"><div style="font-size:1.1rem;font-weight:800;color:#D97706;">3</div><div class="pod-name">Quantum Crew</div><div class="pod-pts">20 pts</div></div></div>
   </div>
   <div style="margin-bottom:1.5rem;">
-    <div class="lb-row r1"><div style="width:26px;text-align:center;">🥇</div><div class="lb-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);overflow:hidden;padding:0;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.outerHTML='NM'"></div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#EC4899,#A855F7);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">90</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row r2"><div style="width:26px;text-align:center;">🥈</div><div class="lb-av" style="background:linear-gradient(135deg,#F59E0B,#D97706);overflow:hidden;padding:0;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.outerHTML='TO'"></div><div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:44%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);overflow:hidden;padding:0;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.outerHTML='QC'"></div><div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:22%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div><div class="lb-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);overflow:hidden;padding:0;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.outerHTML='AI'"></div><div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:17%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">15</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row r1"><div style="width:26px;text-align:center;">🥇</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='NM'"></div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#EC4899,#A855F7);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">90</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row r2"><div style="width:26px;text-align:center;">🥈</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='TO'"></div><div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:44%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='QC'"></div><div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:22%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='AI'"></div><div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:17%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">15</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
   </div>
-
-  <!-- Quiz Winners Section -->
   <div class="sec-title" style="margin-bottom:.3rem;">🧠 Quiz League <span>Round 1 Winners</span></div>
   <div class="sec-sub">APP Quiz League · 27th March 2026 · Top 5 individual performers</div>
   <div style="display:flex;flex-direction:column;gap:.6rem;">
-    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(245,158,11,.05));border:1px solid rgba(245,158,11,.4);border-radius:10px;padding:.9rem 1.1rem;">
-      <div style="width:26px;text-align:center;font-size:1.1rem;">🥇</div>
-      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BH</div>
-      <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Bellam, Hemanth Kumar Reddy</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Neural Mavericks</div></div>
-      <div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--gold);">50</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(156,163,175,.1),rgba(156,163,175,.04));border:1px solid rgba(156,163,175,.35);border-radius:10px;padding:.9rem 1.1rem;">
-      <div style="width:26px;text-align:center;font-size:1.1rem;">🥈</div>
-      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BM</div>
-      <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Bariha, Manas</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Neural Mavericks</div></div>
-      <div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:#9CA3AF;">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(217,119,6,.1),rgba(217,119,6,.04));border:1px solid rgba(217,119,6,.35);border-radius:10px;padding:.9rem 1.1rem;">
-      <div style="width:26px;text-align:center;font-size:1.1rem;">🥉</div>
-      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">KD</div>
-      <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Kapoor, Danish</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">The Orchestrators</div></div>
-      <div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:#D97706;">30</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;">
-      <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);font-weight:700;">4</div>
-      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#8B5CF6);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BR</div>
-      <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Begam Mahamood, Rizwana</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Quantum Crew</div></div>
-      <div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--pl);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;">
-      <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);font-weight:700;">5</div>
-      <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">CB</div>
-      <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Chandregowda, Bhavana</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">AI-nstein Squad</div></div>
-      <div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--pl);">10</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
-    </div>
+    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(245,158,11,.05));border:1px solid rgba(245,158,11,.4);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;font-size:1.1rem;">🥇</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BH</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Bellam, Hemanth Kumar Reddy</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Neural Mavericks</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--gold);">50</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(156,163,175,.1),rgba(156,163,175,.04));border:1px solid rgba(156,163,175,.35);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;font-size:1.1rem;">🥈</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BM</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Bariha, Manas</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Neural Mavericks</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:#9CA3AF;">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(217,119,6,.1),rgba(217,119,6,.04));border:1px solid rgba(217,119,6,.35);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;font-size:1.1rem;">🥉</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">KD</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Kapoor, Danish</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">The Orchestrators</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:#D97706;">30</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div style="display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);font-weight:700;">4</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#8B5CF6);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BR</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Begam Mahamood, Rizwana</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Quantum Crew</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--pl);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div style="display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);font-weight:700;">5</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">CB</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Chandregowda, Bhavana</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">AI-nstein Squad</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--pl);">10</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
   </div>
 </section>
 
@@ -567,7 +563,7 @@ section.active{display:block;}
   <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
   <div class="grid3" style="margin-bottom:1.5rem;">
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#7C3AED,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Deepak.jpeg" alt="Deepak" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Deepak.png';"></div><div class="core-name">Deepak Suresh Kini</div><div class="core-role-badge">Core Team</div></div>
-    <div class="core-card">        <div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shikha.jpeg" alt="Shikha" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px;display:block;" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shikha.png';"></div><div class="core-name">Shikha Hurkat</div><div class="core-role-badge">Core Team</div></div>
+    <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#EC4899,#A855F7);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shikha.jpeg" alt="Shikha" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px;display:block;" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/shikha.png';"></div><div class="core-name">Shikha Hurkat</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#10B981,#14B8A6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ashwini.jpeg" alt="Ashwini" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ashwini.png';"></div><div class="core-name">Ashwini Kundaram</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#F59E0B,#EF4444);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Gowri.jpeg" alt="Gowri" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Gowri.png';"></div><div class="core-name">Gowri Myilsamy</div><div class="core-role-badge">Core Team</div></div>
     <div class="core-card"><div class="core-av" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Pavan.jpeg" alt="Pavan" onerror="this.onerror=null;this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Pavan.png';"></div><div class="core-name">Pavan Kumar Natraj</div><div class="core-role-badge">Core Team</div></div>
@@ -580,10 +576,7 @@ section.active{display:block;}
   </div>
   <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:1.4rem 1.8rem;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
     <div style="font-size:2rem;">💬</div>
-    <div style="flex:1;">
-      <div style="font-weight:700;font-size:.95rem;margin-bottom:.3rem;">Have Feedback or Questions?</div>
-      <div style="font-size:.78rem;color:rgba(255,255,255,.5);">We'd love to hear from you — reach out to us anytime</div>
-    </div>
+    <div style="flex:1;"><div style="font-weight:700;font-size:.95rem;margin-bottom:.3rem;">Have Feedback or Questions?</div><div style="font-size:.78rem;color:rgba(255,255,255,.5);">We'd love to hear from you — reach out to us anytime</div></div>
     <a href="mailto:APP_myXperience@accenture.com" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;text-decoration:none;padding:9px 20px;border-radius:10px;font-weight:700;font-size:.82rem;white-space:nowrap;">✉️ APP_myXperience ↗</a>
   </div>
 </section>
@@ -626,27 +619,20 @@ section.active{display:block;}
   }
   function updateCountdown(){
     var now=new Date();
-    var start=new Date('2026-03-27T10:00:00Z'); // 3:30 PM IST = 10:00 AM UTC
-    var end=new Date('2026-03-27T11:00:00Z');   // 4:30 PM IST = 11:00 AM UTC
+    var start=new Date('2026-03-27T10:00:00Z');
+    var end=new Date('2026-03-27T11:00:00Z');
     var diff=start-now;
     var d=document.getElementById('ko-d'),h=document.getElementById('ko-h'),m=document.getElementById('ko-m'),s=document.getElementById('ko-s');
     if(!d)return;
     var banner=document.querySelector('.ko-banner');
-    if(now>=start && now<end){
-      // Event in progress
-      if(banner){
-        banner.innerHTML='<div style="display:flex;align-items:center;gap:1rem;width:100%;"><div style="font-size:2.2rem;">🎬</div><div><div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.2rem;">Live Now</div><div style="font-size:1.1rem;font-weight:800;">Event in Progress · Thank you for joining! 🙏</div><div style="font-size:.78rem;color:rgba(255,255,255,.55);">Grand Kick Off and Curtain Raiser · MS Teams</div></div><span style="margin-left:auto;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:5px 16px;font-size:.8rem;font-weight:700;color:var(--green);">● LIVE</span></div>';
-      }
+    if(now>=start&&now<end){
+      if(banner){banner.innerHTML='<div style="display:flex;align-items:center;gap:1rem;width:100%;"><div style="font-size:2.2rem;">🎬</div><div><div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.2rem;">Live Now</div><div style="font-size:1.1rem;font-weight:800;">Event in Progress · Thank you for joining! 🙏</div><div style="font-size:.78rem;color:rgba(255,255,255,.55);">Grand Kick Off and Curtain Raiser · MS Teams</div></div><span style="margin-left:auto;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:5px 16px;font-size:.8rem;font-weight:700;color:var(--green);">● LIVE</span></div>';}
       return;
     }
     if(now>=end){
-      // Event completed
-      if(banner){
-        banner.innerHTML='<div style="display:flex;align-items:center;gap:1rem;width:100%;"><div style="font-size:2.2rem;">🎊</div><div><div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.2rem;">Grand Kick Off</div><div style="font-size:1.1rem;font-weight:800;">Event Completed! Thank you for joining 🎉</div><div style="font-size:.78rem;color:rgba(255,255,255,.55);">APP Fusion Fest \'26 is officially underway · Stay tuned for upcoming events</div></div><span style="margin-left:auto;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:5px 16px;font-size:.8rem;font-weight:700;color:var(--green);">Completed ✓</span></div>';
-      }
+      if(banner){banner.innerHTML='<div style="display:flex;align-items:center;gap:1rem;width:100%;"><div style="font-size:2.2rem;">🎊</div><div><div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.2rem;">Grand Kick Off</div><div style="font-size:1.1rem;font-weight:800;">Event Completed! Thank you for joining 🎉</div><div style="font-size:.78rem;color:rgba(255,255,255,.55);">APP Fusion Fest \'26 is officially underway · Stay tuned for upcoming events</div></div><span style="margin-left:auto;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:5px 16px;font-size:.8rem;font-weight:700;color:var(--green);">Completed ✓</span></div>';}
       return;
     }
-    // Countdown
     d.textContent=pad(Math.floor(diff/86400000));h.textContent=pad(Math.floor((diff%86400000)/3600000));
     m.textContent=pad(Math.floor((diff%3600000)/60000));s.textContent=pad(Math.floor((diff%60000)/1000));
   }
