@@ -463,11 +463,51 @@ section.active{display:block;}
 
   <!-- Dashboard -->
   <div class="sec-title" style="margin-bottom:.3rem;">📊 Ideas <span>Dashboard</span></div>
-  <div class="sec-sub">Live tracker · Updates once submissions open on Apr 13</div>
-  <div style="background:var(--card);border:1.5px dashed rgba(168,85,247,.35);border-radius:16px;padding:2.5rem;text-align:center;">
-    <div style="font-size:2.5rem;margin-bottom:.8rem;">💡</div>
-    <div style="font-weight:800;font-size:1.1rem;margin-bottom:.4rem;">The Ideas Are Brewing...</div>
-    <div style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7;max-width:420px;margin:0 auto;">Submission window opens <strong style="color:var(--pl);">April 13</strong> · This dashboard will light up with team submissions, categories and live stats as ideas pour in. Watch this space! 🚀</div>
+  <div class="sec-sub">Live tracker · Submission window open until Apr 17</div>
+
+  <!-- ✅ CHANGE 1: Ideas received callout banner -->
+  <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(168,85,247,.08));border:1px solid rgba(16,185,129,.4);border-radius:11px;padding:.9rem 1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;">
+    <span style="font-size:1.3rem;">💡</span>
+    <div style="flex:1;">
+      <div style="font-weight:700;font-size:.88rem;color:var(--green);">Ideas Are Coming In!</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">2 ideas received so far · Neural Mavericks submitted first 🏅 · Quantum Crew in the mix · AI-nstein Squad & Orchestrators — don't miss out!</div>
+    </div>
+    <span style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--green);">LIVE</span>
+  </div>
+
+  <div class="dash-grid" style="margin-bottom:1rem;">
+    <!-- ✅ CHANGE 2: Total count = 2, teams = 2/4 -->
+    <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
+      <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">📋 Total</div>
+      <div class="dash-num">2</div><div class="dash-lbl">Ideas Submitted</div>
+      <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.5rem;">
+        <div style="display:flex;justify-content:space-between;font-size:.75rem;"><span style="color:rgba(255,255,255,.5);">Teams represented</span><span style="font-weight:700;">2 / 4</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:.75rem;"><span style="color:rgba(255,255,255,.5);">Submission window</span><span style="font-weight:700;color:var(--green);">Open</span></div>
+      </div>
+    </div>
+    <!-- ✅ CHANGE 3: By Team — Neural Mavericks (1), Quantum Crew (1) -->
+    <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
+      <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">👥 By Team</div>
+      <div class="tbar-row"><div class="tbar-name">Neural Mavericks</div><div class="tbar-wrap"><div class="tbar-fill" style="width:100%;background:#EC4899;height:100%;"></div></div><div class="tbar-count">1</div></div>
+      <div class="tbar-row"><div class="tbar-name">Quantum Crew</div><div class="tbar-wrap"><div class="tbar-fill" style="width:100%;background:#6366F1;height:100%;"></div></div><div class="tbar-count">1</div></div>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.3);font-style:italic;margin-top:.5rem;">AI-nstein Squad &amp; Orchestrators yet to submit</div>
+    </div>
+    <!-- ✅ CHANGE 4: Bonus Points card — Neural Mavericks +5 pts for FIRST idea -->
+    <div class="dash-card" style="border-color:rgba(245,158,11,.35);">
+      <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">⭐ Bonus Points</div>
+      <div style="display:flex;align-items:center;gap:.7rem;background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.3);border-radius:8px;padding:.7rem .9rem;margin-bottom:.5rem;">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover;" onerror="this.outerHTML='<div style=\'width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;\'>NM</div>'">
+        <div style="flex:1;">
+          <div style="font-size:.78rem;font-weight:700;">Neural Mavericks</div>
+          <div style="font-size:.68rem;color:rgba(255,255,255,.5);">First idea submitted to AI Battle</div>
+        </div>
+        <div style="font-size:1rem;font-weight:900;color:var(--gold);">+5 pts</div>
+      </div>
+      <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:7px;padding:.5rem .8rem;font-size:.7rem;color:rgba(255,255,255,.55);">🏅 <strong style="color:var(--gold);">First Mover Bonus</strong> — awarded to the team that submits the very first idea of the AI Battle!</div>
+    </div>
+  </div>
+  <div style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.3);border-radius:10px;padding:.8rem 1.1rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem;font-size:.78rem;color:rgba(255,255,255,.65);">
+    <span style="font-size:1.2rem;">🔥</span><span>Keep the ideas coming! Submission window closes <strong style="color:var(--green);">17th April</strong> · Every idea counts towards your team's score</span>
   </div>
 </section>
 
@@ -496,22 +536,59 @@ section.active{display:block;}
 <section id="leaderboard">
   <div class="sec-title">📊 <span>Leaderboard</span></div>
   <div class="sec-sub">Live scores across all APP locations · Updated after every event</div>
+
+  <!-- ✅ CHANGE 5: Scoreboard banner updated — Neural Mavericks now 95 pts (90 quiz + 5 AI Battle bonus) -->
   <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(168,85,247,.08));border:1px solid rgba(16,185,129,.4);border-radius:11px;padding:.9rem 1.2rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;">
     <span style="font-size:1.3rem;">⚡</span>
-    <div style="flex:1;"><div style="font-weight:700;font-size:.88rem;color:var(--green);">Scoreboard Updated — Quiz Round 1 Complete!</div><div style="font-size:.75rem;color:rgba(255,255,255,.5);">Neural Mavericks lead with 90 pts · The Orchestrators on 40 pts</div></div>
+    <div style="flex:1;">
+      <div style="font-weight:700;font-size:.88rem;color:var(--green);">Scoreboard Updated — Quiz Round 1 + AI Battle Bonus!</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Neural Mavericks lead with 95 pts · The Orchestrators on 40 pts · Neural Mavericks earn +5 First Mover Bonus 🏅</div>
+    </div>
     <span style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--green);">LIVE</span>
   </div>
+
+  <!-- ✅ CHANGE 6: Podium — Neural Mavericks 95 pts -->
   <div class="podium">
     <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">2nd</div><div class="pod-block pod-2"><div style="font-size:1.1rem;font-weight:800;color:#9CA3AF;">2</div><div class="pod-name">The Orchestrators</div><div class="pod-pts">40 pts</div></div></div>
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:var(--gold);">Leading!</div><div class="pod-block pod-1"><div style="font-size:1.3rem;">👑</div><div style="font-size:1.1rem;font-weight:800;color:var(--gold);">1</div><div class="pod-name">Neural Mavericks</div><div class="pod-pts">90 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:var(--gold);">Leading!</div><div class="pod-block pod-1"><div style="font-size:1.3rem;">👑</div><div style="font-size:1.1rem;font-weight:800;color:var(--gold);">1</div><div class="pod-name">Neural Mavericks</div><div class="pod-pts">95 pts</div></div></div>
     <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">3rd</div><div class="pod-block pod-3"><div style="font-size:1.1rem;font-weight:800;color:#D97706;">3</div><div class="pod-name">Quantum Crew</div><div class="pod-pts">20 pts</div></div></div>
   </div>
+
+  <!-- ✅ CHANGE 7: Leaderboard rows — Neural Mavericks 95 pts, bar at 100%, detail note updated -->
   <div style="margin-bottom:1.5rem;">
-    <div class="lb-row r1"><div style="width:26px;text-align:center;">🥇</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='NM'"></div><div class="lb-info"><div class="lb-team">Neural Mavericks</div><div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#EC4899,#A855F7);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">90</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row r2"><div style="width:26px;text-align:center;">🥈</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='TO'"></div><div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:44%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='QC'"></div><div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · Engagement: Venkatesh</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:22%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div class="lb-row"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div><div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='AI'"></div><div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div><div class="lb-bar-w"><div class="lb-bar" style="width:17%;"></div></div><div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">15</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+    <div class="lb-row r1">
+      <div style="width:26px;text-align:center;">🥇</div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='NM'"></div>
+      <div class="lb-info">
+        <div class="lb-team">Neural Mavericks</div>
+        <div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek · <span style="color:var(--gold);">+5 First Mover Bonus 🏅</span></div>
+      </div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#EC4899,#A855F7);"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">95</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+    </div>
+    <div class="lb-row r2">
+      <div style="width:26px;text-align:center;">🥈</div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='TO'"></div>
+      <div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:42%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+    </div>
+    <div class="lb-row">
+      <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='QC'"></div>
+      <div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · Engagement: Venkatesh</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:21%;"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+    </div>
+    <div class="lb-row">
+      <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='AI'"></div>
+      <div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:16%;"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">15</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+    </div>
   </div>
+
   <div class="sec-title" style="margin-bottom:.3rem;">🧠 Quiz League <span>Round 1 Winners</span></div>
   <div class="sec-sub">APP Quiz League · 27th March 2026 · Top 5 individual performers</div>
   <div style="display:flex;flex-direction:column;gap:.6rem;">
@@ -575,12 +652,10 @@ section.active{display:block;}
 
 <script>
 (function(){
+  // ✅ CHANGE 8: ideas array updated to reflect actual 2 submissions
   var ideas=[
-    {name:'linta.sebastian',team:'The Orchestrators',title:'Test Idea',cat:'Agentic AI'},
-    {name:'linta.sebastian',team:'Neural Mavericks',title:'Test idea',cat:'Agentic AI'},
-    {name:'linta.sebastian',team:'The Orchestrators',title:'Test Idea 2',cat:'Agentic AI'},
-    {name:'linta.sebastian',team:'AI-nstein Squad',title:'Test 1',cat:'Agentic AI'},
-    {name:'linta.sebastian',team:'The Orchestrators',title:'Test idea 1',cat:'Agentic AI'}
+    {name:'Neural Mavericks Member',team:'Neural Mavericks',title:'AI Battle Idea 1',cat:'AI Innovation'},
+    {name:'Quantum Crew Member',team:'Quantum Crew',title:'AI Battle Idea 2',cat:'AI Innovation'}
   ];
   function pad(n){return n<10?'0'+n:''+n;}
   function showTab(id){
@@ -603,7 +678,7 @@ section.active{display:block;}
     }
     if(teamsEl)teamsEl.textContent=tc.length+' / 4';if(catsEl)catsEl.textContent=cc.length;
     tc.sort(function(a,b){return b.c-a.c;});cc.sort(function(a,b){return b.c-a.c;});
-    var maxT=tc.length>0?tc[0].c:1,cols=['#F59E0B','#7C3AED','#EC4899','#6366F1','#10B981'],th='',ch='',i;
+    var maxT=tc.length>0?tc[0].c:1,cols=['#EC4899','#6366F1','#F59E0B','#7C3AED','#10B981'],th='',ch='',i;
     for(i=0;i<tc.length;i++){var pct=Math.round((tc[i].c/maxT)*100);th+='<div class="tbar-row"><div class="tbar-name">'+tc[i].n+'</div><div class="tbar-wrap"><div class="tbar-fill" style="width:'+pct+'%;background:'+cols[i%cols.length]+';height:100%;"></div></div><div class="tbar-count">'+tc[i].c+'</div></div>';}
     for(i=0;i<cc.length;i++){ch+='<div class="cat-chip-d"><span>'+cc[i].n+'</span><span class="cat-n">'+cc[i].c+'</span></div>';}
     tbEl.innerHTML=th||'<div class="empty-msg">No entries yet</div>';
