@@ -150,6 +150,12 @@ section.active{display:block;}
 .progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--p),var(--pl),#E879F9);}
 .rule-item{display:flex;gap:.6rem;font-size:.8rem;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.05);}
 .rule-item:last-child{border-bottom:none;}
+.coll-hdr{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.coll-hdr:hover{opacity:.88;}
+.coll-arrow{font-size:.8rem;font-weight:900;color:var(--pl);transition:transform .28s;flex-shrink:0;margin-left:.8rem;display:inline-block;}
+.coll-arrow.open{transform:rotate(180deg);}
+.coll-body{overflow:hidden;max-height:0;opacity:0;transition:max-height .4s ease,opacity .3s ease;}
+.coll-body.open{max-height:5000px;opacity:1;}
 </style>
 </head>
 <body>
@@ -183,19 +189,20 @@ section.active{display:block;}
       <div><div class="sn">All Locations</div><div class="sl">Accenture</div></div>
     </div>
   </div>
-  <div class="ko-banner">
+  <div class="ko-banner" style="border-color:rgba(245,158,11,.7);background:linear-gradient(135deg,rgba(245,158,11,.18),rgba(168,85,247,.15));">
     <div style="display:flex;align-items:center;gap:1rem;">
-      <div style="font-size:2.2rem;">🚨</div>
+      <div style="font-size:2.2rem;">🏆</div>
       <div>
-        <div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:.2rem;">✅ AI Battle — Round 1 Closed!</div>
-        <div style="font-size:1.1rem;font-weight:800;"><span style="color:var(--green);">111 Ideas Submitted!</span> What an incredible response from the APP family!</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.55);">Submission window closed · Evaluation underway · <strong style="color:var(--gold);">Top 10 finalists to be announced by <strong>29th April</strong>!</strong></div>
+        <div style="font-size:.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:.2rem;">🎉 AI Battle — Top 9 Shortlisted · Round 2 Underway!</div>
+        <div style="font-size:1.1rem;font-weight:800;"><span style="color:var(--gold);">9 teams have advanced</span> to the Build + Pitch Finale — incredible ideas from all!</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.55);">All 4 teams are represented in the Top 9 · Neural Mavericks also earn a Special Mention 🏅 · <strong style="color:var(--gold);">Grand Pitch Finale date coming soon!</strong></div>
       </div>
     </div>
     <div style="display:flex;gap:.7rem;flex-wrap:wrap;">
-      <button onclick="showTab('aibattle')" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--p),var(--pl));color:#fff;border:none;padding:8px 18px;border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;">🚀 ⚔️ View AI Battle ↗</button>
+      <button onclick="showTab('aibattle')" style="background:linear-gradient(135deg,var(--gold),#F97316);color:#fff;border:none;padding:8px 18px;border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;">🏆 View Shortlist ↗</button>
     </div>
   </div>
+
   <div id="kickoff-detail" style="display:none;margin-bottom:1.5rem;">
     <div class="agenda-box">
       <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem;">🚀 Kick Off Agenda · Thursday 27th March · 3:30–4:30 PM · MS Teams</div>
@@ -216,8 +223,8 @@ section.active{display:block;}
   <div class="sec-sub">Click any month to explore</div>
   <div style="margin-bottom:1.8rem;">
     <div class="jrow highlight" data-goto="overview"><div class="j-icon">🚀</div><div style="flex:1"><div class="j-month">27th March 2026</div><div class="j-title">Grand Kick Off</div><div class="j-theme">Virtual Curtain Raiser · Leadership Address · Team Reveal · APP Quiz League</div><div class="j-chips"><span class="chip gold">Countdown On</span><span class="chip gold">Virtual 1 Hour</span></div></div><div class="j-right"><div class="j-dot dot-ko"></div></div></div>
-    <div class="jrow" data-goto="aibattle"><div class="j-icon">⚔️</div><div style="flex:1"><div class="j-month">April 2026</div><div class="j-title">Innovation Jam and Pitch Battles</div><div class="j-theme">AI-led idea generation · Teams pitch to judges</div><div class="j-chips"><span class="chip">AI Battle</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
-    <div class="jrow" data-goto="sports"><div class="j-icon">🏓</div><div style="flex:1"><div class="j-month">May 2026</div><div class="j-title">Play and Perform — Carroms and Table Tennis</div><div class="j-theme">Team bonding through sports tournaments</div><div class="j-chips"><span class="chip pink">Sports</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
+    <div class="jrow" data-goto="aibattle"><div class="j-icon">⚔️</div><div style="flex:1"><div class="j-month">April 2026</div><div class="j-title">Innovation Jam and Pitch Battles</div><div class="j-theme">112 ideas submitted · Top 9 shortlisted · Round 2 now underway</div><div class="j-chips"><span class="chip live">Top 9 Announced!</span><span class="chip gold">Round 2 Active</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
+    <div class="jrow" data-goto="sports"><div class="j-icon">🏓</div><div style="flex:1"><div class="j-month">May 2026</div><div class="j-title">Play and Perform — Carroms and Table Tennis</div><div class="j-theme">Events in May · Nominations open 1st week of May</div><div class="j-chips"><span class="chip pink">Sports</span><span class="chip live">Nominations open May W1</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="aibattle"><div class="j-icon">🎙️</div><div style="flex:1"><div class="j-month">June 2026</div><div class="j-title">AI Panel and Structured Debate</div><div class="j-theme">AI thought leadership · Expert panel and team debate</div><div class="j-chips"><span class="chip">AI Battle</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="sports"><div class="j-icon">🏃</div><div style="flex:1"><div class="j-month">July 2026</div><div class="j-title">Move and Momentum — Step Challenge and Fitness Reels</div><div class="j-theme">Well-being · Morale · Informal bonding</div><div class="j-chips"><span class="chip pink">Sports and Wellness</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
     <div class="jrow" data-goto="finale"><div class="j-icon">🎊</div><div style="flex:1"><div class="j-month">August 2026</div><div class="j-title">Showcase and Celebrate — Grand Finale</div><div class="j-theme">Cultural Showcase · Innovation Finals · Award Ceremony</div><div class="j-chips"><span class="chip gold">Grand Finale</span></div></div><div class="j-right"><div class="j-dot dot-up"></div></div></div>
@@ -238,19 +245,19 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Harshad.jpeg" alt="Harshad" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Harshad.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#D97706);\'>HN</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Harshad.jpeg" alt="Harshad" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Harshad.png','#F59E0B','#D97706','HN')"></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Harshad Nanal</div><div class="m-handle">harshad.nanal</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>KR</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.png" alt="Karthik" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/karthik.jpeg','#7C3AED','#A855F7','KR')"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthik Rajkumar Kannan</div><div class="m-handle">k.rajkumar.kannan</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>KL</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpg" alt="Kamlesh" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Kamlesh.jpeg','#F59E0B','#F97316','KL')"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Kamlesh Lakshmanan</div><div class="m-handle">kamlesh.lakshmanan</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VB</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpg" alt="Vinodhini" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vinodhini.jpeg','#10B981','#059669','VB')"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vinodhini Balakrishnan</div><div class="m-handle">b.vinodhini</div>
       </div>
     </div>
@@ -262,19 +269,19 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.jpeg" alt="Shobha" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#D97706);\'>SP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.jpeg" alt="Shobha" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Shobha.png','#F59E0B','#D97706','SP')"></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Shobha Puttanna</div><div class="m-handle">shobha.b.puttanna</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Jyothi.jpeg" alt="Jyothi" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Jyothi.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#6366F1,#8B5CF6);\'>JM</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Jyothi.jpeg" alt="Jyothi" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Jyothi.png','#6366F1','#8B5CF6','JM')"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Jyoti Misra Parashar</div><div class="m-handle">jyoti.misra.parashar</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Rupa.jpeg" alt="Rupa" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Rupa.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>RK</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Rupa.jpeg" alt="Rupa" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Rupa.png','#F59E0B','#F97316','RK')"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Rupa Kalidindi</div><div class="m-handle">rupa.kalidindi</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Venkatesh.jpeg" alt="Venkatesh" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Venkatesh.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VK</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Venkatesh.jpeg" alt="Venkatesh" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Venkatesh.png','#10B981','#059669','VK')"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Venkatesh B. Kesari</div><div class="m-handle">venkatesh.b.kesari</div>
       </div>
     </div>
@@ -286,19 +293,19 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/bipin.jpeg" alt="Bipin" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/bipin.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#D97706);\'>BC</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/bipin.jpeg" alt="Bipin" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/bipin.png','#F59E0B','#D97706','BC')"></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Bipin Chandra</div><div class="m-handle">bipin.a.chandra</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>KS</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.png" alt="Karthika" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Karthika.jpeg','#EC4899','#A855F7','KS')"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Karthika Subbiah</div><div class="m-handle">karthika.subbiah</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#F97316);\'>VS</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.png" alt="Vishal" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vishal.jpeg','#F59E0B','#F97316','VS')"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Vishal D. Singh</div><div class="m-handle">vishal.d.singh</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>VV</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.png" alt="Vivek" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Vivek.jpeg','#10B981','#059669','VV')"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Vivek Sharma</div><div class="m-handle">vivekr.sharma</div>
       </div>
     </div>
@@ -310,19 +317,19 @@ section.active{display:block;}
     </div>
     <div class="members">
       <div class="member sponsor-card">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Santhosh.jpeg" alt="Santhosh" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Santhosh.png';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#F59E0B,#D97706);\'>SN</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Santhosh.jpeg" alt="Santhosh" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Santhosh.png','#F59E0B','#D97706','SN')"></div>
         <div class="role-badge rb-sp">🌟 Sponsor</div><div class="m-name">Santhosh Nair</div><div class="m-handle">santhosh.r.nair</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#7C3AED,#A855F7);\'>SD</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.png" alt="Satish" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Satish.jpeg','#7C3AED','#A855F7','SD')"></div>
         <div class="role-badge rb-ai">🤖 AI Champion</div><div class="m-name">Satish D. Kumar</div><div class="m-handle">satish.d.kumar</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#EC4899,#A855F7);\'>SC</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpg" alt="Sulagna" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Sulagna.jpeg','#EC4899','#A855F7','SC')"></div>
         <div class="role-badge rb-cap">👑 Captain</div><div class="m-name">Sulagna Chattopadhyay</div><div class="m-handle">s.y.chattopadhyay</div>
       </div>
       <div class="member">
-        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.png" alt="Ajith" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpeg';this.onerror=function(){this.parentNode.innerHTML='<div class=\'ini\' style=\'background:linear-gradient(135deg,#10B981,#059669);\'>AP</div><span class=\'plabel\'>Photo coming soon</span>';}"></div>
+        <div class="pframe"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.png" alt="Ajith" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Ajith.jpeg','#10B981','#059669','AP')"></div>
         <div class="role-badge rb-eng">🎯 Engagement Champion</div><div class="m-name">Ajith PuthanPisharath</div><div class="m-handle">p.pisharath.ajith</div>
       </div>
     </div>
@@ -348,28 +355,36 @@ section.active{display:block;}
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.3rem;">
     <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:10px;padding:.7rem;text-align:center;">
       <div style="font-size:1.4rem;">💡</div>
-      <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-top:.2rem;">111 Ideas In!</div>
+      <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-top:.2rem;">112 Ideas In!</div>
       <div style="font-size:.67rem;color:rgba(255,255,255,.45);">Evaluation underway</div>
     </div>
     <div style="background:rgba(168,85,247,.08);border:1px solid rgba(168,85,247,.3);border-radius:10px;padding:.7rem;text-align:center;">
       <div style="font-size:1.4rem;">🏆</div>
       <div style="font-size:.75rem;font-weight:700;color:var(--pl);margin-top:.2rem;">Top 8–10 ideas</div>
-      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">advance to Round 2!</div>
+      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">advancing to Round 2!</div>
     </div>
     <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:.7rem;text-align:center;">
       <div style="font-size:1.4rem;">🚀</div>
-      <div style="font-size:.75rem;font-weight:700;color:var(--gold);margin-top:.2rem;">111 ideas in!</div>
+      <div style="font-size:.75rem;font-weight:700;color:var(--gold);margin-top:.2rem;">112 ideas in!</div>
       <div style="font-size:.67rem;color:rgba(255,255,255,.45);">Top 10 by 29 Apr!</div>
     </div>
   </div>
 
+  <!-- 🏆 TEAM SHOUTOUTS — 1 DAY LEFT -->
+
+  <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
+    <div class="coll-hdr" style="padding:.9rem 1.3rem;border-bottom:1px solid var(--border);">
+      <div style="font-size:.78rem;font-weight:800;color:var(--pl);text-transform:uppercase;letter-spacing:.05em;">🎉 Team Shout-Outs · Round 1 Wrap — Final Idea Counts</div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
   <!-- 🏆 TEAM SHOUTOUTS — 1 DAY LEFT -->
   <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.3rem;margin-bottom:1.5rem;">
     <div style="font-size:.72rem;color:var(--pl);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.8rem;">🎉 Team Shout-Outs · Round 1 Wrap — Final Idea Counts!</div>
     <div style="display:flex;flex-direction:column;gap:.55rem;">
       <!-- Orchestrators #1 -->
       <div style="display:flex;align-items:center;gap:.8rem;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(239,68,68,.08));border:1.5px solid rgba(245,158,11,.55);border-radius:10px;padding:.65rem 1rem;">
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="this.outerHTML='<div style=\'width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;\'>TO</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="imgFb(this,'#F59E0B','#D97706','TO','32','32','8px')">
         <div style="flex:1;">
           <div style="font-size:.82rem;font-weight:800;color:var(--gold);">👑 The Orchestrators — Champions of Round 1 with 37 ideas!</div>
           <div style="font-size:.7rem;color:rgba(255,255,255,.5);">Absolutely phenomenal! 🔥 Highest submission count in Round 1 · The standard has been set — bring this energy to Round 2!</div>
@@ -381,7 +396,7 @@ section.active{display:block;}
       </div>
       <!-- Quantum Crew #2 -->
       <div style="display:flex;align-items:center;gap:.8rem;background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.06));border:1px solid rgba(99,102,241,.4);border-radius:10px;padding:.65rem 1rem;">
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="this.outerHTML='<div style=\'width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#6366F1,#8B5CF6);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;\'>QC</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="imgFb(this,'#6366F1','#8B5CF6','QC','32','32','8px')">
         <div style="flex:1;">
           <div style="font-size:.82rem;font-weight:800;color:#818CF8;">🚀 Quantum Crew — 29 ideas and a brilliant Round 1!</div>
           <div style="font-size:.7rem;color:rgba(255,255,255,.5);">Incredible effort across the team · 29 strong ideas submitted · Ready to take it to Round 2 with full force!</div>
@@ -393,19 +408,19 @@ section.active{display:block;}
       </div>
       <!-- Neural Mavericks #3 -->
       <div style="display:flex;align-items:center;gap:.8rem;background:linear-gradient(135deg,rgba(236,72,153,.1),rgba(168,85,247,.06));border:1px solid rgba(236,72,153,.35);border-radius:10px;padding:.65rem 1rem;">
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="this.outerHTML='<div style=\'width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;\'>NM</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="imgFb(this,'#EC4899','#A855F7','NM','32','32','8px')">
         <div style="flex:1;">
-          <div style="font-size:.82rem;font-weight:800;color:#F472B6;">⚡ Neural Mavericks — 30 ideas + First Mover glory 🏅</div>
-          <div style="font-size:.7rem;color:rgba(255,255,255,.5);">First to submit AND finished 2nd in count — incredible consistency! · 30 ideas is a statement · Round 2 awaits!</div>
+          <div style="font-size:.82rem;font-weight:800;color:#F472B6;">⚡ Neural Mavericks — 31 ideas + First Mover glory 🏅</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);">First to submit AND last to submit — a perfect bookend to Round 1! 🏅🎯 · 31 ideas · Round 2 awaits!</div>
         </div>
         <div style="background:rgba(236,72,153,.2);border:1px solid rgba(236,72,153,.45);border-radius:8px;padding:.3rem .7rem;text-align:center;flex-shrink:0;">
-          <div style="font-size:1.3rem;font-weight:900;color:#F472B6;line-height:1.1;">30</div>
+          <div style="font-size:1.3rem;font-weight:900;color:#F472B6;line-height:1.1;">31</div>
           <div style="font-size:.55rem;color:rgba(255,255,255,.4);text-transform:uppercase;">#2</div>
         </div>
       </div>
       <!-- AI-nstein Squad #4 -->
       <div style="display:flex;align-items:center;gap:.8rem;background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(168,85,247,.06));border:1px solid rgba(124,58,237,.35);border-radius:10px;padding:.65rem 1rem;">
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="this.outerHTML='<div style=\'width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;\'>AI</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:32px;height:32px;border-radius:8px;object-fit:cover;" onerror="imgFb(this,'#7C3AED','#A855F7','AI','32','32','8px')">
         <div style="flex:1;">
           <div style="font-size:.82rem;font-weight:800;color:#C084FC;">💪 AI-nstein Squad — 15 ideas submitted!</div>
           <div style="font-size:.7rem;color:rgba(255,255,255,.55);">Great effort from the team! 15 ideas in the pool · Every single idea will be evaluated — fingers crossed for Round 2! 🤞</div>
@@ -417,7 +432,18 @@ section.active{display:block;}
       </div>
     </div>
   </div>
+    </div>
+  </div>
 
+  
+  <!-- Rules & Guidelines -->
+
+  <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
+    <div class="coll-hdr" style="padding:.9rem 1.3rem;border-bottom:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:.8rem;"><span style="font-size:1.1rem;">📋</span><div style="font-weight:800;font-size:.92rem;">Rules &amp; Guidelines</div></div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
   <!-- Rules & Guidelines -->
   <div style="background:var(--card);border:1px solid rgba(168,85,247,.35);border-radius:14px;overflow:hidden;margin-bottom:1.2rem;">
     <div style="background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(168,85,247,.1));padding:.9rem 1.3rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;">
@@ -439,7 +465,18 @@ section.active{display:block;}
       <div class="rule-item"><span style="color:#EF4444;flex-shrink:0;">❌</span><span><strong>Judges' decisions are final</strong> · Any misconduct or plagiarism will lead to disqualification</span></div>
     </div>
   </div>
+    </div>
+  </div>
 
+  
+  <!-- Round 1 -->
+
+  <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
+    <div class="coll-hdr" style="padding:.9rem 1.3rem;border-bottom:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:.8rem;"><span style="background:rgba(168,85,247,.35);border-radius:8px;padding:4px 12px;font-weight:800;font-size:.82rem;color:var(--pl);">🥊 Round 1</span><div style="font-weight:800;font-size:1rem;">Open AI Idea Submission</div><span class="chip live" style="margin-left:.4rem;">Closed ✅ · 112 Ideas</span></div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
   <!-- Round 1 -->
   <div style="background:var(--card);border:1px solid rgba(168,85,247,.4);border-radius:16px;overflow:hidden;margin-bottom:1.2rem;">
     <div style="background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(168,85,247,.1));padding:1rem 1.3rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;">
@@ -467,6 +504,151 @@ section.active{display:block;}
       </div>
       <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:.6rem .9rem;font-size:.76rem;color:rgba(255,255,255,.7);">
         🏁 All ideas evaluated · <strong style="color:var(--green);">Top 8–10 ideas shortlisted</strong> — based on ideas, not teams · Announced by 29th April &nbsp;|&nbsp; ⚠️ <strong style="color:var(--gold);">Reminder: Max 2 ideas per individual</strong>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  
+  <!-- 🏆 SHORTLISTED IDEAS -->
+  <div class="sec-title" style="margin-bottom:.3rem;">🏆 <span>Shortlisted Ideas</span> — Round 2</div>
+  <div class="sec-sub">Top 9 ideas advancing to the Build + Pitch Finale · 10 pts each · Plus 1 Special Mention</div>
+
+  <!-- Top 9 -->
+  <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1rem;">
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">1</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#6366F1','#8B5CF6','QC','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">ZeroBug — AI Agent That Reads Bug Reports, Writes the Fix, and Ships It</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">Quantum Crew · Lead: chitresh.goyal</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">2</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#F59E0B','#D97706','TO','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Invisible AI Care Assistant</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">The Orchestrators · Lead: susanjita.mall</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">3</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#F59E0B','#D97706','TO','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Farmers Government Scheme Eligibility Agent</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">The Orchestrators · Lead: s.bh.balasubramanian</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">4</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#7C3AED','#A855F7','AI','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Multi-Agent Project Planning System</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">AI-nstein Squad · Lead: amrutha.yogisha</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">5</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#EC4899','#A855F7','NM','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Dark Data Prospector</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">Neural Mavericks · Lead: shravankumar.rajanal</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">6</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#7C3AED','#A855F7','AI','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Dynamic Financial Opportunity & Risk Discovery Graph for Mergers and Acquisitions</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">AI-nstein Squad · Lead: christal.reena</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">7</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#EC4899','#A855F7','NM','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Auto-Onboard New Joiners with Intelligent AI Agents</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">Neural Mavericks · Lead: vividh.s.kulshrestha</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">8</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#6366F1','#8B5CF6','QC','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">CityScope: The Urban What-If Engine</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">Quantum Crew · Lead: supriya.panda</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(249,115,22,.06));border:1px solid rgba(245,158,11,.45);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;">
+      <div style="font-size:1.1rem;width:28px;text-align:center;">9</div>
+      <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#F59E0B','#D97706','TO','30','30','7px')">
+      <div style="flex:1;">
+        <div style="font-size:.82rem;font-weight:800;">Vision Autopilot – Mode-Driven AI Glasses for All-Day Independence</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">The Orchestrators · Lead: p.pisharath.ajith</div>
+      </div>
+      <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--gold);flex-shrink:0;">+10 pts</span>
+    </div>
+
+  </div>
+
+  <!-- Special Mention -->
+  <div style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(124,58,237,.08));border:1.5px solid rgba(168,85,247,.55);border-radius:12px;padding:.85rem 1.1rem;display:flex;align-items:center;gap:.9rem;margin-bottom:1.5rem;">
+    <div style="font-size:1.3rem;width:28px;text-align:center;">⭐</div>
+    <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#EC4899','#A855F7','NM','30','30','7px')">
+    <div style="flex:1;">
+      <div style="font-size:.82rem;font-weight:800;">The MindGuard: An Autonomous, Guardrailed AI Agent Pipeline for Proactive Emotional Wellbeing</div>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.15rem;">Neural Mavericks · Lead: rajat.j.mishra · <span style="color:var(--pl);font-weight:700;">Special Mention</span></div>
+    </div>
+    <span style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.5);border-radius:20px;padding:2px 12px;font-size:.72rem;font-weight:800;color:var(--pl);flex-shrink:0;">+5 pts</span>
+  </div>
+
+  <!-- Points summary by team -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.3rem;margin-bottom:1.5rem;">
+    <div style="font-size:.72rem;color:var(--pl);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.8rem;">📊 AI Battle Points Awarded</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;">
+      <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(245,158,11,.04));border:1px solid rgba(245,158,11,.4);border-radius:10px;padding:.7rem;text-align:center;">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:28px;height:28px;border-radius:7px;object-fit:cover;margin-bottom:.3rem;" onerror="imgFb(this,'#F59E0B','#D97706','TO','28','28','7px')">
+        <div style="font-size:.72rem;font-weight:700;color:var(--gold);">The Orchestrators</div>
+        <div style="font-size:1.3rem;font-weight:900;color:var(--gold);">+30</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">3 ideas × 10 pts</div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(236,72,153,.1),rgba(168,85,247,.06));border:1px solid rgba(236,72,153,.35);border-radius:10px;padding:.7rem;text-align:center;">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:28px;height:28px;border-radius:7px;object-fit:cover;margin-bottom:.3rem;" onerror="imgFb(this,'#EC4899','#A855F7','NM','28','28','7px')">
+        <div style="font-size:.72rem;font-weight:700;color:#F472B6;">Neural Mavericks</div>
+        <div style="font-size:1.3rem;font-weight:900;color:#F472B6;">+25</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 shortlisted + Special Mention</div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.06));border:1px solid rgba(99,102,241,.35);border-radius:10px;padding:.7rem;text-align:center;">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:28px;height:28px;border-radius:7px;object-fit:cover;margin-bottom:.3rem;" onerror="imgFb(this,'#6366F1','#8B5CF6','QC','28','28','7px')">
+        <div style="font-size:.72rem;font-weight:700;color:#818CF8;">Quantum Crew</div>
+        <div style="font-size:1.3rem;font-weight:900;color:#818CF8;">+20</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas × 10 pts</div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(168,85,247,.06));border:1px solid rgba(124,58,237,.35);border-radius:10px;padding:.7rem;text-align:center;">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:28px;height:28px;border-radius:7px;object-fit:cover;margin-bottom:.3rem;" onerror="imgFb(this,'#7C3AED','#A855F7','AI','28','28','7px')">
+        <div style="font-size:.72rem;font-weight:700;color:#C084FC;">AI-nstein Squad</div>
+        <div style="font-size:1.3rem;font-weight:900;color:#C084FC;">+20</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas × 10 pts</div>
       </div>
     </div>
   </div>
@@ -543,14 +725,22 @@ section.active{display:block;}
   </div>
 
   <!-- Dashboard -->
+
+  <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
+    <div class="coll-hdr" style="padding:.9rem 1.3rem;border-bottom:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:.8rem;"><span style="font-size:1.1rem;">📊</span><div style="font-weight:800;font-size:.92rem;">Ideas Dashboard</div><span class="chip live" style="margin-left:.4rem;">112 Ideas · Closed ✅</span></div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
+  <!-- Dashboard -->
   <div class="sec-title" style="margin-bottom:.3rem;">📊 Ideas <span>Dashboard</span></div>
-  <div class="sec-sub">Submission closed · 111 ideas received! · <strong style="color:var(--gold);">Top 10 announcement by 29th April</strong></div>
+  <div class="sec-sub">Submission closed · 112 ideas received! · <strong style="color:var(--gold);">Top 10 announcement by 29th April</strong></div>
 
   <!-- IDEAS MOMENTUM BANNER -->
   <div style="background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(168,85,247,.1));border:1px solid rgba(16,185,129,.45);border-radius:12px;padding:1rem 1.3rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
     <div style="font-size:1.5rem;">🔥</div>
     <div style="flex:1;">
-      <div style="font-weight:800;font-size:.92rem;color:var(--green);">🎊 111 Ideas Submitted — Round 1 Complete!</div>
+      <div style="font-weight:800;font-size:.92rem;color:var(--green);">🎊 🎊 112 Ideas Submitted — Round 1 Complete!</div>
       <div style="font-size:.75rem;color:rgba(255,255,255,.55);margin-top:.2rem;">The Orchestrators lead with 37 · Neural Mavericks 30 · Quantum Crew 29 · All ideas now under evaluation!</div>
     </div>
     <span style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.5);border-radius:20px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--green);">CLOSED ✅</span>
@@ -560,7 +750,7 @@ section.active{display:block;}
     <!-- Total: 40 -->
     <div class="dash-card" style="border-color:rgba(168,85,247,.35);">
       <div style="font-size:.72rem;color:var(--pl);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">📋 Total</div>
-      <div class="dash-num" style="color:var(--green);">111</div><div class="dash-lbl">Ideas Submitted</div>
+      <div class="dash-num" style="color:var(--green);">112</div><div class="dash-lbl">Ideas Submitted</div>
       <div style="margin-top:1rem;display:flex;flex-direction:column;gap:.5rem;">
         <div style="display:flex;justify-content:space-between;font-size:.75rem;"><span style="color:rgba(255,255,255,.5);">Teams represented</span><span style="font-weight:700;color:var(--green);">4 / 4 ✅</span></div>
         <div style="display:flex;justify-content:space-between;font-size:.75rem;"><span style="color:rgba(255,255,255,.5);">Window closes</span><span style="font-weight:700;color:var(--green);">Closed ✅</span></div>
@@ -574,7 +764,7 @@ section.active{display:block;}
         <div class="tbar-wrap"><div class="tbar-fill" style="width:100%;background:linear-gradient(90deg,#F59E0B,#EF4444);height:100%;"></div></div>
         <div class="tbar-count" style="color:var(--gold);">37</div>
       </div>
-      <div class="tbar-row"><div class="tbar-name">Neural Mavericks</div><div class="tbar-wrap"><div class="tbar-fill" style="width:81%;background:#EC4899;height:100%;"></div></div><div class="tbar-count">30</div></div>
+      <div class="tbar-row"><div class="tbar-name">Neural Mavericks</div><div class="tbar-wrap"><div class="tbar-fill" style="width:84%;background:#EC4899;height:100%;"></div></div><div class="tbar-count">30</div></div>
       <div class="tbar-row"><div class="tbar-name">Quantum Crew</div><div class="tbar-wrap"><div class="tbar-fill" style="width:78%;background:#6366F1;height:100%;"></div></div><div class="tbar-count">29</div></div>
       <div class="tbar-row"><div class="tbar-name">AI-nstein Squad</div><div class="tbar-wrap"><div class="tbar-fill" style="width:41%;background:#7C3AED;height:100%;"></div></div><div class="tbar-count">15</div></div>
     </div>
@@ -582,7 +772,7 @@ section.active{display:block;}
     <div class="dash-card" style="border-color:rgba(245,158,11,.35);">
       <div style="font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.8rem;">⭐ Bonus Points</div>
       <div style="display:flex;align-items:center;gap:.7rem;background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.3);border-radius:8px;padding:.7rem .9rem;margin-bottom:.5rem;">
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover;" onerror="this.outerHTML='<div style=\'width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;\'>NM</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover;" onerror="imgFb(this,'#EC4899','#A855F7','NM','28','28','50%')">
         <div style="flex:1;">
           <div style="font-size:.78rem;font-weight:700;">Neural Mavericks</div>
           <div style="font-size:.68rem;color:rgba(255,255,255,.5);">First idea submitted to AI Battle</div>
@@ -595,24 +785,35 @@ section.active{display:block;}
 
   <!-- Orchestrators leader spotlight -->
   <div style="background:linear-gradient(135deg,rgba(245,158,11,.18),rgba(239,68,68,.1));border:1.5px solid rgba(245,158,11,.6);border-radius:14px;padding:1rem 1.4rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-    <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:44px;height:44px;border-radius:10px;object-fit:cover;border:2px solid rgba(245,158,11,.6);" onerror="this.outerHTML='<div style=\'width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;\'>TO</div>'">
+    <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:44px;height:44px;border-radius:10px;object-fit:cover;border:2px solid rgba(245,158,11,.6);" onerror="imgFb(this,'#F59E0B','#D97706','TO','44','44','10px')">
     <div style="flex:1;">
       <div style="font-size:.68rem;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.2rem;">👑 👑 AI Battle Round 1 — Ideas Champion!</div>
       <div style="font-size:.95rem;font-weight:800;">The Orchestrators — <span style="color:var(--gold);">37 ideas! Round 1 Champions! 🔥</span></div>
-      <div style="font-size:.73rem;color:rgba(255,255,255,.5);margin-top:.2rem;">Neural Mavericks at 30 · Quantum Crew at 29 — brilliant effort from all! 🙌</div>
+      <div style="font-size:.73rem;color:rgba(255,255,255,.5);margin-top:.2rem;">Neural Mavericks at 31 (first AND last idea!) · Quantum Crew at 29 — brilliant effort from all! 🙌</div>
     </div>
     <div style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:10px;padding:.5rem 1rem;text-align:center;flex-shrink:0;">
       <div style="font-size:1.8rem;font-weight:900;color:var(--gold);line-height:1;">37</div>
       <div style="font-size:.6rem;color:rgba(255,255,255,.45);text-transform:uppercase;">Ideas 🏆</div>
     </div>
   </div>
+    </div>
+  </div>
 
+  
+  <!-- IDEAS SUMMARY SECTION -->
+
+  <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
+    <div class="coll-hdr" style="padding:.9rem 1.3rem;border-bottom:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:.8rem;"><span style="font-size:1.1rem;">📈</span><div style="font-weight:800;font-size:.92rem;">Round 1 — Ideas Summary</div></div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
   <!-- IDEAS SUMMARY SECTION -->
   <div class="sec-title" style="margin-bottom:.3rem;margin-top:.5rem;">📈 Round 1 <span>Ideas Summary</span></div>
   <div class="sec-sub">A snapshot of the incredible participation across APP teams</div>
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:1.2rem;">
     <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(16,185,129,.05));border:1px solid rgba(16,185,129,.35);border-radius:12px;padding:1rem;text-align:center;">
-      <div style="font-size:2rem;font-weight:900;color:var(--green);">111</div>
+      <div style="font-size:2rem;font-weight:900;color:var(--green);">112</div>
       <div style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.05em;margin-top:3px;">Total Ideas</div>
     </div>
     <div style="background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(168,85,247,.05));border:1px solid rgba(168,85,247,.35);border-radius:12px;padding:1rem;text-align:center;">
@@ -634,7 +835,7 @@ section.active{display:block;}
     <div style="display:flex;flex-direction:column;gap:.6rem;">
       <div style="display:flex;align-items:center;gap:.9rem;">
         <div style="width:22px;text-align:center;font-size:.9rem;">🥇</div>
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="this.outerHTML='<div style='width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.65rem;'>TO</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#F59E0B','#D97706','TO','30','30','7px')">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:.8rem;font-weight:700;color:var(--gold);">The Orchestrators 👑</span><span style="font-size:.8rem;font-weight:900;color:var(--gold);">37</span></div>
           <div style="height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;"><div style="width:100%;height:100%;background:linear-gradient(90deg,#F59E0B,#EF4444);border-radius:4px;"></div></div>
@@ -642,15 +843,15 @@ section.active{display:block;}
       </div>
       <div style="display:flex;align-items:center;gap:.9rem;">
         <div style="width:22px;text-align:center;font-size:.9rem;">🥈</div>
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="this.outerHTML='<div style='width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.65rem;'>NM</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#EC4899','#A855F7','NM','30','30','7px')">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:.8rem;font-weight:700;color:#F472B6;">Neural Mavericks ⚡ <span style="font-size:.65rem;background:rgba(236,72,153,.2);border:1px solid rgba(236,72,153,.4);border-radius:20px;padding:1px 7px;color:#F472B6;">First Mover 🏅</span></span><span style="font-size:.8rem;font-weight:900;color:#F472B6;">30</span></div>
-          <div style="height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;"><div style="width:81%;height:100%;background:linear-gradient(90deg,#EC4899,#A855F7);border-radius:4px;"></div></div>
+          <div style="height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;"><div style="width:84%;height:100%;background:linear-gradient(90deg,#EC4899,#A855F7);border-radius:4px;"></div></div>
         </div>
       </div>
       <div style="display:flex;align-items:center;gap:.9rem;">
         <div style="width:22px;text-align:center;font-size:.9rem;">🥉</div>
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="this.outerHTML='<div style='width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,#6366F1,#8B5CF6);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.65rem;'>QC</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#6366F1','#8B5CF6','QC','30','30','7px')">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:.8rem;font-weight:700;color:#818CF8;">Quantum Crew 🚀</span><span style="font-size:.8rem;font-weight:900;color:#818CF8;">29</span></div>
           <div style="height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;"><div style="width:78%;height:100%;background:linear-gradient(90deg,#6366F1,#8B5CF6);border-radius:4px;"></div></div>
@@ -658,7 +859,7 @@ section.active{display:block;}
       </div>
       <div style="display:flex;align-items:center;gap:.9rem;">
         <div style="width:22px;text-align:center;font-size:.9rem;">4️⃣</div>
-        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="this.outerHTML='<div style='width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.65rem;'>AI</div>'">
+        <img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:30px;height:30px;border-radius:7px;object-fit:cover;" onerror="imgFb(this,'#7C3AED','#A855F7','AI','30','30','7px')">
         <div style="flex:1;">
           <div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-size:.8rem;font-weight:700;color:#C084FC;">AI-nstein Squad 💪</span><span style="font-size:.8rem;font-weight:900;color:#C084FC;">15</span></div>
           <div style="height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;"><div style="width:41%;height:100%;background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:4px;"></div></div>
@@ -667,18 +868,21 @@ section.active{display:block;}
     </div>
     <div style="margin-top:.9rem;padding-top:.7rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
       <span style="font-size:.75rem;color:rgba(255,255,255,.4);">Grand Total</span>
-      <span style="font-size:1rem;font-weight:900;color:var(--green);">111 Ideas 🎉</span>
+      <span style="font-size:1rem;font-weight:900;color:var(--green);">112 Ideas 🎉</span>
+    </div>
+  </div>
     </div>
   </div>
 
-  <!-- TOP 10 COMING SOON -->
+  
+  <!-- ROUND 2 UNDERWAY BANNER -->
   <div style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(168,85,247,.1));border:1.5px solid rgba(245,158,11,.5);border-radius:12px;padding:1rem 1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-    <div style="font-size:1.8rem;">🔍</div>
+    <div style="font-size:1.8rem;">🚀</div>
     <div style="flex:1;">
-      <div style="font-weight:800;font-size:.9rem;color:var(--gold);">What happens next?</div>
-      <div style="font-size:.76rem;color:rgba(255,255,255,.65);margin-top:.3rem;">All 111 ideas are now under evaluation by the judging panel · The <strong style="color:var(--gold);">Top 10 shortlisted ideas</strong> will be announced by <strong style="color:var(--gold);">29th April</strong> · Shortlisting is based on ideas, not teams · Stay tuned! 🏆</div>
+      <div style="font-weight:800;font-size:.9rem;color:var(--gold);">Round 2 — Build + Pitch Finale!</div>
+      <div style="font-size:.76rem;color:rgba(255,255,255,.65);margin-top:.3rem;">The Top 9 teams are now in the <strong style="color:var(--gold);">prototyping phase</strong> · Each team has ~10 days to build and demo their idea · Grand Pitch Finale date to be announced! 🎤</div>
     </div>
-    <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:4px 14px;font-size:.75rem;font-weight:700;color:var(--gold);white-space:nowrap;">Top 10 · Announcing Soon</span>
+    <span style="background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.5);border-radius:20px;padding:4px 14px;font-size:.75rem;font-weight:700;color:var(--gold);white-space:nowrap;">Round 2 · Active 🔥</span>
   </div>
 </section>
 
@@ -687,19 +891,49 @@ section.active{display:block;}
   <div class="sec-title">🏆 Sports and <span>Wellness</span></div>
   <div class="sec-sub">Team bonding through competition, movement and fun · May and July 2026</div>
   <div class="grid2" style="margin-bottom:1.5rem;">
-    <div style="background:linear-gradient(135deg,rgba(236,72,153,.15),rgba(168,85,247,.1));border:1px solid rgba(236,72,153,.35);border-radius:14px;padding:1.3rem;"><div style="font-size:.72rem;color:var(--pink);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">May 2026 · Sports Month</div><div style="font-weight:800;font-size:1.1rem;margin-bottom:.3rem;">Play and Perform</div><div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;">Cross-team bonding through healthy competition.</div><div style="display:flex;gap:6px;"><span class="chip pink">Carroms</span><span class="chip pink">Table Tennis</span></div></div>
+    <div style="background:linear-gradient(135deg,rgba(236,72,153,.15),rgba(168,85,247,.1));border:1px solid rgba(236,72,153,.35);border-radius:14px;padding:1.3rem;"><div style="font-size:.72rem;color:var(--pink);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">May 2026 · Sports Month</div><div style="font-weight:800;font-size:1.1rem;margin-bottom:.3rem;">Play and Perform</div><div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;">Cross-team bonding through healthy competition.</div><div style="display:flex;gap:6px;"><span class="chip pink">Carroms</span><span class="chip pink">Table Tennis</span><span class="chip live">Nominations open May W1</span></div></div>
     <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(168,85,247,.08));border:1px solid rgba(16,185,129,.3);border-radius:14px;padding:1.3rem;"><div style="font-size:.72rem;color:var(--green);font-weight:700;text-transform:uppercase;margin-bottom:.5rem;">July 2026 · Wellness Month</div><div style="font-weight:800;font-size:1.1rem;margin-bottom:.3rem;">Move and Momentum</div><div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.8rem;">Promote well-being and drive bonding across all locations.</div><div style="display:flex;gap:6px;"><span class="chip live">Step Challenge</span><span class="chip live">Fitness Reels</span></div></div>
   </div>
   <div class="grid4">
-    <div class="sport-card"><div class="sport-icon">🎯</div><div class="sport-name">Carroms</div><div class="sport-when">May 2026</div><div class="sport-desc">Classic carrom board championship. Singles and doubles formats.</div></div>
-    <div class="sport-card"><div class="sport-icon">🏓</div><div class="sport-name">Table Tennis</div><div class="sport-when">May 2026</div><div class="sport-desc">Singles and doubles TT matches across all teams.</div></div>
+    <div class="sport-card" style="border-color:rgba(236,72,153,.35);"><div class="sport-icon">🎯</div><div class="sport-name">Carroms</div><div class="sport-when" style="color:var(--green);">May 2026 · Coming Soon!</div><div class="sport-desc">Classic carrom board championship · Singles and doubles formats.</div><div style="margin-top:.7rem;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:8px;padding:.4rem .7rem;font-size:.7rem;color:var(--green);">📋 Nominations open 1st week of May</div></div>
+    <div class="sport-card" style="border-color:rgba(236,72,153,.35);"><div class="sport-icon">🏓</div><div class="sport-name">Table Tennis</div><div class="sport-when" style="color:var(--green);">May 2026 · Coming Soon!</div><div class="sport-desc">Singles and doubles TT matches across all teams.</div><div style="margin-top:.7rem;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:8px;padding:.4rem .7rem;font-size:.7rem;color:var(--green);">📋 Nominations open 1st week of May</div></div>
     <div class="sport-card"><div class="sport-icon">👟</div><div class="sport-name">Step Challenge</div><div class="sport-when">July 2026</div><div class="sport-desc">2-week team step counting challenge. Most steps wins!</div></div>
     <div class="sport-card"><div class="sport-icon">🎬</div><div class="sport-name">Fitness Reels</div><div class="sport-when">July 2026</div><div class="sport-desc">Creative fitness videos judged on energy and team spirit.</div></div>
   </div>
-  <div style="background:var(--card);border:1.5px dashed rgba(236,72,153,.35);border-radius:16px;padding:3rem;text-align:center;margin-top:1.5rem;">
-    <div style="font-size:2.5rem;margin-bottom:.8rem;">📅</div>
-    <div style="font-weight:700;font-size:1rem;margin-bottom:.3rem;">Calendar View</div>
-    <div style="font-size:.78rem;color:rgba(255,255,255,.4);">Detailed timeline and schedule coming soon</div>
+  <div style="background:linear-gradient(135deg,rgba(236,72,153,.1),rgba(168,85,247,.08));border:1px solid rgba(236,72,153,.35);border-radius:16px;padding:1.4rem 1.8rem;margin-top:1.5rem;">
+    <div style="font-size:.72rem;color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem;">📅 Upcoming Sports Events</div>
+    <div style="display:flex;flex-direction:column;gap:.7rem;">
+      <div style="display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:.8rem 1rem;">
+        <div style="font-size:1.6rem;">🎯</div>
+        <div style="flex:1;">
+          <div style="font-weight:700;font-size:.88rem;">Carroms Championship</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem;">Event in May 2026 · Singles and doubles formats</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div style="font-size:.68rem;font-weight:700;color:var(--green);background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 10px;">📋 Nominations open May W1</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:.8rem 1rem;">
+        <div style="font-size:1.6rem;">🏓</div>
+        <div style="flex:1;">
+          <div style="font-weight:700;font-size:.88rem;">Table Tennis Championship</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem;">Event in May 2026 · Singles and doubles formats</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div style="font-size:.68rem;font-weight:700;color:var(--green);background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 10px;">📋 Nominations open May W1</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:.8rem 1rem;">
+        <div style="font-size:1.6rem;">👟</div>
+        <div style="flex:1;">
+          <div style="font-weight:700;font-size:.88rem;">Step Challenge + Fitness Reels</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem;">July 2026 · Well-being and team bonding</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <div style="font-size:.68rem;font-weight:700;color:rgba(255,255,255,.3);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2px 10px;">Details coming soon</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -713,66 +947,84 @@ section.active{display:block;}
     <span style="font-size:1.3rem;">⚡</span>
     <div style="flex:1;">
       <div style="font-weight:700;font-size:.88rem;color:var(--green);">Scoreboard Updated — Quiz Round 1 + AI Battle First Mover Bonus!</div>
-      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Neural Mavericks lead with 95 pts · AI Battle Round 1 CLOSED — 111 ideas submitted · Shortlisting scores will be added after evaluation</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Neural Mavericks lead with 95 pts · AI Battle Round 1 CLOSED — 112 ideas submitted · Shortlisting scores will be added after evaluation</div>
     </div>
     <span style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--green);">LIVE</span>
   </div>
   <!-- AI Battle activity callout on leaderboard -->
   <div style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(239,68,68,.07));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:.75rem 1.1rem;margin-bottom:1.4rem;display:flex;align-items:center;gap:.8rem;font-size:.78rem;color:rgba(255,255,255,.7);">
     <span style="font-size:1.1rem;">⚔️</span>
-    <span><strong style="color:var(--gold);">AI Battle Round 1 in progress</strong> — 111 ideas submitted across 4 teams · <strong style="color:#EF4444;">Closed — 22nd April ✅</strong> · Shortlisting scores will be added to this leaderboard after evaluation · <span style="color:var(--pl);cursor:pointer;font-weight:700;" onclick="showTab('aibattle')">View AI Battle →</span></span>
+    <span><strong style="color:var(--gold);">AI Battle Round 1 in progress</strong> — 112 ideas submitted across 4 teams · <strong style="color:#EF4444;">Closed — 22nd April ✅</strong> · Shortlisting scores will be added to this leaderboard after evaluation · <span style="color:var(--pl);cursor:pointer;font-weight:700;" onclick="showTab('aibattle')">View AI Battle →</span></span>
   </div>
 
   <!-- ✅ CHANGE 6: Podium — Neural Mavericks 95 pts -->
   <div class="podium">
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">2nd</div><div class="pod-block pod-2"><div style="font-size:1.1rem;font-weight:800;color:#9CA3AF;">2</div><div class="pod-name">The Orchestrators</div><div class="pod-pts">40 pts</div></div></div>
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:var(--gold);">Leading!</div><div class="pod-block pod-1"><div style="font-size:1.3rem;">👑</div><div style="font-size:1.1rem;font-weight:800;color:var(--gold);">1</div><div class="pod-name">Neural Mavericks</div><div class="pod-pts">95 pts</div></div></div>
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">3rd</div><div class="pod-block pod-3"><div style="font-size:1.1rem;font-weight:800;color:#D97706;">3</div><div class="pod-name">Quantum Crew</div><div class="pod-pts">20 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">2nd</div><div class="pod-block pod-2"><div style="font-size:1.1rem;font-weight:800;color:#9CA3AF;">2</div><div class="pod-name">The Orchestrators</div><div class="pod-pts">70 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:var(--gold);">Leading!</div><div class="pod-block pod-1"><div style="font-size:1.3rem;">👑</div><div style="font-size:1.1rem;font-weight:800;color:var(--gold);">1</div><div class="pod-name">Neural Mavericks</div><div class="pod-pts">120 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">3rd</div><div class="pod-block pod-3"><div style="font-size:1.1rem;font-weight:800;color:#D97706;">3</div><div class="pod-name">Quantum Crew</div><div class="pod-pts">40 pts</div></div></div>
   </div>
 
   <!-- ✅ CHANGE 7: Leaderboard rows — Neural Mavericks 95 pts, bar at 100%, detail note updated -->
   <div style="margin-bottom:1.5rem;">
     <div class="lb-row r1">
       <div style="width:26px;text-align:center;">🥇</div>
-      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='NM'"></div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
       <div class="lb-info">
         <div class="lb-team">Neural Mavericks</div>
-        <div class="lb-detail">Capt: Vishal · AI: Karthika · Engagement: Vivek · <span style="color:var(--gold);">+5 First Mover Bonus 🏅</span></div>
+        <div class="lb-detail">Capt: Vishal · AI: Karthika · +5 First Mover 🏅 · +25 AI Battle 🏆</div>
       </div>
       <div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#EC4899,#A855F7);"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">95</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">120</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
     <div class="lb-row r2">
       <div style="width:26px;text-align:center;">🥈</div>
-      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='TO'"></div>
-      <div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · Engagement: Ajith</div></div>
-      <div class="lb-bar-w"><div class="lb-bar" style="width:42%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
+      <div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · +30 AI Battle 🏆</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:58%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div>
       <div style="text-align:right;min-width:50px;"><div class="lb-pts">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
     <div class="lb-row">
       <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">3</div>
-      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='QC'"></div>
-      <div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · Engagement: Venkatesh</div></div>
-      <div class="lb-bar-w"><div class="lb-bar" style="width:21%;"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
+      <div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · +20 AI Battle 🏆</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:33%;"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
     <div class="lb-row">
       <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div>
-      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='AI'"></div>
-      <div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · Engagement: Vinodhini</div></div>
-      <div class="lb-bar-w"><div class="lb-bar" style="width:16%;"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">15</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
+      <div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · +20 AI Battle 🏆</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:29%;"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">35</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
   </div>
 
-  <div class="sec-title" style="margin-bottom:.3rem;">🧠 Quiz League <span>Round 1 Winners</span></div>
-  <div class="sec-sub">APP Quiz League · 27th March 2026 · Top 5 individual performers</div>
-  <div style="display:flex;flex-direction:column;gap:.6rem;">
-    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(245,158,11,.05));border:1px solid rgba(245,158,11,.4);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;font-size:1.1rem;">🥇</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BH</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Bellam, Hemanth Kumar Reddy</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Neural Mavericks</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--gold);">50</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(156,163,175,.1),rgba(156,163,175,.04));border:1px solid rgba(156,163,175,.35);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;font-size:1.1rem;">🥈</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BM</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Bariha, Manas</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Neural Mavericks</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:#9CA3AF;">40</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(217,119,6,.1),rgba(217,119,6,.04));border:1px solid rgba(217,119,6,.35);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;font-size:1.1rem;">🥉</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#F59E0B,#D97706);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">KD</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Kapoor, Danish</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">The Orchestrators</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:#D97706;">30</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);font-weight:700;">4</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#8B5CF6);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">BR</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Begam Mahamood, Rizwana</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">Quantum Crew</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--pl);">20</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
-    <div style="display:flex;align-items:center;gap:.9rem;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem;"><div style="width:26px;text-align:center;color:rgba(255,255,255,.4);font-weight:700;">5</div><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;">CB</div><div style="flex:1;"><div style="font-weight:700;font-size:.88rem;">Chandregowda, Bhavana</div><div style="font-size:.7rem;color:rgba(255,255,255,.4);">AI-nstein Squad</div></div><div style="text-align:right;"><div style="font-size:1rem;font-weight:800;color:var(--pl);">10</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div></div>
+
+  <!-- AI Battle Points Breakdown -->
+  <div style="background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(168,85,247,.06));border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:1rem 1.3rem;margin-bottom:1.5rem;">
+    <div style="font-size:.72rem;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.8rem;">⚔️ AI Battle — Points Added to Leaderboard</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;font-size:.75rem;">
+      <div style="text-align:center;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:9px;padding:.6rem;">
+        <div style="font-weight:700;color:var(--gold);margin-bottom:.2rem;">The Orchestrators</div>
+        <div style="font-size:1.1rem;font-weight:900;color:var(--gold);">+30</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">3 ideas shortlisted</div>
+      </div>
+      <div style="text-align:center;background:rgba(236,72,153,.07);border:1px solid rgba(236,72,153,.25);border-radius:9px;padding:.6rem;">
+        <div style="font-weight:700;color:#F472B6;margin-bottom:.2rem;">Neural Mavericks</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#F472B6;">+25</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas + Special Mention</div>
+      </div>
+      <div style="text-align:center;background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.25);border-radius:9px;padding:.6rem;">
+        <div style="font-weight:700;color:#818CF8;margin-bottom:.2rem;">Quantum Crew</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#818CF8;">+20</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas shortlisted</div>
+      </div>
+      <div style="text-align:center;background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.25);border-radius:9px;padding:.6rem;">
+        <div style="font-weight:700;color:#C084FC;margin-bottom:.2rem;">AI-nstein Squad</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#C084FC;">+20</div>
+        <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas shortlisted</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -797,12 +1049,12 @@ section.active{display:block;}
   </div>
   <div class="sec-title" style="margin-bottom:1rem;">🏅 Program <span>Sponsor</span></div>
   <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(168,85,247,.1));border:1px solid rgba(245,158,11,.4);">
-    <div class="org-avatar" style="border:3px solid rgba(245,158,11,.5);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/KC.jpeg" alt="KC" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/KC.png';this.onerror=function(){this.outerHTML='<span style=\'font-size:1.6rem;font-weight:800;\'>KC</span>';}"></div>
+    <div class="org-avatar" style="border:3px solid rgba(245,158,11,.5);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/KC.jpeg" alt="KC" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/KC.png','#7C3AED','#A855F7','KC')"></div>
     <div><div class="org-role" style="color:var(--gold);">🌟 Program Sponsor</div><div class="org-name">Kaladhar Challagondla (KC)</div><div class="org-sub">The visionary backing APP Fusion Fest '26</div></div>
   </div>
   <div class="sec-title" style="margin-bottom:1rem;">🎯 Program <span>Lead</span></div>
   <div class="org-lead-card" style="background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.4);">
-    <div class="org-avatar" style="border:3px solid rgba(168,85,247,.5);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Linta.jpeg" alt="Linta" onerror="this.src='https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Linta.png';this.onerror=function(){this.outerHTML='<span style=\'font-size:1.6rem;font-weight:800;\'>LS</span>';}"></div>
+    <div class="org-avatar" style="border:3px solid rgba(168,85,247,.5);"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Linta.jpeg" alt="Linta" onerror="imgFb2(this,'https://ts.accenture.com/sites/APP-Learning/SiteAssets/FusionFest-Photos/Linta.png','#7C3AED','#A855F7','LS')"></div>
     <div><div class="org-role" style="color:var(--pl);">🎯 Program Lead</div><div class="org-name">Linta Sebastian</div><div class="org-sub">Driving the vision and energy of APP Fusion Fest '26</div></div>
   </div>
   <div class="sec-title" style="margin-bottom:1rem;">🤝 Core <span>Team</span></div>
@@ -827,9 +1079,28 @@ section.active{display:block;}
 </section>
 
 <script>
+function imgFb2(el,src2,c1,c2,txt){
+  el.onerror=function(){
+    var d=document.createElement('div');
+    d.className='ini';
+    d.style.cssText='background:linear-gradient(135deg,'+c1+','+c2+');';
+    d.textContent=txt;
+    if(el.parentNode){el.parentNode.replaceChild(d,el);}
+  };
+  el.src=src2;
+}
+function imgFb(el,c1,c2,txt,w,h,r){
+  var d=document.createElement('div');
+  d.style.cssText='width:'+w+'px;height:'+h+'px;border-radius:'+r+';background:linear-gradient(135deg,'+c1+','+c2+');display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;color:#fff;flex-shrink:0;';
+  d.textContent=txt;
+  if(el.parentNode) el.parentNode.replaceChild(d,el);
+}
+</script>
+<script>
 (function(){
+
   // Idea counts: Orchestrators=13, Quantum Crew=12, Neural Mavericks=9, AI-nstein Squad=2 (Total=36)
-  var ideas=(function(){var arr=[];var t=[['The Orchestrators',37],['Neural Mavericks',30],['Quantum Crew',29],['AI-nstein Squad',15]];for(var i=0;i<t.length;i++){for(var j=0;j<t[i][1];j++){arr.push({name:'Member',team:t[i][0],title:'Idea '+(arr.length+1),cat:'AI Innovation'});}}return arr;})();
+  var ideas=(function(){var arr=[];var t=[['The Orchestrators',37],['Neural Mavericks',31],['Quantum Crew',29],['AI-nstein Squad',15]];for(var i=0;i<t.length;i++){for(var j=0;j<t[i][1];j++){arr.push({name:'Member',team:t[i][0],title:'Idea '+(arr.length+1),cat:'AI Innovation'});}}return arr;})();
   function pad(n){return n<10?'0'+n:''+n;}
   function showTab(id){
     var secs=document.querySelectorAll('section'),tabs=document.querySelectorAll('.nt'),i;
@@ -889,6 +1160,15 @@ section.active{display:block;}
     });}
     showTab('overview');updateCountdown();setInterval(updateCountdown,1000);
     window.showTab=showTab;
+
+    // Collapsible sections
+    document.querySelectorAll('.coll-hdr').forEach(function(h){
+      h.addEventListener('click',function(){
+        var b=this.nextElementSibling;
+        var a=this.querySelector('.coll-arrow');
+        if(b){b.classList.toggle('open');if(a)a.classList.toggle('open');}
+      });
+    });
   });
 }());
 </script>
