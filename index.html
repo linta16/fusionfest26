@@ -214,13 +214,13 @@ function imgFb2(el,src2,c1,c2,txt){
     <div style="display:flex;align-items:center;gap:1rem;">
       <div style="font-size:2.2rem;">🏆</div>
       <div>
-        <div style="font-size:.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:.2rem;">🏆 AI Battle — Top 5 Prototypes Selected!</div>
-        <div style="font-size:1.1rem;font-weight:800;"><span style="color:var(--gold);">Top 5 prototypes</span> selected for the Final Demo to the panel!</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.55);">All 4 teams represented · <strong style="color:var(--gold);">Demo Day — Wednesday 3rd June · 5:00–6:30 PM 🎤</strong></div>
+        <div style="font-size:.65rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:.2rem;">✅ AI Battle — Demo Day Completed! · Results In!</div>
+        <div style="font-size:1.1rem;font-weight:800;">ZeroBug 🥇 · MindGuard 🥈 · Multi-Agent Project 🥉 — <span style="color:var(--green);">Top 3 crowned!</span></div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.55);">All 5 teams presented · 3rd June · <strong style="color:var(--gold);">Neural Mavericks lead overall with 254 pts 🏆</strong></div>
       </div>
     </div>
     <div style="display:flex;gap:.7rem;flex-wrap:wrap;">
-      <button onclick="showTab('aibattle')" style="background:linear-gradient(135deg,var(--gold),#F97316);color:#fff;border:none;padding:8px 18px;border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;">🏆 View Top 5 ↗</button>
+      <button onclick="showTab('aibattle')" style="background:linear-gradient(135deg,var(--green),#0D9488);color:#fff;border:none;padding:8px 18px;border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;">🏆 View Results ↗</button>
     </div>
   </div>
 
@@ -315,18 +315,79 @@ function imgFb2(el,src2,c1,c2,txt){
   
   </div>
 
+  <!-- AI BATTLE MINI LEADERBOARD -->
+  <div style="background:var(--card);border:1.5px solid rgba(245,158,11,.5);border-radius:14px;overflow:hidden;margin-bottom:1.2rem;">
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,.18),rgba(168,85,247,.08));padding:.85rem 1.3rem;border-bottom:1px solid rgba(245,158,11,.3);display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:.7rem;"><span style="font-size:1.1rem;">🎤</span><div style="font-size:.78rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;">Panel Demo — Top 3 Winners</div><span style="background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 8px;font-size:.65rem;color:var(--green);font-weight:700;margin-left:.5rem;">✅ 3rd June</span></div>
+    </div>
+    <div style="padding:1rem 1.3rem;display:flex;flex-direction:column;gap:.45rem;">
+
+      <div style="display:flex;align-items:center;gap:.9rem;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(249,115,22,.08));border:2px solid rgba(245,158,11,.6);border-radius:12px;padding:.85rem 1.1rem;">
+        <span style="font-size:1.8rem;">🥇</span>
+        <div style="flex:1;">
+          <div style="font-size:.92rem;font-weight:800;color:var(--gold);">ZeroBug</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">AI Agent That Reads Bug Reports, Writes the Fix &amp; Ships It</div>
+          <div style="font-size:.68rem;color:#818CF8;margin-top:.15rem;">Chitresh Goyal · Quantum Crew</div>
+        </div>
+        <div style="text-align:center;flex-shrink:0;">
+          <div style="font-size:1.3rem;font-weight:900;color:var(--gold);">50</div>
+          <div style="font-size:.6rem;color:rgba(255,255,255,.4);text-transform:uppercase;">pts</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:.9rem;background:rgba(255,255,255,.04);border:1.5px solid rgba(192,192,192,.4);border-radius:12px;padding:.85rem 1.1rem;">
+        <span style="font-size:1.8rem;">🥈</span>
+        <div style="flex:1;">
+          <div style="font-size:.92rem;font-weight:800;color:rgba(192,192,192,.9);">The MindGuard</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">Autonomous, Guardrailed AI Agent for Proactive Emotional Wellbeing</div>
+          <div style="font-size:.68rem;color:#F472B6;margin-top:.15rem;">Rajat Mishra · Neural Mavericks</div>
+        </div>
+        <div style="text-align:center;flex-shrink:0;">
+          <div style="font-size:1.3rem;font-weight:900;color:rgba(192,192,192,.9);">40</div>
+          <div style="font-size:.6rem;color:rgba(255,255,255,.4);text-transform:uppercase;">pts</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:.9rem;background:rgba(255,255,255,.04);border:1.5px solid rgba(205,127,50,.4);border-radius:12px;padding:.85rem 1.1rem;">
+        <span style="font-size:1.8rem;">🥉</span>
+        <div style="flex:1;">
+          <div style="font-size:.92rem;font-weight:800;color:#D97706;">Multi-Agent Project Planning System</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">Intelligent multi-agent system for end-to-end project planning</div>
+          <div style="font-size:.68rem;color:var(--pl);margin-top:.15rem;">Y. Amrutha · AI-nstein Squad</div>
+        </div>
+        <div style="text-align:center;flex-shrink:0;">
+          <div style="font-size:1.3rem;font-weight:900;color:#D97706;">30</div>
+          <div style="font-size:.6rem;color:rgba(255,255,255,.4);text-transform:uppercase;">pts</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- TOP 5 FINALISTS -->
+  <div style="border:1.5px solid rgba(245,158,11,.5);border-radius:16px;overflow:hidden;background:var(--card);margin-bottom:1.2rem;">
+    <div class="coll-hdr" style="background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(168,85,247,.08));padding:1rem 1.3rem;border-bottom:1px solid rgba(245,158,11,.3);">
+      <div style="display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;">
+        <span style="font-size:1.4rem;">🏆</span>
+        <div>
+          <div style="font-size:.68rem;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.1em;">🏆 Top 5 Teams Selected for Panel Demo</div>
+          <div style="font-size:.92rem;font-weight:800;">Final Panel Demo — <span style="color:var(--gold);">Wednesday, 3rd June 2026 · ✅ Completed</span></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
   <div style="background:linear-gradient(135deg,rgba(245,158,11,.18),rgba(168,85,247,.1));border:2px solid rgba(245,158,11,.7);border-radius:16px;overflow:hidden;margin-bottom:1.5rem;">
     <div style="background:linear-gradient(135deg,rgba(245,158,11,.25),rgba(249,115,22,.12));padding:1rem 1.4rem;border-bottom:1px solid rgba(245,158,11,.3);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;">
       <div style="display:flex;align-items:center;gap:.8rem;">
         <span style="font-size:1.8rem;">🏆</span>
         <div>
-          <div style="font-size:.68rem;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem;">🏆 Top 5 Prototypes — Final Demo to Panel</div>
-          <div style="font-size:1rem;font-weight:800;">Final Panel Demo — <span style="color:var(--gold);">Wednesday, 3rd June 2026</span></div>
+          <div style="font-size:.68rem;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem;">🏆 Top 5 Demo — Completed! · Results In!</div>
+          <div style="font-size:1rem;font-weight:800;">Final Panel Demo — <span style="color:var(--gold);">Wednesday, 3rd June 2026 · ✅ Completed</span></div>
           <div style="font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.2rem;">⏰ 5:00 PM – 6:30 PM &nbsp;·&nbsp; 🎤 10 minutes per team &nbsp;·&nbsp; Live demo + presentation</div>
         </div>
       </div>
-      <span style="background:rgba(245,158,11,.2);border:1.5px solid rgba(245,158,11,.5);border-radius:20px;padding:4px 14px;font-size:.72rem;font-weight:700;color:var(--gold);">🎤 Demo: 3rd June</span>
+      <span style="background:rgba(245,158,11,.2);border:1.5px solid rgba(245,158,11,.5);border-radius:20px;padding:4px 14px;font-size:.72rem;font-weight:700;color:var(--gold);">✅ Completed · 3rd June</span>
     </div>
     <div style="padding:1.2rem 1.4rem;">
       <div style="font-size:.72rem;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.9rem;">🥊 Top 5 Finalists</div>
@@ -379,88 +440,10 @@ function imgFb2(el,src2,c1,c2,txt){
 
       </div>
     </div>
+  </div>    </div>
   </div>
 
-  <!-- PROTOTYPING TIMELINE -->
-  <style>.pulse-dot{animation:pulse-dot-anim 1.5s infinite;}@keyframes pulse-dot-anim{0%,100%{box-shadow:0 0 6px rgba(99,102,241,.5);}50%{box-shadow:0 0 14px rgba(99,102,241,.9);}}</style>
-  <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.4rem;margin-bottom:1.5rem;">
-    <div style="font-size:.72rem;color:var(--pl);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.1rem;">📅 Round 2 — Prototyping Timeline</div>
-    <div style="display:flex;flex-direction:column;gap:0;">
 
-      <div style="display:flex;gap:1rem;align-items:stretch;">
-        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
-          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
-          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
-        </div>
-        <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1;">
-          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;">Phase 1 — Infra Check &amp; Connectivity Trials</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.5);">Confirm environment access · Run connectivity tests</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.3rem;font-weight:600;">Friday, 8th May</div>
-          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 9px;color:var(--green);font-weight:700;">✅ Completed</span></div>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:1rem;align-items:stretch;">
-        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
-          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
-          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
-        </div>
-        <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1;">
-          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:var(--green);">Phase 2 — Environment Setup &amp; Team Rollout</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.5);">Configuration · Access provisioning for all Top 10 teams</div>
-          <div style="font-size:.72rem;color:var(--green);margin-top:.3rem;font-weight:600;">Monday 11th May – Tuesday 12th May</div>
-          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 9px;color:var(--green);font-weight:700;">✅ Completed</span></div>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:1rem;align-items:stretch;">
-        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
-          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
-          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
-        </div>
-        <div style="background:rgba(99,102,241,.08);border:1.5px solid rgba(99,102,241,.4);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1;">
-          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:#818CF8;">Phase 3 — Prototyping + Presentation Prep</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">Build, demo-prep &amp; pitch creation · Submit by 29th May EOD</div>
-          <div style="font-size:.72rem;color:#818CF8;margin-top:.3rem;font-weight:600;">Wednesday 13th May → Wednesday 27th May (build ends)</div>
-          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(99,102,241,.2);border:1px solid rgba(99,102,241,.5);border-radius:20px;padding:2px 9px;color:#818CF8;font-weight:700;">🔥 Active Now</span></div>
-          <div style="margin-top:.8rem;background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(168,85,247,.08));border:1.5px solid rgba(99,102,241,.45);border-radius:10px;padding:.8rem 1rem;display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;">
-            <div style="font-size:1.5rem;flex-shrink:0;">📊</div>
-            <div style="flex:1;">
-              <div style="font-size:.82rem;font-weight:800;color:#818CF8;margin-bottom:.15rem;">Presentation Template — Use this for your Demo Day pitch!</div>
-              <div style="font-size:.7rem;color:rgba(255,255,255,.5);">Official PPT template for all Top 10 teams · Required format for panel presentation</div>
-            </div>
-            <a href="https://ts.accenture.com/sites/APP-Learning/SiteAssets/AI%20Battle/AI%20Battle_Prototype_Demo_Template.pptx?d=wfefcb7a147ac49128494f479adf2081e" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#6366F1,#8B5CF6);color:#fff;text-decoration:none;padding:8px 16px;border-radius:9px;font-weight:700;font-size:.78rem;white-space:nowrap;flex-shrink:0;">⬇️ Download Template ↗</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:1rem;align-items:stretch;">
-        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
-          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
-          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
-        </div>
-        <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1);">
-          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:var(--green);">Phase 4a — Prototype Closure &amp; Materials Submission</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">PPT + Media Exchange video link submitted to Deepthi &amp; Linta</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.3rem;font-weight:600;">Friday, 29th May 2026 · EOD (5/29)</div>
-          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 9px;color:var(--green);font-weight:700;">✅ Completed</span></div>
-        </div>
-      </div>
-
-      <div style="display:flex;gap:1rem;align-items:stretch;">
-        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
-          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
-        </div>
-        <div style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(249,115,22,.06));border:1.5px solid rgba(245,158,11,.5);border-radius:10px;padding:.75rem 1rem;flex:1;">
-          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:var(--gold);">Phase 4b — Demo Day · Top 5 Teams 🏆🎤</div>
-          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">Top 5 shortlisted teams present live to the review panel · Q&amp;A with judges</div>
-          <div style="font-size:.72rem;color:var(--gold);margin-top:.3rem;font-weight:600;">Wednesday, Wednesday, 3rd June 2026</div>
-          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:2px 9px;color:var(--gold);font-weight:700;">⏳ Coming Up</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
   <!-- AI Olympics Section -->
   <div style="border:1px solid rgba(245,158,11,.3);border-radius:14px;overflow:hidden;background:var(--card);margin-top:1.5rem;">
@@ -541,25 +524,25 @@ function imgFb2(el,src2,c1,c2,txt){
     </div>
   </div>
 
-</section>
+
 
 
   <!-- LAST PUSH MOTIVATION STRIP -->
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.3rem;">
     <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:10px;padding:.7rem;text-align:center;">
       <div style="font-size:1.4rem;">💡</div>
-      <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-top:.2rem;">112 Ideas In!</div>
-      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">Evaluation underway</div>
+      <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-top:.2rem;">112 Ideas</div>
+      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">Total Submitted</div>
     </div>
     <div style="background:rgba(168,85,247,.08);border:1px solid rgba(168,85,247,.3);border-radius:10px;padding:.7rem;text-align:center;">
       <div style="font-size:1.4rem;">🏆</div>
-      <div style="font-size:.75rem;font-weight:700;color:var(--pl);margin-top:.2rem;">Top 8–10 ideas</div>
-      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">advancing to Round 2!</div>
+      <div style="font-size:.75rem;font-weight:700;color:var(--pl);margin-top:.2rem;">10 Selected</div>
+      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">For Prototyping</div>
     </div>
     <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:.7rem;text-align:center;">
-      <div style="font-size:1.4rem;">🚀</div>
-      <div style="font-size:.75rem;font-weight:700;color:var(--gold);margin-top:.2rem;">112 ideas in!</div>
-      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">Top 10 by 29 Apr!</div>
+      <div style="font-size:1.4rem;">🎤</div>
+      <div style="font-size:.75rem;font-weight:700;color:var(--gold);margin-top:.2rem;">5 Selected</div>
+      <div style="font-size:.67rem;color:rgba(255,255,255,.45);">For Panel Demo</div>
     </div>
   </div>
 
@@ -629,39 +612,7 @@ function imgFb2(el,src2,c1,c2,txt){
   </div>
 
   
-  <!-- Rules & Guidelines -->
 
-  <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
-    <div class="coll-hdr" style="padding:.9rem 1.3rem;border-bottom:1px solid var(--border);">
-      <div style="display:flex;align-items:center;gap:.8rem;"><span style="font-size:1.1rem;">📋</span><div style="font-weight:800;font-size:.92rem;">Rules &amp; Guidelines</div></div>
-      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
-    </div>
-    <div class="coll-body">
-  <!-- Rules & Guidelines -->
-  <div style="background:var(--card);border:1px solid rgba(168,85,247,.35);border-radius:14px;overflow:hidden;margin-bottom:1.2rem;">
-    <div style="background:linear-gradient(135deg,rgba(124,58,237,.25),rgba(168,85,247,.1));padding:.9rem 1.3rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.8rem;">
-      <span style="font-size:1.2rem;">📋</span>
-      <div style="font-weight:800;font-size:.95rem;">Rules & Guidelines</div>
-    </div>
-    <div style="padding:1rem 1.3rem;">
-      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Each participant can submit a maximum of <strong>2 ideas</strong></span></div>
-      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Teams must consist of members from the <strong>same parent team</strong> — cross-team grouping not allowed</span></div>
-      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Each team must have a <strong>minimum of 2 and maximum of 5 members</strong></span></div>
-      <div class="rule-item"><span style="color:var(--gold);flex-shrink:0;">⚠️</span><span><strong>AI Champions cannot participate</strong> as team members — they may only guide teams</span></div>
-      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Ideas must be presented as a <strong>clear solution pitch</strong></span></div>
-      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Ideas must be <strong>original</strong> — any external or pre-built content must be clearly disclosed</span></div>
-      <div class="rule-item"><span style="color:#EF4444;flex-shrink:0;">❌</span><span>Use of <strong>confidential or sensitive company data</strong> is strictly prohibited</span></div>
-      <div class="rule-item"><span style="color:var(--green);flex-shrink:0;">✅</span><span>Use of <strong>Accenture-approved AI tools</strong> is allowed · Teams may consult AI Champions for guidance</span></div>
-      <div class="rule-item"><span style="color:var(--pl);flex-shrink:0;">🏆</span><span>Evaluation criteria: <strong>Innovation · Relevance · Feasibility · Business Impact · Clarity</strong></span></div>
-      <div class="rule-item"><span style="color:var(--gold);flex-shrink:0;">🎤</span><span>Top 10 shortlisted ideas present to a judging panel — <strong>4–5 minutes + Q&A</strong> · Strict time adherence required</span></div>
-      <div class="rule-item"><span style="color:var(--pl);flex-shrink:0;">ℹ️</span><span>All submitted ideas may be considered for <strong>future development</strong> within the organization, with due credit</span></div>
-      <div class="rule-item"><span style="color:#EF4444;flex-shrink:0;">❌</span><span><strong>Judges' decisions are final</strong> · Any misconduct or plagiarism will lead to disqualification</span></div>
-    </div>
-  </div>
-    </div>
-  </div>
-
-  
   <!-- Round 1 -->
 
   <div style="border-radius:14px;overflow:hidden;margin-bottom:1.2rem;border:1px solid var(--border);background:var(--card);">
@@ -1167,12 +1118,93 @@ function imgFb2(el,src2,c1,c2,txt){
       <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
     </div>
     <div class="coll-body">
+
+  <!-- PROTOTYPING TIMELINE -->
+  <style>.pulse-dot{animation:pulse-dot-anim 1.5s infinite;}@keyframes pulse-dot-anim{0%,100%{box-shadow:0 0 6px rgba(99,102,241,.5);}50%{box-shadow:0 0 14px rgba(99,102,241,.9);}}</style>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.4rem;margin-bottom:1.5rem;">
+    <div style="font-size:.72rem;color:var(--pl);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.1rem;">📅 Round 2 — Prototyping Timeline</div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+
+      <div style="display:flex;gap:1rem;align-items:stretch;">
+        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
+          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
+        </div>
+        <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1;">
+          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;">Phase 1 — Infra Check &amp; Connectivity Trials</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);">Confirm environment access · Run connectivity tests</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.3rem;font-weight:600;">Friday, 8th May</div>
+          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 9px;color:var(--green);font-weight:700;">✅ Completed</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;align-items:stretch;">
+        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
+          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
+        </div>
+        <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1;">
+          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:var(--green);">Phase 2 — Environment Setup &amp; Team Rollout</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.5);">Configuration · Access provisioning for all Top 10 teams</div>
+          <div style="font-size:.72rem;color:var(--green);margin-top:.3rem;font-weight:600;">Monday 11th May – Tuesday 12th May</div>
+          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 9px;color:var(--green);font-weight:700;">✅ Completed</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;align-items:stretch;">
+        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
+          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
+        </div>
+        <div style="background:rgba(99,102,241,.08);border:1.5px solid rgba(99,102,241,.4);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1;">
+          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:#818CF8;">Phase 3 — Prototyping + Presentation Prep</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">Build, demo-prep &amp; pitch creation · Submit by 29th May EOD</div>
+          <div style="font-size:.72rem;color:#818CF8;margin-top:.3rem;font-weight:600;">Wednesday 13th May → Wednesday 27th May (build ends)</div>
+          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(99,102,241,.2);border:1px solid rgba(99,102,241,.5);border-radius:20px;padding:2px 9px;color:#818CF8;font-weight:700;">🔥 Active Now</span></div>
+          <div style="margin-top:.8rem;background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(168,85,247,.08));border:1.5px solid rgba(99,102,241,.45);border-radius:10px;padding:.8rem 1rem;display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;">
+            <div style="font-size:1.5rem;flex-shrink:0;">📊</div>
+            <div style="flex:1;">
+              <div style="font-size:.82rem;font-weight:800;color:#818CF8;margin-bottom:.15rem;">Presentation Template — Use this for your Demo Day pitch!</div>
+              <div style="font-size:.7rem;color:rgba(255,255,255,.5);">Official PPT template for all Top 10 teams · Required format for panel presentation</div>
+            </div>
+            <a href="https://ts.accenture.com/sites/APP-Learning/SiteAssets/AI%20Battle/AI%20Battle_Prototype_Demo_Template.pptx?d=wfefcb7a147ac49128494f479adf2081e" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#6366F1,#8B5CF6);color:#fff;text-decoration:none;padding:8px 16px;border-radius:9px;font-weight:700;font-size:.78rem;white-space:nowrap;flex-shrink:0;">⬇️ Download Template ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;align-items:stretch;">
+        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
+          <div style="width:2px;flex:1;background:rgba(255,255,255,.08);margin-top:3px;"></div>
+        </div>
+        <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:.7rem;flex:1);">
+          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:var(--green);">Phase 4a — Prototype Closure &amp; Materials Submission</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">PPT + Media Exchange video link submitted to Deepthi &amp; Linta</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.3rem;font-weight:600;">Friday, 29th May 2026 · EOD (5/29)</div>
+          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);border-radius:20px;padding:2px 9px;color:var(--green);font-weight:700;">✅ Completed</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;align-items:stretch;">
+        <div style="display:flex;flex-direction:column;align-items:center;width:20px;flex-shrink:0;">
+          <div style="width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--green);flex-shrink:0;margin-top:4px;box-shadow:0 0 8px rgba(16,185,129,.5);"></div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(249,115,22,.06));border:1.5px solid rgba(245,158,11,.5);border-radius:10px;padding:.75rem 1rem;flex:1;">
+          <div style="font-size:.82rem;font-weight:800;margin-bottom:.2rem;color:var(--gold);">Phase 4b — Demo Day · Top 5 Teams 🏆🎤</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55);">Top 5 shortlisted teams present live to the review panel · Q&amp;A with judges</div>
+          <div style="font-size:.72rem;color:var(--gold);margin-top:.3rem;font-weight:600;">Wednesday, Wednesday, 3rd June 2026</div>
+          <div style="margin-top:.4rem;"><span style="font-size:.65rem;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4);border-radius:20px;padding:2px 9px;color:var(--gold);font-weight:700;">⏳ Coming Up</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
   <!-- ROUND 2 UNDERWAY BANNER -->
   <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(124,58,237,.08));border:1.5px solid rgba(16,185,129,.5);border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
     <div style="font-size:2rem;">🚀</div>
     <div style="flex:1;">
       <div style="font-size:.68rem;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.25rem;">🔥 Round 2 — Build + Pitch Finale · In Progress!</div>
-      <div style="font-size:1rem;font-weight:800;">Top 10 teams are <span style="color:var(--green);">actively building their prototypes!</span></div>
+      <div style="font-size:1rem;font-weight:800;">AI Battle is <span style="color:var(--green);">fully completed!</span> 🎉</div>
       <div style="font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.25rem;">Submission closes <strong style="color:var(--gold);">29th May EOD</strong> · Top 5 teams present to panel on <strong style="color:var(--gold);">3rd June 🎤</strong></div>
     </div>
     <div style="background:rgba(16,185,129,.15);border:1.5px solid rgba(16,185,129,.5);border-radius:10px;padding:.5rem 1rem;text-align:center;flex-shrink:0;">
@@ -1187,6 +1219,8 @@ function imgFb2(el,src2,c1,c2,txt){
 
   
 <!-- SPORTS -->
+</section>
+
 <section id="sports">
   <div class="sec-title">🏆 Sports and <span>Wellness</span></div>
   <div class="sec-sub">Team bonding through competition, movement and fun · May and July 2026</div>
@@ -1301,16 +1335,16 @@ function imgFb2(el,src2,c1,c2,txt){
     <span style="font-size:1.3rem;">⚡</span>
     <div style="flex:1;">
       <div style="font-weight:700;font-size:.88rem;color:var(--green);">Scoreboard Updated — Quiz · AI Battle · Indoor Sports Points Added!</div>
-      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Neural Mavericks lead with 214 pts · The Orchestrators on 192 pts · AI-nstein Squad 161 · Quantum Crew 143</div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.5);">Neural Mavericks lead with 254 pts · AI-nstein Squad 211 · Quantum Crew 203 · The Orchestrators 192</div>
     </div>
     <span style="background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.4);border-radius:20px;padding:3px 12px;font-size:.7rem;font-weight:700;color:var(--green);">LIVE</span>
   </div>
 
   <!-- ✅ CHANGE 6: Podium — Neural Mavericks 95 pts -->
   <div class="podium">
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">2nd</div><div class="pod-block pod-2"><div style="font-size:1.1rem;font-weight:800;color:#9CA3AF;">2</div><div class="pod-name">The Orchestrators</div><div class="pod-pts">192 pts</div></div></div>
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:var(--gold);">Leading!</div><div class="pod-block pod-1"><div style="font-size:1.3rem;">👑</div><div style="font-size:1.1rem;font-weight:800;color:var(--gold);">1</div><div class="pod-name">Neural Mavericks</div><div class="pod-pts">214 pts</div></div></div>
-    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">3rd</div><div class="pod-block pod-3"><div style="font-size:1.1rem;font-weight:800;color:#D97706;">3</div><div class="pod-name">AI-nstein Squad</div><div class="pod-pts">161 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">2nd</div><div class="pod-block pod-2"><div style="font-size:1.1rem;font-weight:800;color:#9CA3AF;">2</div><div class="pod-name">AI-nstein Squad</div><div class="pod-pts">211 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:var(--gold);">Leading!</div><div class="pod-block pod-1"><div style="font-size:1.3rem;">👑</div><div style="font-size:1.1rem;font-weight:800;color:var(--gold);">1</div><div class="pod-name">Neural Mavericks</div><div class="pod-pts">254 pts</div></div></div>
+    <div class="pod-item"><div style="margin-bottom:5px;font-size:.72rem;color:rgba(255,255,255,.45);">3rd</div><div class="pod-block pod-3"><div style="font-size:1.1rem;font-weight:800;color:#D97706;">3</div><div class="pod-name">Quantum Crew</div><div class="pod-pts">203 pts</div></div></div>
   </div>
 
   <!-- ✅ CHANGE 7: Leaderboard rows — Neural Mavericks 95 pts, bar at 100%, detail note updated -->
@@ -1320,33 +1354,37 @@ function imgFb2(el,src2,c1,c2,txt){
       <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Neural%20Mavericks.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
       <div class="lb-info">
         <div class="lb-team">Neural Mavericks</div>
-        <div class="lb-detail">Capt: Vishal · AI: Karthika · +75 AI Battle 🏆 · +44 Sports</div>
+        <div class="lb-detail">Capt: Vishal · AI: Karthika · +75 AI Battle 🏆 · +44 Sports · +40 Demo 🎤</div>
       </div>
       <div class="lb-bar-w"><div class="lb-bar" style="width:100%;background:linear-gradient(90deg,#EC4899,#A855F7);"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">214</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
-    </div>
-    <div class="lb-row r2">
-      <div style="width:26px;text-align:center;">🥈</div>
-      <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Orchestrators.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
-      <div class="lb-info"><div class="lb-team">The Orchestrators</div><div class="lb-detail">Capt: Sulagna · AI: Satish · +90 AI Battle 🏆 · +62 Sports</div></div>
-      <div class="lb-bar-w"><div class="lb-bar" style="width:90%;background:linear-gradient(90deg,#F59E0B,#EF4444);"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts">192</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:var(--gold);">254</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
     <div class="lb-row">
-      <div style="width:26px;text-align:center;">🥉</div>
+      <div style="width:26px;text-align:center;">🥈</div>
       <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Ainsteen%20Squad.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
-      <div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · +60 AI Battle 🏆 · +86 Sports 🏆</div></div>
-      <div class="lb-bar-w"><div class="lb-bar" style="width:67%;"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">161</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+      <div class="lb-info"><div class="lb-team">AI-nstein Squad</div><div class="lb-detail">Capt: Kamlesh · AI: Karthik · +60 AI Battle 🏆 · +86 Sports 🏆 · +50 Demo 🎤</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:76%;"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">211</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
   </div>
 
     <div class="lb-row">
-      <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div>
+      <div style="width:26px;text-align:center;">🥉</div>
       <div class="lb-av" style="overflow:hidden;"><img src="https://ts.accenture.com/sites/APP-Learning/SiteAssets/Team%20Logos/Quantum%20Crew.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.textContent='XX'"></div>
-      <div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · +60 AI Battle 🏆 · +63 Sports</div></div>
-      <div class="lb-bar-w"><div class="lb-bar" style="width:75%;"></div></div>
-      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">143</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+      <div class="lb-info"><div class="lb-team">Quantum Crew</div><div class="lb-detail">Capt: Rupa · AI: Jyoti · +60 AI Battle 🏆 · +63 Sports · +60 Demo 🎤</div></div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:80%;"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">203</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
+    </div>
+
+
+    <div class="lb-row">
+      <div style="display:flex;align-items:center;gap:.8rem;flex:1;">
+        <div style="width:26px;text-align:center;color:rgba(255,255,255,.4);">4</div>
+        <div class="lb-team">The Orchestrators</div>
+        <div class="lb-detail">Capt: Sulagna · AI: Satish · +90 AI Battle 🏆 · +62 Sports · +0 Demo</div>
+      </div>
+      <div class="lb-bar-w"><div class="lb-bar" style="width:76%;background:linear-gradient(90deg,var(--p),var(--pl));"></div></div>
+      <div style="text-align:right;min-width:50px;"><div class="lb-pts" style="color:rgba(255,255,255,.7);">192</div><div style="font-size:.65rem;color:rgba(255,255,255,.35);">pts</div></div>
     </div>
 
 
@@ -1378,40 +1416,6 @@ function imgFb2(el,src2,c1,c2,txt){
             <div style="font-size:.72rem;font-weight:700;color:var(--pl);">AI-nstein Squad</div>
             <div style="font-size:1.2rem;font-weight:900;color:var(--pl);">+15</div>
             <div style="font-size:.62rem;color:rgba(255,255,255,.4);">Quiz League</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- AI Battle Points Breakdown -->
-  <div style="border:1px solid rgba(245,158,11,.3);border-radius:12px;overflow:hidden;margin-bottom:.8rem;background:var(--card);">
-    <div class="coll-hdr" style="padding:.85rem 1.2rem;border-bottom:1px solid var(--border);">
-      <div style="display:flex;align-items:center;gap:.7rem;"><span style="font-size:1rem;">⚔️</span><div style="font-size:.78rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;">AI Battle — Points Breakdown</div></div>
-      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
-    </div>
-    <div class="coll-body">
-      <div style="padding:1rem 1.2rem;">
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;">
-          <div style="background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.3);border-radius:10px;padding:.7rem;text-align:center;">
-            <div style="font-size:.72rem;font-weight:700;color:#F472B6;">Neural Mavericks</div>
-            <div style="font-size:1.2rem;font-weight:900;color:#F472B6;">+75</div>
-            <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2×30 + 15 special</div>
-          </div>
-          <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:.7rem;text-align:center;">
-            <div style="font-size:.72rem;font-weight:700;color:var(--gold);">The Orchestrators</div>
-            <div style="font-size:1.2rem;font-weight:900;color:var(--gold);">+90</div>
-            <div style="font-size:.62rem;color:rgba(255,255,255,.4);">3 ideas × 30 pts</div>
-          </div>
-          <div style="background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.3);border-radius:10px;padding:.7rem;text-align:center;">
-            <div style="font-size:.72rem;font-weight:700;color:#818CF8;">Quantum Crew</div>
-            <div style="font-size:1.2rem;font-weight:900;color:#818CF8;">+60</div>
-            <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas × 30 pts</div>
-          </div>
-          <div style="background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.3);border-radius:10px;padding:.7rem;text-align:center;">
-            <div style="font-size:.72rem;font-weight:700;color:var(--pl);">AI-nstein Squad</div>
-            <div style="font-size:1.2rem;font-weight:900;color:var(--pl);">+60</div>
-            <div style="font-size:.62rem;color:rgba(255,255,255,.4);">2 ideas × 30 pts</div>
           </div>
         </div>
       </div>
@@ -1451,6 +1455,56 @@ function imgFb2(el,src2,c1,c2,txt){
       </div>
     </div>
   </div>
+
+  <!-- AI Battle Points Breakdown -->
+  <div style="border:1px solid rgba(245,158,11,.3);border-radius:12px;overflow:hidden;margin-bottom:.8rem;background:var(--card);">
+    <div class="coll-hdr" style="padding:.85rem 1.2rem;border-bottom:1px solid var(--border);">
+      <div style="display:flex;align-items:center;gap:.7rem;"><span style="font-size:1rem;">⚔️</span><div style="font-size:.78rem;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;">AI Battle Points Breakdown</div></div>
+      <div style="display:flex;align-items:center;gap:.5rem;"><span style="font-size:.68rem;color:rgba(255,255,255,.3);font-style:italic;">tap to expand</span><span class="coll-arrow">▼</span></div>
+    </div>
+    <div class="coll-body">
+      <div style="padding:1rem 1.2rem;">
+
+        <!-- Combined table -->
+        <div style="display:grid;grid-template-columns:1fr repeat(3,80px);gap:.4rem;padding:.3rem .5rem;margin-bottom:.3rem;">
+          <div style="font-size:.6rem;font-weight:800;color:rgba(255,255,255,.3);text-transform:uppercase;">Team</div>
+          <div style="font-size:.6rem;font-weight:800;color:rgba(255,255,255,.3);text-transform:uppercase;text-align:center;">Shortlist</div>
+          <div style="font-size:.6rem;font-weight:800;color:rgba(255,255,255,.3);text-transform:uppercase;text-align:center;">Demo</div>
+          <div style="font-size:.6rem;font-weight:800;color:var(--gold);text-transform:uppercase;text-align:center;">Total</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:.35rem;">
+          <div style="display:grid;grid-template-columns:1fr repeat(3,80px);gap:.4rem;align-items:center;background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.3);border-radius:9px;padding:.65rem .8rem;">
+            <div style="font-size:.82rem;font-weight:800;color:#818CF8;">Quantum Crew</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;">+60</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;color:#818CF8;">+60 🥇</div>
+            <div style="text-align:center;font-size:1rem;font-weight:900;color:var(--gold);">120</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr repeat(3,80px);gap:.4rem;align-items:center;background:rgba(236,72,153,.07);border:1px solid rgba(236,72,153,.3);border-radius:9px;padding:.65rem .8rem;">
+            <div style="font-size:.82rem;font-weight:800;color:#F472B6;">Neural Mavericks</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;">+75</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;color:#F472B6;">+40 🥈</div>
+            <div style="text-align:center;font-size:1rem;font-weight:900;color:#818CF8;">115</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr repeat(3,80px);gap:.4rem;align-items:center;background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.3);border-radius:9px;padding:.65rem .8rem;">
+            <div style="font-size:.82rem;font-weight:800;color:var(--pl);">AI-nstein Squad</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;">+60</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;color:var(--pl);">+50 🥉</div>
+            <div style="text-align:center;font-size:1rem;font-weight:900;color:#D97706;">110</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr repeat(3,80px);gap:.4rem;align-items:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:.65rem .8rem;">
+            <div style="font-size:.82rem;font-weight:800;color:rgba(255,255,255,.5);">The Orchestrators</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;">+90</div>
+            <div style="text-align:center;font-size:.85rem;font-weight:700;color:rgba(255,255,255,.35);">+0</div>
+            <div style="text-align:center;font-size:1rem;font-weight:900;color:rgba(255,255,255,.4);">90</div>
+          </div>
+        </div>
+
+        <div style="font-size:.65rem;color:rgba(255,255,255,.3);margin-top:.7rem;text-align:center;">Shortlist = Round 2 ideas × 30 pts · Demo = Panel Demo Day (3rd June)</div>
+      </div>
+    </div>
+  </div>
+
 
 </section>
 
@@ -1595,4 +1649,4 @@ function imgFb2(el,src2,c1,c2,txt){
 }());
 </script>
 </body>
-</html>  <!-- Indoor Games Event Details -->
+</html>
